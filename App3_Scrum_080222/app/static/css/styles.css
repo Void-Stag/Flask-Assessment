@@ -3,3 +3,15 @@
        -moz-border-radius: 0 !important;
             border-radius: 0 !important;
 }
+
+map.div{
+        /* Div for text on the right hand of the screen */
+        text-align: left;
+        display: block;
+        padding-right: 100px;
+        padding-top: 20px;
+        float: right;
+        width: 780px;
+
+
+}

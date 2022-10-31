@@ -7,3 +7,7 @@ main = Blueprint('main', __name__)
 @main.route('/index', methods=['GET', 'POST'])
 def index(cat=None):
     return render_template('index.html',  title='Home')
+
+@main.route('/contact', methods=['GET','POST'])
+def contact(cat=None):
+    return render_template('contact.html', title='Contact')
