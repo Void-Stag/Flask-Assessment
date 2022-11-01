@@ -1,4 +1,5 @@
 import logging
+import os
 from flask import Flask
 from config import Config
 from flask_mail import Mail
