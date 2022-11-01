@@ -4,5 +4,6 @@ Create new branches for the task and commit to there. Only create pull request w
 
 
 
-Don't forget to fetch updated code before committing
+Don't forget to fetch updated code before committing.
+
 Please let me know if you need help or if anything goes wrong ASAP
