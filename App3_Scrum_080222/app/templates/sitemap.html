@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+
+{% block app_content %}
+<div class="jumbotron text-center">
+    <h1>Site Map</h1>
+    <p></p> 
+  </div>
+    
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        <h3>Home</h3>
+        <p></p>
+        
+      </div>
+      <div class="col-sm-4">
+        <h3>Courses</h3>
+        <p></p>
+        
+      </div>
+      <div class="col-sm-4">
+        <h3><li><a href="{{ url_for('main.events') }}" >Events</a></li></h3>        
+        <p> </p>
+      </div>
+
+    </div>
+    <div class="col-sm-4">
+      <h3><li><a href="{{ url_for('main.contact') }}" >Contact</a></li></h3>        
+      <p> </p>
+    </div>
+    </div>
+  </div>
+
+{% endblock %}

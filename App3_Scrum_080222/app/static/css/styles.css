@@ -5,7 +5,6 @@
 }
 
 map.div{
-        /* Div for text on the right hand of the screen */
         text-align: left;
         display: block;
         padding-right: 100px;
@@ -14,4 +13,30 @@ map.div{
         width: 780px;
 
 
+}
+.navbar {
+        display: flex;
+        align-items: center;
+        margin: auto;
+        justify-content: center;
+}
+    
+.navitem {
+        list-style:none;
+        margin: 0 50px 0 50px;
+        font-size: 22px;
+        transition: 0.4s;
+}
+    
+.navitem:hover {
+        transform: scale(1.05);
+}
+.page-footer {
+        background-color: #ffffff;
+        color: #ffffff;
+        padding-top: 20px;
+            width: 100%;
+            min-width: 300px;
+            height: 100px;
+        overflow: hidden;
 }

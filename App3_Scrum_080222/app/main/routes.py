@@ -15,3 +15,7 @@ def contact(cat=None):
 @main.route('/events', methods=['GET','POST'])
 def events(cat=None):
     return render_template('event.html', title='Events')
+
+@main.route('/sitemap', methods=['GET', 'POST'])
+def sitemap(cat=None):
+    return render_template('sitemap.html', title='SiteMap')
