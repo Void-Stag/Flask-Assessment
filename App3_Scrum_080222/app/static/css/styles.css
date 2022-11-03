@@ -3,6 +3,9 @@
        -moz-border-radius: 0 !important;
             border-radius: 0 !important;
 }
+html{
+        scroll-behavior: smooth;
+}
 
 map.div{
         text-align: left;
