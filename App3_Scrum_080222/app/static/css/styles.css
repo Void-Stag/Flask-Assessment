@@ -40,3 +40,12 @@ map.div{
             height: 100px;
         overflow: hidden;
 }
+
+p {
+        text-align: left;
+
+}
+
+p.copyright{
+        text-align: center;
+}
