@@ -2,7 +2,7 @@
 
 
 {% block app_content %}
-<div class="jumbotron text-center">
+<div class="jumbotron text-center"><!-- Template layout from W3schools ref:https://www.w3schools.com/bootstrap/bootstrap_templates.asp-->
     <h1>Site Map</h1>
     <p></p> 
   </div>
@@ -10,7 +10,7 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-4">
-        <h3 class="sitem">Home</h3>
+        <h3 class="sitem"><li><a href="{{ url_for('main.home') }}" >Home</a></li></h3>
         <p></p>
         
       </div>
@@ -33,6 +33,12 @@
       <div class="col-sm-4">
           <h3 class="sitem"><li><a href="{{ url_for('main.contact') }}" >Contact</a></li></h3>        
           <p> </p>
+        </div>
+      
+        <div class="col-sm-4">
+          <h3 class="sitem"><li><a href="{{ url_for('auth.login') }}" >Login</a></li></h3>        
+          <h3 class="sitem"><li><a href="{{ url_for('auth.register') }}" >Register</a></li></h3>
+          <h3 class="sitem"><li><a href="{{ url_for('auth.reset_password_request') }}" >Forgotton Password</a></li></h3>
         </div>
       
       </div>
