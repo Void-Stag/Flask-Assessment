@@ -52,3 +52,13 @@ p {
 p.copyright{
         text-align: center;
 }
+
+h3.sitem{
+        list-style-type: none;
+        text-align: left;
+}
+
+p.sitem{
+        list-style-type: none;
+        text-align: left;
+}

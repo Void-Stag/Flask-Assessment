@@ -19,3 +19,7 @@ def events(cat=None):
 @main.route('/sitemap', methods=['GET', 'POST'])
 def sitemap(cat=None):
     return render_template('sitemap.html', title='SiteMap')
+
+@main.route('/course', methods=['GET', 'POST'])
+def course(cat=None):
+    return render_template('course.html', title='Courses')
