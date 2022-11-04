@@ -23,3 +23,7 @@ def sitemap(cat=None):
 @main.route('/course', methods=['GET', 'POST'])
 def course(cat=None):
     return render_template('course.html', title='Courses')
+
+@main.route('/home', methods=['GET', 'POST'])
+def home(cat=None):
+    return render_template('home.html', title='Home')

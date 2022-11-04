@@ -59,6 +59,6 @@ h3.sitem{
 }
 
 p.sitem{
-        list-style-type: none;
+        list-style-type:circle;
         text-align: left;
 }
