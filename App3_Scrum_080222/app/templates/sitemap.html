@@ -10,26 +10,33 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-4">
-        <h3>Home</h3>
+        <h3 class="sitem">Home</h3>
         <p></p>
         
       </div>
       <div class="col-sm-4">
-        <h3>Courses</h3>
+        <h3 class="sitem"><li><a href="{{ url_for('main.course') }}" >Courses</a></li></h3>
         <p></p>
         
       </div>
       <div class="col-sm-4">
-        <h3><li><a href="{{ url_for('main.events') }}" >Events</a></li></h3>        
+        <h3 class="sitem"><li><a href="{{ url_for('main.events') }}" >Events</a></li></h3>        
         <p> </p>
       </div>
 
     </div>
-    <div class="col-sm-4">
-      <h3><li><a href="{{ url_for('main.contact') }}" >Contact</a></li></h3>        
-      <p> </p>
     </div>
+  </div><br><br>
+
+  <div class="container-fluid bg-3 text-center">    
+    <div class="row">
+      <div class="col-sm-4">
+          <h3 class="sitem"><li><a href="{{ url_for('main.contact') }}" >Contact</a></li></h3>        
+          <p> </p>
+        </div>
+      
+      </div>
     </div>
-  </div>
+  </div><br><br>
 
 {% endblock %}
