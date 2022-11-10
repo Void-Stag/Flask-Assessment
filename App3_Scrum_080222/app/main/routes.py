@@ -27,3 +27,7 @@ def course(cat=None):
 @main.route('/home', methods=['GET', 'POST'])
 def home(cat=None):
     return render_template('home.html', title='Home')
+
+@main.route('/users', methods=['GET','POST'])
+def users(cat=None):
+        return render_template('certiuse.html', title='Users')
