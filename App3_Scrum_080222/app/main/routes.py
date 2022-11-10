@@ -30,4 +30,4 @@ def home(cat=None):
 
 @main.route('/users', methods=['GET','POST'])
 def users(cat=None):
-        return render_template('certitrain.html', title='Users')
+        return render_template('certiuse.html', title='Users')
