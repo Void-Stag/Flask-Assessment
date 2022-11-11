@@ -31,3 +31,11 @@ def home(cat=None):
 @main.route('/users', methods=['GET','POST'])
 def users(cat=None):
         return render_template('certiuse.html', title='Users')
+
+@main.route('/faq', methods=['GET','POST'])
+def faq(cat=None):
+    return render_template('FAQ.html', title='FAQ')
+
+@main.route('/improvements', methods=['GET','POST'])
+def improvements(cat=None):
+    return render_template('Improvements.html', title='Improvements')
