@@ -24,6 +24,7 @@
                 <li><a href="{{ url_for('main.course') }}" >Courses</a></li>
                 <li><a href="{{ url_for('main.events') }}" >Events</a></li>
                 <li><a href="{{ url_for('main.contact') }}" >Contact</a></li>
+                <li><a href="{{ url_for('main.faq') }}" >FAQs</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 {% if current_user.is_authenticated %}
@@ -71,6 +72,7 @@
     <p class="copyright">Copyright Swift Courses 2022</p>
     <footer class="page-footer">
         <li><a href="{{ url_for('main.sitemap') }}" >SiteMap</a></li>
+        <li><a href="{{ url_for('main.improvements') }}" >Feedback</a></li>
     </footer>
 </footer>
 {% endblock %}
