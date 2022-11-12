@@ -42,7 +42,7 @@ map.div{
             min-width: 300px;
             height: 100px;
         overflow: hidden;
-        display:inline-flex;
+        display:inline;
 }
 
 p {
@@ -85,11 +85,7 @@ p.sitem{
         }
                  
 }*/
-.row_content{
-        align-items: left;
-        padding-right: 100px;
 
-}
 
 .jumbotron{
         margin: auto;
