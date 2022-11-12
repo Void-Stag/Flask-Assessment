@@ -42,6 +42,7 @@ map.div{
             min-width: 300px;
             height: 100px;
         overflow: hidden;
+        display:inline-flex;
 }
 
 p {
@@ -61,4 +62,37 @@ h3.sitem{
 p.sitem{
         list-style-type:circle;
         text-align: left;
+}
+
+    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+.row.content {
+        height: 1500px
+}
+    
+    /* Set gray background color and 100% height */
+.sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+
+}
+
+/*@media screen and (max-width: auto) {
+        .sidenav {
+          height: auto;
+        }
+        .row.content {
+                height: auto;
+        }
+                 
+}*/
+.row_content{
+        align-items: left;
+        padding-right: 100px;
+
+}
+
+.jumbotron{
+        margin: auto;
+        width: auto;
+        height: auto;
 }

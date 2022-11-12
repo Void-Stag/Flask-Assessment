@@ -39,3 +39,7 @@ def faq(cat=None):
 @main.route('/improvements', methods=['GET','POST'])
 def improvements(cat=None):
     return render_template('Improvements.html', title='Improvements')
+
+@main.route('/basicscrum', methods=['GET', 'POST'])
+def basicscrum(cat=None):
+    return render_template('SCRUM_basics.html', title='Scrum Basics')
