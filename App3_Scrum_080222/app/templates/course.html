@@ -19,27 +19,58 @@
           <li><a href="{{ url_for('main.users') }}" >Certified Users</a></li>
         </ul><br>
       </div>
-  
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-4">
-            <h3 class="sitem"><li><a href="{{ url_for('main.home') }}" >Home</a></li></h3>
-            <p></p>
-            
-          </div>
-          <div class="col-sm-4">
-            <h3 class="sitem"><li><a href="{{ url_for('main.course') }}" >Courses</a></li></h3>
-            <p class="sitem">
-              <li><a href="{{ url_for('main.basicscrum') }}">SCRUM Basics</a></li>
-              <li><a href="{{ url_for('main.users') }}" >Certified Users</a></li></p>
-            
-          </div>
-          <div class="col-sm-4">
-            <h3 class="sitem"><li><a href="{{ url_for('main.events') }}" >Events</a></li></h3>        
-            <p> </p>
-          </div>
-    
-        </div>
-      </div>
 
+      <div class="container">
+
+        <div class="item-box">
+
+            <img src="../images/product-card-1.png" alt="The OMEGA Ultra system">
+            <div class="prod-card-title"><h2>OMEGA&trade; Ultra</h2></div>
+            <div class="price-text"><h3>Starting from £1000</h3></div>
+            <div class="system-info">
+                <li><p><strong>CPU: </strong>AMD Ryzen 5 3600</p></li>
+                <li><p><strong>Memory: </strong>16GB DDR4-3200 CL16</p></li>
+                <li><p><strong>Graphics: </strong>ASUS GeForce RTX 3080 10GB</p></li>
+            </div>
+            <button onclick="window.location.href='config.html'" class="button-main customise-button">Customise</button>
+
+        </div>
+        <div class="item-box">
+            
+            <img src="../images/custompc6.png" alt="The ALPHA Pro system">
+            <div class="prod-card-title"><h2>ALPHA&trade; Pro</h2></div>
+            <div class="price-text"><h3>Starting from £1,752</h3></div>
+            <div class="system-info">
+                <li><p><strong>CPU: </strong>AMD Ryzen 5 5600X</p></li>
+                <li><p><strong>Memory: </strong>16GB DDR4-3200 CL16</p></li>
+                <li><p><strong>Graphics: </strong>GIGABYTE GeForce RTX 3080 10GB - AORUS XTREME</p></li>
+            </div>
+            <button onclick="window.location.href='config.html'" class="button-main customise-button">Customise</button>
+        </div>
+        <div class="item-box">
+
+            <img src="../images/custompc4.png" alt="The ECHO Super system">
+            <div class="prod-card-title"><h2>ECHO&trade; Super</h2></div>
+            <div class="price-text"><h3>Starting from £2,500</h3></div>
+            <div class="system-info">
+                <li><p><strong>CPU: </strong>Intel i9-10910</p></li>
+                <li><p><strong>Memory: </strong>16GB DDR4-3200 CL16</p></li>
+                <li><p><strong>Graphics: </strong>Nvidia GeForce RTX 3070 8GB</p></li>
+            </div>
+            <button onclick="window.location.href='config.html'" class="button-main customise-button">Customise</button>
+        </div>
+        <div class="item-box">
+            
+            <img src="../images/custompc7.png" alt="The GALAXY-STAR Pro-Prenium system">
+            <div class="prod-card-title"><h2>GALAXY-STAR&trade; Pro-Prenium</h2></div>
+            <div class="price-text"><h3>Starting from £3,000</h3></div>
+            <div class="system-info">
+                <li><p><strong>CPU: </strong>AMD Ryzen 9 6900X</p></li>
+                <li><p><strong>Memory: </strong>32GB DDR4-3200 CL16</p></li>
+                <li><p><strong>Graphics: </strong>Nvidia GeForce RTX 3080 16GB</p></li>
+            </div>
+            <button onclick="window.location.href='config.html'" class="button-main customise-button">Customise</button>
+        </div>
+
+    </div>
 {% endblock %}
