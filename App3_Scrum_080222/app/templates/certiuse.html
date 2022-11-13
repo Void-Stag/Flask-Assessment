@@ -7,34 +7,26 @@
     <p></p> 
   </div>
 
+<div class="container-fluid text-center">    
   <div class="row content">
     <div class="col-sm-3 sidenav">
       <ul class="nav nav-pills nav-stacked">
-        <li><a href="{{ url_for('main.course') }}">Courses</a></li>
-        <li><a href="#section2">Friends</a></li>
-        <li><a href="{{ url_for('main.basicscrum') }}">SCRUM Basics</a></li>
-        <li class="active"><a href="{{ url_for('main.users') }}" >Certified Users</a></li>
-      </ul><br>
-  </div>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-4">
-        <h3>SCRUM Trainers</h3>
-        <p></p>
-        
-      </div>
-      <div class="col-sm-4">
-        <h3>SCRUM Masters</h3>
-        <p></p>
-        
-      </div>
-      <div class="col-sm-4">
-        <h3>SCRUM Practitioners</h3>        
-        <p></p>
-      </div>
+      <li><a href="{{ url_for('main.course') }}">Courses</a></li>
+      <li><a href="{{ url_for('main.addcourse') }}">Additional Courses</a></li>
+      <li><a href="{{ url_for('main.basicscrum') }}">SCRUM Basics</a></li>
+      <li class="active"><a href="{{ url_for('main.users') }}">Certified Users</a></li>
+    </ul>
+    </div>
+    <div class="col-sm-8 text-left"> 
+      <h1>SCRUM Trainers</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      <hr>
+      <h3>SCRUM Masters</h3>
+      <p>Lorem ipsum...</p>
+      <hr>
+      <h3>SCRUM Practitioners</h3>
+      <p>hi</p>
     </div>
   </div>
-
-
+</div>
 {% endblock %}
