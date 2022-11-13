@@ -22,6 +22,7 @@ map.div{
         align-items: center;
         margin: auto;
         justify-content: center;
+        padding: 0px;
 }
     
 .navitem {
@@ -91,4 +92,17 @@ p.sitem{
         margin: auto;
         width: auto;
         height: auto;
+        padding-right:60px;
+        padding-left:60px;
+        position: relative;
+}
+.sidenav {
+        padding-top: 28px;
+        margin-top: 18px;
+        object-position: left;
+    }
+
+.scrum{
+        padding-left: 28px;
+        margin-left: 18px;
 }
