@@ -39,3 +39,7 @@ def faq(cat=None):
 @main.route('/improvements', methods=['GET','POST'])
 def improvements(cat=None):
     return render_template('Improvements.html', title='Improvements')
+
+@main.route('/jobs', methods=['GET', 'POST'])
+def jobs(cat=None):
+    return render_template('jobs.html', title='Jobs')
