@@ -7,6 +7,10 @@ html{
         scroll-behavior: smooth;
 }
 
+img{
+        float: left
+}
+
 map.div{
         text-align: left;
         display: block;
@@ -14,6 +18,7 @@ map.div{
         padding-top: 20px;
         float: right;
         width: 780px;
+        padding: 0px;
 
 
 }
@@ -29,6 +34,7 @@ map.div{
         margin: 0 50px 0 50px;
         font-size: 22px;
         transition: 0.4s;
+        text-align: center;
 }
     
 .navitem:hover {
@@ -64,6 +70,72 @@ p.sitem{
         text-align: left;
 }
 
+   /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
+   .row.content {
+        height: 1500px
+}
+
+    /* Set gray background color and 100% height */
+.sidenav {
+      background-color: #f1f1f1;
+      height: 100%;
+
+}
+
+/*@media screen and (max-width: auto) {
+        .sidenav {
+          height: auto;
+        }
+        .row.content {
+                height: auto;
+        }
+                 
+}*/
+
+
+.jumbotron{
+        margin: auto;
+        width: auto;
+        height: auto;
+        padding-right:60px;
+        padding-left:60px;
+        position: relative;
+}
+.sidenav {
+        padding-top: 28px;
+        margin-top: 18px;
+        object-position: left;
+    }
+
+.scrum{
+        padding-left: 28px;
+        margin-left: 18px;
+}
+
+ /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+ .row.content {height: 450px}
+
+ /* Set gray background color and 100% height */
+ .sidenav {
+   padding-top: 20px;
+   background-color: #f1f1f1;
+   height: 100%;
+ }
+
+ /* Set black background color, white text and some padding */
+ footer {
+   padding: 15px;
+ }
+
+ /* On small screens, set height to 'auto' for sidenav and grid */
+ @media screen and (max-width: 767px) {
+   .sidenav {
+     height: auto;
+     padding: 15px;
+   }
+   .row.content {height:auto;} 
+ }
+ 
 .carousel-inner img {
         width: auto; /* Set width to 100% */
         margin: auto;

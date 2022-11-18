@@ -40,6 +40,14 @@ def faq(cat=None):
 def improvements(cat=None):
     return render_template('Improvements.html', title='Improvements')
 
+@main.route('/basicscrum', methods=['GET', 'POST'])
+def basicscrum(cat=None):
+    return render_template('SCRUM_basics.html', title='Scrum Basics')
+
+@main.route('/addcourse', methods=['GET', 'POST'])
+def addcourse(cat=None):
+    return render_template('additionalcourses.html', title='Additional Courses')
+    
 @main.route('/jobs', methods=['GET', 'POST'])
 def jobs(cat=None):
     return render_template('jobs.html', title='Jobs')
