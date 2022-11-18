@@ -16,7 +16,9 @@
       </div>
       <div class="col-sm-4">
         <h3 class="sitem"><li><a href="{{ url_for('main.course') }}" >Courses</a></li></h3>
-        <p class="sitem"><li><a href="{{ url_for('main.users') }}" >Certified Users</a></li></p>
+        <p class="sitem"><li><a href="{{ url_for('main.addcourse') }}" >Additional Courses</a></li>
+        <li><a href="{{ url_for('main.basicscrum') }}" >SCRUM Basics</a></li>
+        <li><a href="{{ url_for('main.users') }}" >Certified Users</a></li></p>
         
       </div>
       <div class="col-sm-4">
@@ -36,9 +38,10 @@
         </div>
       
         <div class="col-sm-4">
-          <h3 class="sitem"><li><a href="{{ url_for('auth.login') }}" >Login</a></li></h3>        
-          <h3 class="sitem"><li><a href="{{ url_for('auth.register') }}" >Register</a></li></h3>
-          <h3 class="sitem"><li><a href="{{ url_for('auth.reset_password_request') }}" >Forgotton Password</a></li></h3>
+          <h3 class="sitem"><li><a href="{{ url_for('auth.login') }}" >Login</a></li>        
+          <li><a href="{{ url_for('auth.register') }}" >Register</a></li>
+          <li><a href="{{ url_for('auth.reset_password_request') }}" >Forgotton Password</a></li>
+          <li><a href="{{ url_for('main.improvements') }}" >Feedback</a></li></h3>
         </div>
       
       </div>
