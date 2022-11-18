@@ -60,9 +60,80 @@ h3.sitem{
 }
 
 p.sitem{
-        list-style-type:circle;
+        list-style-type:none;
         text-align: left;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .carousel-inner img {
         width: auto; /* Set width to 100% */
