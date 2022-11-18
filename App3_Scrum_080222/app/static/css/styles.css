@@ -136,32 +136,3 @@ p.sitem{
    .row.content {height:auto;} 
  }
  
-.carousel-inner img {
-        width: auto; /* Set width to 100% */
-        margin: auto;
-        min-height:200px;
-    }
-
-@media (max-width: 500px) {
-        .carousel-caption {
-          display: inline; 
-        }
-      }
-.banner_caption {
-        width: auto;
-        float: left;
-        height: auto;
-        background-color: grey;
-        position: absolute;
-        opacity: 50;
-        z-index: 9999;
-        transition: all 0.5s ease-in-out;
-        margin-bottom: 100px;
-      }
-img{
-        float:left ;
-}
-
-container-fluidtext-center{
-        margin-top: 100px;
-}
