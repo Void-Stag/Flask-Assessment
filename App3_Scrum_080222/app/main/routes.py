@@ -51,3 +51,4 @@ def addcourse(cat=None):
 @main.route('/jobs', methods=['GET', 'POST'])
 def jobs(cat=None):
     return render_template('jobs.html', title='Jobs')
+

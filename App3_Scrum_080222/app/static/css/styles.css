@@ -136,3 +136,14 @@ p.sitem{
    .row.content {height:auto;} 
  }
  
+/* Banner Images*/
+#bannerimage {
+  width: auto;
+  background-image: url(http://getwallpapers.com/wallpaper/full/7/2/2/14898.jpg);
+  height: 50px;
+  background-position: center;
+}
+#cortitle{
+        color: #f1f1f1;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
