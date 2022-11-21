@@ -67,3 +67,7 @@ def dev_cycles(cat=None):
 @main.route('/scrum_project', methods=['GET', 'POST'])
 def scrum_project(cat=None):
     return render_template('/Course/courses/scrumweb.html', title='SCRUM Website Project')
+
+@main.route('/member_articles', methods=['GET', 'POST'])
+def member_articles(cat=None):
+    return render_template('memberartitcle.html', title='Member Articles')
