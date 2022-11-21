@@ -22,7 +22,7 @@ def sitemap(cat=None):
 
 @main.route('/course', methods=['GET', 'POST'])
 def course(cat=None):
-    return render_template('course.html', title='Courses')
+    return render_template('/Course/course.html', title='Courses')
 
 @main.route('/home', methods=['GET', 'POST'])
 def home(cat=None):
@@ -30,7 +30,7 @@ def home(cat=None):
 
 @main.route('/users', methods=['GET','POST'])
 def users(cat=None):
-        return render_template('certiuse.html', title='Users')
+        return render_template('/Course/certiuse.html', title='Users')
 
 @main.route('/faq', methods=['GET','POST'])
 def faq(cat=None):
@@ -42,32 +42,32 @@ def improvements(cat=None):
 
 @main.route('/basicscrum', methods=['GET', 'POST'])
 def basicscrum(cat=None):
-    return render_template('SCRUM_basics.html', title='Scrum Basics')
+    return render_template('/Course/SCRUM_basics.html', title='Scrum Basics')
 
 @main.route('/addcourse', methods=['GET', 'POST'])
 def addcourse(cat=None):
-    return render_template('additionalcourses.html', title='Additional Courses')
+    return render_template('/Course/additionalcourses.html', title='Additional Courses')
     
 @main.route('/jobs', methods=['GET', 'POST'])
 def jobs(cat=None):
-    return render_template('jobs.html', title='Jobs')    
+    return render_template('/Member_Only/jobs.html', title='Jobs')    
 
 @main.route('/userstories_acceptancecriteria', methods=['GET', 'POST'])
 def userstories_acceptancecriteria(cat=None):
-    return render_template('/Course/courses/usercriteria.html', title='User Stories & Acceptance Criteria')
+    return render_template('/Course/course_post/usercriteria.html', title='User Stories & Acceptance Criteria')
 
 @main.route('/burnout_charts', methods=['GET', 'POST'])
 def burnout_charts(cat=None):
-    return render_template('/Course/courses/burnoutchart.html', title='Burnout Charts for Dummies')
+    return render_template('/Course/course_post/burnoutchart.html', title='Burnout Charts for Dummies')
 
 @main.route('/dev_cycles', methods=['GET', 'POST'])
 def dev_cycles(cat=None):
-    return render_template('/Course/courses/devcycles.html', title='Different types of Development Cycles')
+    return render_template('/Course/course_post/devcycles.html', title='Different types of Development Cycles')
     
 @main.route('/scrum_project', methods=['GET', 'POST'])
 def scrum_project(cat=None):
-    return render_template('/Course/courses/scrumweb.html', title='SCRUM Website Project')
+    return render_template('/Course/course_post/scrumweb.html', title='SCRUM Website Project')
 
 @main.route('/member_articles', methods=['GET', 'POST'])
 def member_articles(cat=None):
-    return render_template('memberartitcle.html', title='Member Articles')
+    return render_template('/Member_Only/memberarticle.html', title='Member Articles')
