@@ -23,7 +23,7 @@ def login():
         login_user(user, remember=form.remember_me.data)
         next_page = request.args.get('next')
         if not next_page or url_parse(next_page).netloc != '':
-            next_page = url_for('main.index')
+            next_page = url_for('main.home')
         flash("You are now signed in!", "success")
         return redirect(next_page)
     return render_template('auth/login.html', title='Login', form=form)
@@ -52,7 +52,7 @@ def logout():
     logout_user()
     #session.clear()
     flash("You've signed out!", "success")
-    return redirect(url_for('main.index'))
+    return redirect(url_for('main.home'))
 
 @auth.route('/reset_password_request', methods=['GET', 'POST'])
 def reset_password_request():

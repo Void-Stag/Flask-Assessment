@@ -45,10 +45,10 @@ map.div{
         color: #ffffff;
         padding-top: 20px;
             width: 100%;
-            min-width: 300px;
             height: 100px;
         overflow: hidden;
         text-align: center;
+        display: inline;
 }
 
 p {
@@ -58,6 +58,7 @@ p {
 
 p.copyright{
         text-align: center;
+        color: black;
 }
 
 h3.sitem{
@@ -82,15 +83,6 @@ p.sitem{
 
 }
 
-/*@media screen and (max-width: auto) {
-        .sidenav {
-          height: auto;
-        }
-        .row.content {
-                height: auto;
-        }
-                 
-}*/
 
 
 .jumbotron{
@@ -122,11 +114,20 @@ p.sitem{
    height: 100%;
  }
 
- /* Set black background color, white text and some padding */
- footer {
-   padding: 15px;
- }
-
+/* Footer */
+footer {
+        background: #ffffff;
+}
+a {
+        color: inherit;
+        text-decoration: none;
+        transition: all 0.3s;
+      }
+      
+a:hover, a:focus {
+        text-decoration: none;
+      }
+      
  /* On small screens, set height to 'auto' for sidenav and grid */
  @media screen and (max-width: 767px) {
    .sidenav {

@@ -26,15 +26,12 @@
                     <li><a href="{{ url_for('main.course') }}" >Courses</a></li>
                     <li><a href="{{ url_for('main.events') }}" >Events</a></li>
                     <li><a href="{{ url_for('main.jobs') }}"> Jobs</a></li>
-                    <li><a href="{{ url_for('main.contact') }}" >Contact</a></li>
-                    <li><a href="{{ url_for('main.faq') }}" >FAQs</a></li>
                 {% else %}
                     <img src="{{url_for('static', filename='Logo/Swift_Logo.png')}}" alt="Logo">
                     <li><a href="{{ url_for('main.home') }}" >Home</a></li>
                     <li><a href="{{ url_for('main.course') }}" >Courses</a></li>
                     <li><a href="{{ url_for('main.events') }}" >Events</a></li>
                     <li><a href="{{ url_for('main.contact') }}" >Contact</a></li>
-                    <li><a href="{{ url_for('main.faq') }}" >FAQs</a></li>
                 {% endif %}
             </ul>
 
@@ -47,7 +44,8 @@
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="" >Logout</a></li>
+                            <li><a href="{{ url_for('main.member_articles') }}">Articles</a></li>
+                            <li><a href="{{ url_for('auth.logout') }}" >Logout</a></li>
                         </ul>
                     </li>
                 {% else %}
@@ -82,15 +80,35 @@
 
 </div>
 <br>
-<footer class="container-fluidtext-center">
-    <p class="copyright">©Swift Courses 2022</p>
-    <footer class="page-footer">
-        <ul>
-        <li><a href="{{ url_for('main.sitemap') }}" >SiteMap</a></li>
-        <li><a href="{{ url_for('main.improvements') }}" >Feedback</a></li>
-        </ul>
+    <!-- FOOTER -->
+    <footer class="w-100 py-4 flex-shrink-0">
+        <div class="container py-4">
+            <div class="row gy-4 gx-5">
+                <div class="col-lg-4 col-md-6">
+                    <h5 class="h1 text-white">FB.</h5>
+                    <p class="small text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt.</p>
+                    <p class="small text-muted mb-0">&copy; Copyrights. All rights reserved. <a class="text-primary" href="{{ url_for('main.home') }}">SwiftCourses.com</a></p>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="text-white mb-3">Quick links</h5>
+                    <ul class="list-unstyled text-muted">
+                        <li><a href="{{ url_for('main.sitemap') }}">Site Map</a></li>
+                        <li><a href="{{ url_for('main.improvements') }}">Feedback</a></li>
+                        <li><a href="#">Get started</a></li>
+                        <li><a href="{{ url_for('main.faq') }}">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="text-white mb-3"></h5><br>
+                    <ul class="list-unstyled text-muted">
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Legal</a></li>
+                        <li><a href="#">Climate Pledge</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
     </footer>
-</footer>
 {% endblock %}
 
 {% block scripts %}
