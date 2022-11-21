@@ -50,4 +50,20 @@ def addcourse(cat=None):
     
 @main.route('/jobs', methods=['GET', 'POST'])
 def jobs(cat=None):
-    return render_template('jobs.html', title='Jobs')
+    return render_template('jobs.html', title='Jobs')    
+
+@main.route('/userstories_acceptancecriteria', methods=['GET', 'POST'])
+def userstories_acceptancecriteria(cat=None):
+    return render_template('/Course/courses/usercriteria.html', title='User Stories & Acceptance Criteria')
+
+@main.route('/burnout_charts', methods=['GET', 'POST'])
+def burnout_charts(cat=None):
+    return render_template('/Course/courses/burnoutchart.html', title='Burnout Charts for Dummies')
+
+@main.route('/dev_cycles', methods=['GET', 'POST'])
+def dev_cycles(cat=None):
+    return render_template('/Course/courses/devcycles.html', title='Different types of Development Cycles')
+    
+@main.route('/scrum_project', methods=['GET', 'POST'])
+def scrum_project(cat=None):
+    return render_template('/Course/courses/scrumweb.html', title='SCRUM Website Project')
