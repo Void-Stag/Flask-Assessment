@@ -71,3 +71,7 @@ def scrum_project(cat=None):
 @main.route('/member_articles', methods=['GET', 'POST'])
 def member_articles(cat=None):
     return render_template('/Member_Only/memberarticle.html', title='Member Articles')
+
+@main.route('/welcome_member', methods=['GET', 'POST'])
+def welcome_member(cat=None):
+    return render_template('/Member_Only/article/memberwelcome.html', title='Welcome Member')
