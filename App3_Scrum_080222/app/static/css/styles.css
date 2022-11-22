@@ -71,6 +71,10 @@ p.sitem{
         text-align: left;
 }
 
+h3.trainame{
+        padding-left: 100px;
+}
+
    /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
    .row.content {
         height: 1500px
@@ -148,3 +152,7 @@ a:hover, a:focus {
               color: #f1f1f1;
               font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
       }
+/* Avatars */
+img.avatar{
+        border-radius: 50%;
+        }
