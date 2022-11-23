@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+
+{% block title %} {{user["name"]}}'s Details {% block app_content %}
+<div style="float:left; border-style:double;">
+    <img src= "{{url_for('static', filename = user["id"]|string+".jpg")}}" height="350" >
+</div> 
+<div style="float:left; margin:10px;">
+    <h1 class="title">{{ user["name"] }}</h1>
+    <p><b>Age: &nbsp;</b> {{user["age"]}}</p>
+    <p><b>Bio: &nbsp;</b> {{user["bio"]}}</p>
+</div>
+
+
+{% endblock %}

@@ -88,7 +88,7 @@ h3.trainame{
 }
 
 
-
+/* Jumbotron */
 .jumbotron{
         margin: auto;
         width: auto;
@@ -97,6 +97,8 @@ h3.trainame{
         padding-left:60px;
         position: relative;
 }
+
+/* Left nav Bar */
 .sidenav {
         padding-top: 28px;
         margin-top: 18px;
@@ -152,7 +154,3 @@ a:hover, a:focus {
               color: #f1f1f1;
               font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
       }
-/* Avatars */
-img.avatar{
-        border-radius: 50%;
-        }
