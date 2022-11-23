@@ -82,6 +82,11 @@ def member_articles(cat=None):
 def welcome_member(cat=None):
     return render_template('/Member_Only/article/memberwelcome.html', title='Welcome Member')
 
+@main.route('/cookie_policy', methods=['GET', 'POST'])
+def cookie_policy(cat=None):
+    return render_template('/Legal/cookie_policy.html', title='Cookie Policy')
+
+
 
 @main.route("/User/<int:user_id>")
 def user_details(user_id):
