@@ -57,3 +57,8 @@ ul.profile{
 .checked {
     color: orange;
   }
+
+/* Text*/
+p.mb-1{
+    text-align: center;
+}
