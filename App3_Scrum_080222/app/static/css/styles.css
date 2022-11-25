@@ -7,6 +7,7 @@ html{
         scroll-behavior: smooth;
 }
 
+/* Images & Map*/
 img{
         float: left
 }
@@ -22,6 +23,8 @@ map.div{
 
 
 }
+
+/* Nav Bar*/
 .navbar {
         display: flex;
         align-items: center;
@@ -51,6 +54,11 @@ map.div{
         display: inline;
 }
 
+ul.email{
+        list-style: none;
+}
+
+/* Text*/
 p {
         text-align: left;
 
@@ -74,19 +82,6 @@ p.sitem{
 h3.trainame{
         padding-left: 100px;
 }
-
-   /* Set height of the grid so .sidenav can be 100% (adjust if needed) */
-   .row.content {
-        height: 1500px
-}
-
-    /* Set gray background color and 100% height */
-.sidenav {
-      background-color: #f1f1f1;
-      height: 100%;
-
-}
-
 
 /* Jumbotron */
 .jumbotron{
