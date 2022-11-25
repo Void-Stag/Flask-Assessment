@@ -3,6 +3,12 @@ from app.models import User
 
 main = Blueprint('main', __name__)
 
+users = [
+            {"id": 1, "name": "Jane Dane", "age": "5 weeks", "bio": "I am a tiny kitten rescued by the good people at Paws Rescue Center. I love squeaky toys and cuddles."},
+            {"id": 2, "name": "John Doe", "age": "8 months", "bio": "I am a handsome gentle-cat. I like to dress up in bow ties."},
+        ]
+
+
 @main.route('/')
 @main.route('/index', methods=['GET', 'POST'])
 def index(cat=None):
@@ -75,3 +81,23 @@ def member_articles(cat=None):
 @main.route('/welcome_member', methods=['GET', 'POST'])
 def welcome_member(cat=None):
     return render_template('/Member_Only/article/memberwelcome.html', title='Welcome Member')
+
+@main.route('/cookie_policy', methods=['GET', 'POST'])
+def cookie_policy(cat=None):
+    return render_template('/Legal/cookie_policy.html', title='Cookie Policy')
+
+@main.route('/Jane_Dane', methods=['GET', 'POST'])
+def Jane_Dane(cat=None):
+    return render_template('/Trainer_Profile/Jane_Prof.html', title='Jane Dane')
+
+@main.route('/John_Doe', methods=['GET', 'POST'])
+def John_Doe(cat=None):
+    return render_template('/Trainer_Profile/John_Prof.html', title='John Doe')
+
+@main.route("/User/<int:user_id>")
+def user_details(user_id):
+    """View function for Showing Details of Each Pet.""" 
+    user = next((user for user in users if user["id"] == user_id), None) 
+    if user is None: 
+        abort(404, description="No User was Found with the given ID")
+    return render_template("User.html", user = user)
