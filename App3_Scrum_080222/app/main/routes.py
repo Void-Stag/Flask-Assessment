@@ -81,7 +81,7 @@ def John_Doe(cat=None):
 #Edit
 @main.route('/edit', methods=['PATCH'])
 def edit(cat=None):
-    
+
 
 
 
