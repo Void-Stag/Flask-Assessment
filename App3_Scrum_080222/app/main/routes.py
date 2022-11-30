@@ -65,10 +65,6 @@ def dev_cycles(cat=None):
 def scrum_project(cat=None):
     return render_template('/Course/course_post/scrumweb.html', title='SCRUM Website Project')
 
-
-
-
-
 @main.route('/cookie_policy', methods=['GET', 'POST'])
 def cookie_policy(cat=None):
     return render_template('/Legal/cookie_policy.html', title='Cookie Policy')
@@ -80,6 +76,14 @@ def Jane_Dane(cat=None):
 @main.route('/John_Doe', methods=['GET', 'POST'])
 def John_Doe(cat=None):
     return render_template('/Trainer_Profile/John_Prof.html', title='John Doe')
+
+
+#Edit
+@main.route('/edit', methods=['PATCH'])
+def edit(cat=None):
+    
+
+
 
 #Authentication Required
 
