@@ -86,7 +86,6 @@ def edit(cat=None):
 
 
 #Authentication Required
-
 @main.route('/jobs', methods=['GET', 'POST'])
 def jobs(cat=None):
     return render_template('/Member_Only/jobs.html', title='Jobs')  
