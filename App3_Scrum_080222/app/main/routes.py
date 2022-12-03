@@ -2,8 +2,7 @@ from flask import Blueprint, render_template, redirect, url_for, request
 from app.models import User
 
 main = Blueprint('main', __name__)
-
-
+#
 @main.route('/')
 @main.route('/index', methods=['GET', 'POST'])
 def index(cat=None):
@@ -77,20 +76,10 @@ def Jane_Dane(cat=None):
 def John_Doe(cat=None):
     return render_template('/Trainer_Profile/John_Prof.html', title='John Doe')
 
-
-#Edit
-@main.route('/edit', methods=['PATCH'])
-def edit(cat=None):
-
-
-
-
-#Authentication Required
-@main.route('/jobs', methods=['GET', 'POST'])
+@main.route('/jobs', methods=['GET','POST'])
 def jobs(cat=None):
-    return render_template('/Member_Only/jobs.html', title='Jobs')  
+    return render_template('/Member_Only/jobs.html', title='Jobs')
 
-#Member
 @main.route('/member_articles', methods=['GET', 'POST'])
 def member_articles(cat=None):
     return render_template('/Member_Only/memberarticle.html', title='Member Articles')
@@ -99,4 +88,4 @@ def member_articles(cat=None):
 def welcome_member(cat=None):
     return render_template('/Member_Only/article/memberwelcome.html', title='Welcome Member')
 
-#Site Admin
+
