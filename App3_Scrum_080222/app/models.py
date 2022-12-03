@@ -60,7 +60,7 @@ class User(db.Model, TimestampMixin, UserMixin):
 
                 if not current_user.is_authenticated():
                     return current_app.login_manager.unauthorized()
-                auth = current_app.login_manager.reload_user().get_urole()
+                auth = current_app.login_manager.reload_user().get_auth()
                 if ( (auth != auth) and (auth != "ANY")):
                     return current_app.login_manager.unauthorized()      
                 return fn(*args, **kwargs)
