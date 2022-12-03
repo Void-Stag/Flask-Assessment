@@ -6,6 +6,7 @@ from flask import current_app
 from flask_login import UserMixin
 from flask_login import LoginManager # new code entry
 from werkzeug.security import generate_password_hash, check_password_hash
+from functools import wraps
 
 # timestamp to be inherited by other class models
 class TimestampMixin(object):
@@ -24,6 +25,7 @@ class User(db.Model, TimestampMixin, UserMixin):
     password_hash = db.Column(db.String(128))
     first_name = db.Column(db.String(20), nullable=False)
     last_name = db.Column(db.String(20), nullable=False)
+    auth = db.Column(db.String(20), nullable=True)
 
     # print to console username created
     def __repr__(self):
@@ -49,3 +51,18 @@ class User(db.Model, TimestampMixin, UserMixin):
         except:
             return
         return User.query.get(id)
+    
+    #user login
+    def login_required(auth="ANY"):
+        def wrapper(fn):
+            @wraps(fn)
+            def decorated_view(*args, **kwargs):
+
+                if not current_user.is_authenticated():
+                    return current_app.login_manager.unauthorized()
+                auth = current_app.login_manager.reload_user().get_urole()
+                if ( (auth != auth) and (auth != "ANY")):
+                    return current_app.login_manager.unauthorized()      
+                return fn(*args, **kwargs)
+            return decorated_view
+        return wrapper

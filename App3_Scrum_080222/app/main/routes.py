@@ -76,16 +76,23 @@ def Jane_Dane(cat=None):
 def John_Doe(cat=None):
     return render_template('/Trainer_Profile/John_Prof.html', title='John Doe')
 
+@main.route('/articles', methods=['GET', 'POST'])
+def articles(cat=None):
+    return render_template('/Articles/Articles.html', title='Articles')
+
+#Users
 @main.route('/jobs', methods=['GET','POST'])
 def jobs(cat=None):
-    return render_template('/Member_Only/jobs.html', title='Jobs')
+    return render_template('/User_Only/jobs.html', title='Jobs')
 
+#Members
 @main.route('/member_articles', methods=['GET', 'POST'])
 def member_articles(cat=None):
-    return render_template('/Member_Only/memberarticle.html', title='Member Articles')
+    return render_template('/Articles/Member_Only/memberarticle.html', title='Member Articles')
 
 @main.route('/welcome_member', methods=['GET', 'POST'])
 def welcome_member(cat=None):
-    return render_template('/Member_Only/article/memberwelcome.html', title='Welcome Member')
+    return render_template('/Articles/Member_Only/posts/memberwelcome.html', title='Welcome Member')
+#Trainers
 
-
+#Admin
