@@ -6,7 +6,7 @@
     {{ super() }}
     <link href="{{url_for('static', filename='css/styles.css')}}" rel="stylesheet">
     <link href="{{url_for('static', filename='css/profile.css')}}" rel="stylesheet">
-    <link href="{{url_for('static', filename='css/jscont.css')}}" rel="stylesheet">
+    <link href="{{url_for('static', filename='css/privacy.css')}}" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 {% endblock %}
 
@@ -110,7 +110,7 @@
                 <div class="col-lg-2 col-md-6">
                     <h5 class="text-white mb-3"></h5><br>
                     <ul class="list-unstyled text-muted">
-                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="{{ url_for('main.privacy_policy') }}">Privacy Policy</a></li>
                         <li><a href="{{ url_for('main.cookie_policy') }}">Cookie Policy</a></li>
                     </ul>
                 </div>

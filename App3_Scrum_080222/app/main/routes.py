@@ -89,3 +89,39 @@ def welcome_member(cat=None):
     return render_template('/Member_Only/article/memberwelcome.html', title='Welcome Member')
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@main.route('/privacy_policy', methods=['GET','POST'])
+def privacy_policy(cat=None):
+    return render_template('/Legal/privacy_policy.html', title='Privacy Policy')
