@@ -19,8 +19,6 @@
         </ul>
       </div>
       <div class="col-sm-8 text-left"> 
-      {% if current_user.is_authenticated %}
-       <li><a href="{{ url_for('auth.adminscrum') }}" >Forgotton Password</a></li>
         <h3>Introduction of scrum</h3>
           <p>Scrum is a framework within which people
               can address complex adaptive problems,
@@ -38,26 +36,7 @@
                       lightweight and simple to understand, while still remaining robust
                       enough to support complex product development in the face of rapidly
                       changing business environments.</p>
-      {% else %}
-        <h3>Introduction of scrum</h3>
-          <p>Scrum is a framework within which people
-          can address complex adaptive problems,
-          while productively and creatively delivering products
-          of the highest possible value. The framework is designed to be
-                  lightweight and simple to understand, while still remaining robust
-                  enough to support complex product development in the face of rapidly
-                  changing business environments. </p>
-                <hr>
-                <h3>The basics of scrum</h3>
-                <p>Scrum is a framework within which people
-                  can address complex adaptive problems,
-                  while productively and creatively delivering products
-                  of the highest possible value. The framework is designed to be
-                  lightweight and simple to understand, while still remaining robust
-                  enough to support complex product development in the face of rapidly
-                  changing business environments.</p>
                   </div>
                 </div>
               </div>
-      {% endif %}
 {% endblock %}
