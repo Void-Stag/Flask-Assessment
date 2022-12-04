@@ -4,7 +4,7 @@
 {% block app_content %}
 <div class="jumbotron"><!-- Template layout from W3schools ref:https://www.w3schools.com/bootstrap/bootstrap_templates.asp-->
     <div class="container text-center">
-      <h1>Articles</h1>      
+      <h1>Member-Only Articles</h1>      
     </div>
   </div>
   
@@ -12,7 +12,9 @@
           <div class="row content">
             <div class="col-sm-3 sidenav">
               <ul class="nav nav-pills nav-stacked">
-              <li><a href="{{ url_for('main.course') }}">Misc Articles</a></li>
+              <li class="active"><a href="{{ url_for('main.member_articles') }}">Member Articles</a></li>
+              <hr>
+              <li><a href="{{ url_for('main.articles') }}">Articles</a></li>
             </ul>
             </div>
             <div class="col-sm-8 text-left"> 

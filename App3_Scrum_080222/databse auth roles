@@ -2,3 +2,9 @@ Admin  = Site Admin/Editor
 Member = Member
 Trainer = Trainer
 Practi = Practicioner
+
+Users:
+Sean = Admin
+H = Admin
+JDane = Trainer
+bobcat = Member
