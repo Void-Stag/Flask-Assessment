@@ -8,3 +8,6 @@ Sean = Admin
 H = Admin
 JDane = Trainer
 bobcat = Member
+
+To update table
+UPDATE user SET auth = '' WHERE id = ''
