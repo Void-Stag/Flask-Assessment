@@ -20,7 +20,9 @@
       </div>
       <div class="col-sm-8 text-left"> 
       {% if current_user.is_authenticated %}
-       <li><a href="{{ url_for('auth.adminscrum') }}" >Forgotton Password</a></li>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="{{ url_for('auth.adminscrum') }}" >Edit</a></li>
+      </ul>
         <h3>Introduction of scrum</h3>
           <p>Scrum is a framework within which people
               can address complex adaptive problems,
