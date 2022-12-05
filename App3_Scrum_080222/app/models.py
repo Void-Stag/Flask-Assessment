@@ -24,6 +24,7 @@ class User(db.Model, TimestampMixin, UserMixin):
     password_hash = db.Column(db.String(128))
     first_name = db.Column(db.String(20), nullable=False)
     last_name = db.Column(db.String(20), nullable=False)
+    auth = db.Column(db.String(20), nullable=True)
 
     # print to console username created
     def __repr__(self):
@@ -49,3 +50,8 @@ class User(db.Model, TimestampMixin, UserMixin):
         except:
             return
         return User.query.get(id)
+
+
+
+    def is_admin(self):
+        return self.auth == "admin"
