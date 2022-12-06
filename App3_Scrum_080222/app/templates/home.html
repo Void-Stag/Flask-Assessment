@@ -3,6 +3,21 @@
 
 {% block app_content %}
 
+<div>
+    <h2>Announcements</h2>
+    <br>
+    
+</div>
 
 
+
+<button onclick=submit()>Click me!</button>
+<script>
+function got_data(data){
+    alert(data)
+}
+function submit() {
+    $.getJSON('/announcements', 'trash', got_data)
+}
+</script>
 {% endblock %}
