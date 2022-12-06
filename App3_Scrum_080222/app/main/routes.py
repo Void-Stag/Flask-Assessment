@@ -81,6 +81,10 @@ def John_Doe(cat=None):
 def articles(cat=None):
     return render_template('/Articles/Articles.html', title='Articles')
 
+@main.route('/whatnext', methods=['GET', 'POST'])
+def whatnext(cat=None):
+    return render_template('/Articles/Article#1.html', title='What is next?')
+
 #Users
 @main.route('/jobs', methods=['GET','POST'])
 def jobs(cat=None):
