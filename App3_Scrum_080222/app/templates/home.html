@@ -5,14 +5,7 @@
 
 <div class="col-sm-2 sidnav">
     <h2>Special Announcements</h2>
-    <form action="/action_page.">
-        <label for="fname">First name:</label><br>
-        <input type="text" id="fname" name="fname" value="John"><br>
-        <label for="lname">Last name:</label><br>
-        <input type="text" id="lname" name="lname" value="Doe"><br><br>
-        <input type="submit" value="Submit">
-      </form> 
-      
+
     <br>
     <button id="btn2">Add Announcement</button>
     <br>
@@ -30,17 +23,23 @@
     {{ super() }}
 <script>
         $(document).ready(function contrequest(){//Once the page has loaded, the folowing function is executed
-            $.getJSON('/announcements', 'trash', got_data)//Obtains the data from the annoumcement route
+            $.getJSON('/addannounce', 'trash', get_data)//Obtains the data from the annoumcement route
         });
-        function got_data(data){//When triggered by the above function, takes the retrieved data and inserts it on the page
-            $("#content").html(data);
-            //$("#content").append(JSON.stringify(data));//Turns the data into a string and inserts it into the div using div ID
+        function get_data(data){//When triggered by the above function, takes the retrieved data and inserts it on the page
             
+            //$("#content").html(data);//Sends and converts data to be displayed in the div associated by id in the HTML file
+            $("#content").append(JSON.stringify(data));
         }
-    function add_data(data){
+
+        function add_data(data){
             $("#btn2").click(function(){
+            $.getJSON(update_data)
+         });
+        }
+        
+        function update_data(data){
+            $.getJSON(get_data)
             $("ol").append("<li>Appended item</li>");
-  });
         }
 </script>
 {% endblock %}

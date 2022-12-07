@@ -1,5 +1,5 @@
 from flask import Blueprint, render_template, redirect, url_for, request
-from app.models import User
+from app.models import User, db
 from flask import jsonify
 
 main = Blueprint('main', __name__)
@@ -87,14 +87,19 @@ def whatnext(cat=None):
     return render_template('/Articles/Article#1.html', title='What is next?')
 
 #Announcement database routes
-@main.route('/announcements', methods=['GET', 'POST'])
-def announcements(cat=None):
+@main.route('/getannounce', methods=['GET', 'POST'])
+def getannounce(cat=None):
     print(f"announcements {cat}")
     toReturn= ('banana ', 'blinky ', 'pie ')
-    return jsonify(toReturn)
+    return jsonify(toReturn) #Returns declared values for json
 
-@main.route('/addannounce', methods=['POST'])
-def addannounce(cat=None):
+@main.route('/addannounce', methods=['GET', 'POST'])
+def addannounce(title, content, cat=None):
+    print(f"announcements {cat}")
+    content = request.form.get('content')
+    title = request.form.get('title')
+
+    return
 
 
 #Users
