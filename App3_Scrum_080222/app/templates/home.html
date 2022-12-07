@@ -6,20 +6,24 @@
 <div>
     <h2>Announcements</h2>
     <br>
-    <div id="content">
-        
+    <div class="content">
+
     </div>
 </div>
 
 
 
 <button onclick=submit()>Click me!</button>
-<script>
-function got_data(data){
-    alert(data)
-}
-function submit() {
-    $.getJSON('/announcements', 'trash', got_data)
-}
-</script>
+{% block scripts %}
+    {{ super() }}
+        <script>
+
+        function got_data(data){
+            alert(data)
+        }
+        function submit() {
+            $.getJSON('/announcements', 'trash', got_data)
+        }
+        </script>
+{% endblock %}
 {% endblock %}
