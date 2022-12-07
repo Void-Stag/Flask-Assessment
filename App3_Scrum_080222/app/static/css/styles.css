@@ -7,22 +7,11 @@ html{
         scroll-behavior: smooth;
 }
 
-/* Images & Map*/
+/* Images*/
 img{
         float: left
 }
 
-map.div{
-        text-align: left;
-        display: block;
-        padding-right: 100px;
-        padding-top: 20px;
-        float: right;
-        width: 780px;
-        padding: 0px;
-
-
-}
 
 /* Nav Bar*/
 .navbar {
