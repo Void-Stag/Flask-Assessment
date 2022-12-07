@@ -86,13 +86,15 @@ def articles(cat=None):
 def whatnext(cat=None):
     return render_template('/Articles/Article#1.html', title='What is next?')
 
+#Announcement database routes
 @main.route('/announcements', methods=['GET', 'POST'])
 def announcements(cat=None):
     print(f"announcements {cat}")
-    toReturn= ('banana', 'blinky', 'pie')
-    #return jsonify(toReturn, default=str)
+    toReturn= ('banana ', 'blinky ', 'pie ')
     return jsonify(toReturn)
 
+@main.route('/addannounce', methods=['POST'])
+def addannounce(cat=None):
 
 
 #Users

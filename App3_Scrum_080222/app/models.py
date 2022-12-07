@@ -51,7 +51,11 @@ class User(db.Model, TimestampMixin, UserMixin):
             return
         return User.query.get(id)
 
-
-
+#Admin auth
     def is_admin(self):
         return self.auth == "admin"
+
+class Announcement(db.Model, TimestampMixin, UserMixin):
+    id = db.Column(db.Integer, primary_key=True)
+    antitle = db.Column(db.String(50), nullable=False)
+    ancontent = db.Column(db.String(1000), nullable=False)

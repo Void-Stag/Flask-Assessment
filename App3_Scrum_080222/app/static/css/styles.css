@@ -90,6 +90,15 @@ h3.trainame{
         margin-left: 18px;
 }
 
+/* Right nav Bar*/
+.sidnav {
+        margin-top: 100px;
+        background-color: #dcdcdc;
+        height: 100%;
+        width: auto;
+        float: right;
+      }
+
  /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
  .row.content {height: 450px}
 
@@ -141,3 +150,8 @@ a:hover, a:focus {
         position: sticky;
          top: 0;
 }
+
+.announcecol{
+        float: right;
+}
+
