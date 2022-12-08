@@ -5,9 +5,13 @@
 
 <div class="col-sm-2 sidnav">
     <h2>Special Announcements</h2>
-
-    <br>
-    <button id="btn2">Add Announcement</button>
+    <form action="/add" method="POST">
+        <label>Title</label>
+        <input type="text" name="title" placeholder="Enter title...">
+        <label>Content</label>
+        <input type="text" name= "content" placeholder="Enter text...">
+        <button type="submit">Add</button>
+    </form>
     <br>
     <div class="panel panel-default">
         <div class="panel-body">   
@@ -23,12 +27,12 @@
     {{ super() }}
 <script>
         $(document).ready(function contrequest(){//Once the page has loaded, the folowing function is executed
-            $.getJSON('/addannounce', 'trash', get_data)//Obtains the data from the annoumcement route
+            $.getJSON('/getannounce', 'trash', get_data)//Obtains the data from the annoumcement route
         });
         function get_data(data){//When triggered by the above function, takes the retrieved data and inserts it on the page
             
-            //$("#content").html(data);//Sends and converts data to be displayed in the div associated by id in the HTML file
-            $("#content").append(JSON.stringify(data));
+            $("#content").html(data);//Sends and converts data to be displayed in the div associated by id in the HTML file
+           // $("#content").append(JSON.stringify(data));
         }
 
         function add_data(data){

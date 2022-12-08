@@ -54,8 +54,13 @@ class User(db.Model, TimestampMixin, UserMixin):
 #Admin auth
     def is_admin(self):
         return self.auth == "admin"
-
-class Announcement(db.Model, TimestampMixin, UserMixin):
+#Announcement class
+class Announcement(db.Model, TimestampMixin):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(50), nullable=False)
     content = db.Column(db.String(1000), nullable=True)
+
+#print title name to console
+    def __repr__(self):
+        return f' {self.title}, {self.content}'
+    
