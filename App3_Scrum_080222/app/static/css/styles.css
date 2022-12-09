@@ -5,13 +5,18 @@
 }
 html{
         scroll-behavior: smooth;
+        content: none;
 }
 
-/* Images*/
+/* Images */
 img{
         float: left
 }
+/* Map */
 
+.embed-responsive-100x400px{
+        padding-bottom: 400px;
+}
 
 /* Nav Bar*/
 .navbar {

@@ -24,8 +24,7 @@ def course(cat=None):
 @main.route('/')
 @main.route('/home', methods=['GET', 'POST'])
 def home(cat=None):
-  #  announcement = Announcement.query.all()
-    return render_template('home.html', title='Home',) #announcement=announcement)
+    return render_template('home.html', title='Home',) 
 
 @main.route('/users', methods=['GET','POST'])
 def users(cat=None):
@@ -86,22 +85,26 @@ def whatnext(cat=None):
 #Announcement database routes
 @main.route('/getannounce', methods=['GET', 'POST'])
 def getannounce(cat=None):
-    print(f"announcements {cat}")
-    toReturn= ('banana ', 'blinky ', 'pie ')
-    return jsonify(toReturn) #Returns declared values for json
+    announcement = [] # Declare an empty list
+    for row in Announcement.query.all(): # gathers all the data in the Announcement table
+        announcement.append((str(row.title), str(row.content)))# Turns the table data into strings
+        #print(f"announcements {announcement}") Debugging code
+    #toReturn= ('banana ', 'blinky ', 'pie ') Debugging code
+    return jsonify(announcement) #Returns declared values for json
 
-#@main.route('/addannounce', methods=['POST'])
-#def addannounce():
-   # content = request.form.get('content')
-    #title = request.form.get('title')
-    #if title != '' and content!= '' != None:
-     #   p = Announcement(title=title, content=content)
-      #  db.session.add(p)
-       # db.session.commit()
-       # return redirect('/')
-   # else:
-    #    return redirect('/')
-
+@main.route('/addannounce', methods=['POST'])
+def addannounce():
+    content = request.form.get('content')# Requests the values in the title box
+    title = request.form.get('title')#Requests the values in the content box
+    #print("announce 1") Debugging code
+    if title != '' and content!= '' != None: # If there is content in the form boxes then the following with execute
+       # print("announce 2") Debugging code
+        p = Announcement(title=title, content=content)# finds the declared tables to put the values into
+        db.session.add(p)# Adds the requested values to the declared fields
+        db.session.commit()# saves the database
+        #print("announce 3") Debugging code
+   #print("announce 4") Debugging code
+    return redirect('/')#Refreshes the page
 
 
 #Users

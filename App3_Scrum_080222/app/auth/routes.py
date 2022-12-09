@@ -87,9 +87,3 @@ def reset_password(token):
         return redirect(url_for('auth.login'))
     return render_template('auth/reset_password.html', form=form)
 
-@auth.route('/announcement', methods=['GET', 'POST'])
-def announcement():
-    if current_user.is_admin():
-        return render_template('auth/admin/announcement.html')
-    else:
-        return redirect(url_for('main.home'))

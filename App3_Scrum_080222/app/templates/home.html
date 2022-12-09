@@ -5,48 +5,65 @@
 
 <div class="col-sm-2 sidnav">
     <h2>Special Announcements</h2>
-    <form action="/add" method="POST">
+    <form action="/addannounce" method="POST">
         <label>Title</label>
-        <input type="text" name="title" placeholder="Enter title...">
+        <input type="text" name="title" placeholder="Enter title..."><br>
         <label>Content</label>
         <input type="text" name= "content" placeholder="Enter text...">
-        <button type="submit">Add</button>
+        <button type="submit">Post</button>
     </form>
     <br>
     <div class="panel panel-default">
         <div class="panel-body">   
              <div id="content">
 
-        </div></div>
+            </div>
+          </div>
       </div>
-
 </div>
-<div class="container-fluid text-center">
-    <div class="row">
-        <div class="col-sm-4">
-          <div class="well">
-            <h6 class="mb-0">Email:</h6>
-            <span class="text-secondary">
-              <ul class="email">
-                <!--The link below allows a email message to be created in default mail app, filling in the recepient box-->
-                <li><a href="mailto:supportdesk@swiftcourses.com">supportdesk@swiftcourses.com</a></li>
-              </ul>
-            </span>
-            <br> 
-            <h6 class="mb-0">Phone:</h6>
-            <span class="text-secondary">(+44) 08934 8934673</span> 
-          </div>
-        </div>
-        <div class="col-sm-4">
-          <div class="well">
-            <h6 class="mb-0">Address:</h6>
-            <span class="text-secondary">
-              Stockwood Gardens<br>
-              Newlands Rd<br>
-              Luton LU1 4AA</span>
-          </div>
-        </div>
+
+<!-- The large div below contains the contact details-->
+<div class="container py-4">
+  <div class="row gy-4 gx-5">
+    <div class="col-lg-2 col-md-6">
+      <h5 class="text-white mb-3">Contact Details</h5><br>
+      <ul class="list-unstyled text-muted">
+          <p class="small text-muted">
+              <span class="text-secondary">Phone: (+44) 08934 8934673</span><br>
+              Email:<br>
+              <!--The link below allows a email message to be created in default mail app, filling in the recepient box-->
+              <li><a href="mailto:supportdesk@swiftcourses.com">supportdesk@swiftcourses.com</a></li> 
+          </p>
+      </ul>
+    </div>
+      <div class="col-lg-2 col-md-6">
+          <h5 class="text-white mb-3"></h5>
+          <ul class="list-unstyled text-muted">
+ 
+          </ul>
       </div>
+      <div class="col-lg-2 col-md-6">
+          <h5 class="text-white mb-3"></h5><br>
+          <ul class="list-unstyled text-muted">
+
+          </ul>
+      </div>
+      <div class="col-lg-2 col-md-6">
+        <h5 class="text-white mb-3">Office Address</h5><br>
+        <ul class="list-unstyled text-muted">
+            <p class="small text-muted">
+                Stockwood Gardens<br>
+                Newlands Rd<br>
+                Luton LU1 4AA</p>
+        </ul>
+    </div>
+  </div>
+</div>
+
+<!--Div to format and position the google map-->
+<div class="embed-responsive embed-responsive-100x400px">
+  <!--Contains an google map embed which allows access to an interactable map which is linked to Google Maps-->
+  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d35818.719732048536!2d-4.25169!3d55.868392!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x488815562056ceeb%3A0x71e683b805ef511e!2sGlasgow%2C+Glasgow+City%2C+UK!5e0!3m2!1sen!2sus!https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9573.243132160434!2d-0.4270260601796047!3d51.87117999073809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487649043c494f1d%3A0xb391a877a3fcbc56!2sStockwood%20Gardens!5e0!3m2!1sen!2suk!4v1670265320387!5m2!1sen!2suk" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 </div>
 
 {% block scripts %}
@@ -61,16 +78,6 @@
            // $("#content").append(JSON.stringify(data));
         }
 
-        function add_data(data){
-            $("#btn2").click(function(){
-            $.getJSON(update_data)
-         });
-        }
-        
-        function update_data(data){
-            $.getJSON(get_data)
-            $("ol").append("<li>Appended item</li>");
-        }
 </script>
 {% endblock %}
 {% endblock %}
