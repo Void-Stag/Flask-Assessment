@@ -28,8 +28,8 @@ def course(cat=None):
 @main.route('/')
 @main.route('/home', methods=['GET', 'POST'])
 def home(cat=None):
-    announcement = Announcement.query.all()
-    return render_template('home.html', title='Home', announcement=announcement)
+  #  announcement = Announcement.query.all()
+    return render_template('home.html', title='Home',) #announcement=announcement)
 
 @main.route('/users', methods=['GET','POST'])
 def users(cat=None):
@@ -94,19 +94,18 @@ def getannounce(cat=None):
     toReturn= ('banana ', 'blinky ', 'pie ')
     return jsonify(toReturn) #Returns declared values for json
 
-@main.route('/addannounce', methods=['POST'])
-def addannounce():
-    content = request.form.get('content')
-    title = request.form.get('title')
-    if title != '' and content!= '' != None:
-        p = Announcement(title=title, content=content)
-        db.session.add(p)
-        db.session.commit()
-        return redirect('/')
-    else:
-        return redirect('/')
+#@main.route('/addannounce', methods=['POST'])
+#def addannounce():
+   # content = request.form.get('content')
+    #title = request.form.get('title')
+    #if title != '' and content!= '' != None:
+     #   p = Announcement(title=title, content=content)
+      #  db.session.add(p)
+       # db.session.commit()
+       # return redirect('/')
+   # else:
+    #    return redirect('/')
 
-    return
 
 
 #Users
