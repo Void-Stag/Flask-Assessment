@@ -28,11 +28,14 @@
                 <br>
                 <hr>
 <!-- begin wwww.htmlcommentbox.com -->
-                <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Comment Box</a> is loading comments...</div>
-                <link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" />
-                <script type="text/javascript" id="hcb"> 
+                <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Comment Box</a> is loading comments...</div><!--The first element to be displayed as a delay before the script loads the comment box elements-->
+                <link rel="stylesheet" type="text/css" href="https://www.htmlcommentbox.com/static/skins/bootstrap/twitter-bootstrap.css?v=0" /><!--Links a CSS sheet from the website link for the comment box-->
+                <script type="text/javascript" id="hcb"> //The script contains form elements inside for name and comment.  When the submit button is pressed, the script takes what has been inputted into the form and creates formatted elements with the data passed into it and displays them below the form elements
                 /*<!--*/ if(!window.hcb_user){hcb_user={};} (function(){var s=document.createElement("script"), l=hcb_user.PAGE || (""+window.location).replace(/'/g,"%27"), h="https://www.htmlcommentbox.com";s.setAttribute("type","text/javascript");s.setAttribute("src", h+"/jread?page="+encodeURIComponent(l).replace("+","%2B")+"&mod=%241%24wq1rdBcg%243e6nwUOAFfSkQPoLSl6BJ%2F"+"&opts=16798&num=10&ts=1669023512024");if (typeof s!="undefined") document.getElementsByTagName("head")[0].appendChild(s);})(); 
-                </script>
+                </script><!-- There are elements to upload an image which the script should take the file selected to upload and pass them into the created elemets for that comment. 
+                I did not intend for this feature to be in here, but trying to remove it breaks the whole comment box.
+                
+                There is an option to log in for the comment box, but since this is a third party script that is uncustomisable, it does not work-->
 <!-- end www.htmlcommentbox.com -->
               
             </div>
