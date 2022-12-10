@@ -47,10 +47,18 @@ img{
         text-align: center;
         display: inline;
 }
-
-ul.email{
+/* List */
+li.email{
         list-style: none;
 }
+
+/* Announcement List */
+.announce{
+        overflow: auto;
+        max-width: fit-content;
+        height: 300px;
+}
+
 
 /* Text*/
 p {
