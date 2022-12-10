@@ -5,23 +5,17 @@
 }
 html{
         scroll-behavior: smooth;
+        content: none;
 }
 
-/* Images & Map*/
+/* Images */
 img{
         float: left
 }
+/* Map */
 
-map.div{
-        text-align: left;
-        display: block;
-        padding-right: 100px;
-        padding-top: 20px;
-        float: right;
-        width: 780px;
-        padding: 0px;
-
-
+.embed-responsive-100x400px{
+        padding-bottom: 400px;
 }
 
 /* Nav Bar*/
@@ -53,10 +47,18 @@ map.div{
         text-align: center;
         display: inline;
 }
-
-ul.email{
+/* List */
+li.email{
         list-style: none;
 }
+
+/* Announcement List */
+.announce{
+        overflow: auto;
+        max-width: fit-content;
+        height: 300px;
+}
+
 
 /* Text*/
 p {
@@ -100,6 +102,15 @@ h3.trainame{
         padding-left: 28px;
         margin-left: 18px;
 }
+
+/* Right nav Bar*/
+.sidnav {
+        margin-top: 100px;
+        background-color: #ece6e6;
+        height: 100%;
+        width: auto;
+        float: right;
+      }
 
  /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
  .row.content {height: 450px}
@@ -145,3 +156,15 @@ a:hover, a:focus {
               color: #f1f1f1;
               font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
       }
+
+
+.sticky{
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+         top: 0;
+}
+
+.announcecol{
+        float: right;
+}
+
