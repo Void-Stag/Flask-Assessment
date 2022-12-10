@@ -45,7 +45,8 @@ def basicscrum(cat=None):
 @main.route('/addcourse', methods=['GET', 'POST'])
 def addcourse(cat=None):
     return render_template('/Course/additionalcourses.html', title='Additional Courses')
-      
+
+#Certification Courses      
 @main.route('/userstories_acceptancecriteria', methods=['GET', 'POST'])
 def userstories_acceptancecriteria(cat=None):
     return render_template('/Course/course_post/usercriteria.html', title='User Stories & Acceptance Criteria')
@@ -62,10 +63,17 @@ def dev_cycles(cat=None):
 def scrum_project(cat=None):
     return render_template('/Course/course_post/scrumweb.html', title='SCRUM Website Project')
 
+#Non certification Courses
+@main.route('/python_basics', methods=['GET', 'POST'])
+def python_basics(cat=None):
+    return render_template('/Course/addcourse/pythonbasic.html', title='Python Basics')
+
+#Legal
 @main.route('/cookie_policy', methods=['GET', 'POST'])
 def cookie_policy(cat=None):
     return render_template('/Legal/cookie_policy.html', title='Cookie Policy')
 
+# TRainer Profiles
 @main.route('/Jane_Dane', methods=['GET', 'POST'])
 def Jane_Dane(cat=None):
     return render_template('/Trainer_Profile/Jane_Prof.html', title='Jane Dane')
@@ -74,6 +82,7 @@ def Jane_Dane(cat=None):
 def John_Doe(cat=None):
     return render_template('/Trainer_Profile/John_Prof.html', title='John Doe')
 
+#Articles
 @main.route('/articles', methods=['GET', 'POST'])
 def articles(cat=None):
     return render_template('/Articles/Articles.html', title='Articles')
@@ -107,12 +116,12 @@ def addannounce():
     return redirect('/')#Refreshes the page
 
 
-#Users
+#Jobs
 @main.route('/jobs', methods=['GET','POST'])
 def jobs(cat=None):
     return render_template('/User_Only/jobs.html', title='Jobs')
 
-#Members
+#Member Articles
 @main.route('/member_articles', methods=['GET', 'POST'])
 def member_articles(cat=None):
     return render_template('/Articles/memberarticle.html', title='Member Articles')
