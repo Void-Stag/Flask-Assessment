@@ -5,7 +5,7 @@
 <div class="jumbotron"><!-- Template layout from W3schools ref:https://www.w3schools.com/bootstrap/bootstrap_templates.asp-->
   <div class="container text-center">
     <h1>Courses</h1>      
-    <p class="copyright">Additional Courses</p>
+    <p class="copyright">Non-certification Courses</p>
   </div>
 </div>
 
@@ -20,8 +20,12 @@
           </ul>
           </div>
           <div class="col-sm-8 text-left"> 
-            <h1>Welcome</h1>
-            <p>Currently there are no additional courses to apply for, please keep watching this space for further updates.</p>
+            <div id="bannerimage">
+              <h2 id="cortitle">Python Basics</h2>
+            </div>
+            <p>What is Python? This course will provide you with the basic knowledge of the Python programming Language! </p>
+              <br>
+              <a href="{{ url_for('main.python_basics') }}" class="btn btn-default btn-lg" role="button">More Details</a>
             <hr>
           </div>
         </div>
