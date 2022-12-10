@@ -6,7 +6,6 @@
 <div class="col-sm-2 sidnav">
     <h2>Special Announcements</h2>
     {% if current_user.is_authenticated %}
-      {% if current_user.auth_admin %}
           <form action="/addannounce" method="POST">
               <label>Title</label>
               <input type="text" name="title" placeholder="Enter title..."><br>
@@ -22,15 +21,6 @@
                   </div>
                 </div>
             </div>
-        {% else %}
-          <div class="panel panel-default">
-            <div class="panel-body">   
-                <div id="content" class="announce">
-                  <!--Data from the databse will be passed into here by the jquery-->
-                </div>
-              </div>
-          </div>
-        {% endif %}
     {% else %}
       <div class="panel panel-default">
         <div class="panel-body">   
