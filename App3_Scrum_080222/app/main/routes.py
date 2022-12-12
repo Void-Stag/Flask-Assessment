@@ -9,9 +9,9 @@ main = Blueprint('main', __name__)
 def index(cat=None):
     return render_template('index.html',  title='Home')
 
-@main.route('/events', methods=['GET','POST'])
-def events(cat=None):
-    return render_template('event.html', title='Events')
+@main.route('/events', methods=['GET','POST'])# Defines the route name and what it can do. GET is fetching data and POST is sending data
+def events(cat=None):#Function defines what happens when the route is called
+    return render_template('event.html', title='Events')#Returns the html file which is rendered to display data using jinja as it is a child template file
 
 @main.route('/sitemap', methods=['GET', 'POST'])
 def sitemap(cat=None):

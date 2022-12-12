@@ -108,7 +108,7 @@
     {{ super() }}
 <script>
         $(document).ready(function contrequest(){//Once the page has loaded, the folowing function is executed
-            $.getJSON('/getannounce', 'trash', get_data)//Obtains the data from the annoumcement route
+            $.getJSON('/getannounce', get_data)//Obtains the data from the annoumcement route
         });
         function get_data(data){//When triggered by the above function, takes the retrieved data and inserts it on the page
            //console.log('1') Debugging code for testing flow
