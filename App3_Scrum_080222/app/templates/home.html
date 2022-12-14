@@ -6,36 +6,161 @@
 <div class="col-sm-2 sidnav">
     <h2>Special Announcements</h2>
     {% if current_user.is_authenticated %}
-          <form action="/addannounce" method="POST">
-              <label>Title</label>
-              <input type="text" name="title" placeholder="Enter title..."><br>
-              <label>Content</label>
-              <input type="text" name= "content" placeholder="Enter text...">
-              <button type="submit">Post</button>
-          </form>
-          <br>
-          <div class="panel panel-default">
-              <div class="panel-body">   
-                  <div id="content" class="announce">
-                    <!--Data from the databse will be passed into here by the jquery-->
-                  </div>
-                </div>
-            </div>
-    {% else %}
-      <div class="panel panel-default">
-        <div class="panel-body">   
-             <div id="content" class="announce">
+        <form action="/addannounce" method="POST">
+            <label>Title</label>
+            <input type="text" name="title" placeholder="Enter title..."><br>
+            <label>Content</label>
+            <input type="text" name= "content" placeholder="Enter text...">
+            <button type="submit">Post</button>
+        </form>
+        <br>
+        <div class="panel panel-default">
+          <div class="panel-body">   
+            <div id="content" class="announce">
               <!--Data from the databse will be passed into here by the jquery-->
             </div>
           </div>
+        </div>
+    {% else %}
+    <div class="panel panel-default">
+        <div class="panel-body">   
+          <div id="content" class="announce">
+            <!--Data from the databse will be passed into here by the jquery-->
+          </div>
+        </div>
       </div>
     {% endif %}
+
 </div>
 
 <!-- The large div below contains the contact details-->
 <section id="services" class="services-area services-eight">
   <div class="section-title-five">
     <div class="container">
+      <divclass="jumbotron text-center"> 
+
+  <h1>Certified Scrum Master (CSM)</h1> 
+
+  <p></p> 
+
+</div> 
+
+   
+
+<divclass="container"> 
+
+  <divclass="row"> 
+
+    <divclass="col-sm-4"> 
+
+      <h3>Introduction</h3> 
+
+ 
+
+    <p> The Scrum Master is an examplary leader, 
+
+      one who serves and leads the team. 
+
+       The certification process provides candidates with an understanding of Scrum values, which emphasize teamwork, 
+
+       accountability and iterative progress toward a well-defined goal. 
+
+    </p> 
+
+       
+
+    </div> 
+
+    <divclass="col-sm-4"> 
+
+      
+
+       
+
+    </div> 
+
+    <divclass="col-sm-4"> 
+
+      <h3>CSM Certifications Benefits</h3>         
+
+      <p>The Agile methodology is taking the world by storm, and the CSM credential can set you apart 
+
+         from the crowd. These credentials show that you're a leader who can provide expertise far beyond  
+
+         what a conventional project manager could contribute. </p> 
+
+         <ahref="https://www.simplilearn.com/benefits-of-csm-certification-article#:~:text=Improve%20Team%20Management%20and%20Collaboration,lead%20an%20agile%20team%20successfully."> 
+
+          For more info click here</a> 
+
+     
+
+    </div> 
+
+ 
+
+  </div> 
+
+</div>
+      <divclass="container-fluid text-center">     
+
+  <divclass="row content"> 
+
+ 
+
+    <divclass="col-sm-2 sidenav"> 
+
+      <h3>Special Articles</h3> 
+
+      <ol> 
+
+      <li><ahref="https://www.simplilearn.com/data-science-roadmap-article">Data Science</a></li> 
+
+      <li><ahref="https://insidebigdata.com/2022/11/28/2023-trends-in-artificial-intelligence-and-machine-learning-generative-ai-unfolds/"> Machine Learning and AI</a></li> 
+
+      <li><ahref="https://www.perforce.com/blog/vcs/future-of-game-development-trends">Games Development</a></li> 
+
+      <li><ahref="https://developer.ibm.com/technologies/mobile/articles/">Mobile Development</a></li> 
+
+      <li><ahref="https://www.forbes.com/sites/bernardmarr/2020/12/18/the-future-of-virtual-reality-vr/?sh=21338fc827be">Virtual Reality</a></li> 
+
+      <li><ahref="https://www.interaction-design.org/literature/topics/web-design#:~:text=Web%20design%20is%20a%20multi,using%20CSS%20and%2For%20JavaScript.">Web design</a></li> 
+
+    </ol> 
+
+    </div> 
+
+    <divclass="col-sm-8 text-left">                                           
+
+      <h1>Most Popular Items</h1> 
+
+      <h2>List of the most valuable Courses (2023)</h2> 
+
+      <ol> 
+
+       <li>Data Science</li> 
+
+       <li>Machine Learning and Artificial Intelligence </li> 
+
+       <li>Games Development</li> 
+
+       <li>Mobile Development</li> 
+
+       <li>Virtual Reality</li> 
+
+       <li>Certificate in Beginners Web Design with HTML5 & CSS3</li> 
+
+      </ol>   
+
+    </div> 
+
+    <divclass="col-sm-2 sidenav"> 
+
+    </div> 
+
+  </div> 
+
+</div> 
     </div>
   </div>
   <!--#28 to 31 have to be kept in to prevent the content from moving to the side until the home content is inputted-->
@@ -104,25 +229,35 @@
   <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d35818.719732048536!2d-4.25169!3d55.868392!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x488815562056ceeb%3A0x71e683b805ef511e!2sGlasgow%2C+Glasgow+City%2C+UK!5e0!3m2!1sen!2sus!https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9573.243132160434!2d-0.4270260601796047!3d51.87117999073809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487649043c494f1d%3A0xb391a877a3fcbc56!2sStockwood%20Gardens!5e0!3m2!1sen!2suk!4v1670265320387!5m2!1sen!2suk" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
 </div>
 
+
 {% block scripts %}
     {{ super() }}
 <script>
         $(document).ready(function contrequest(){//Once the page has loaded, the folowing function is executed
-            $.getJSON('/getannounce', 'trash', get_data)//Obtains the data from the annoumcement route
+          $.getJSON('/getannounce', get_data)//Obtains the data from the annoumcement route
         });
         function get_data(data){//When triggered by the above function, takes the retrieved data and inserts it on the page
            //console.log('1') Debugging code for testing flow
           // console.log('2')Debugging code for testing flow
-           var content = '' //Creates an empty list
-           
-           data.forEach(function(element) { //Iterates the code within for each database entry
+          var content = '' //Creates an empty list
+                     
+          data.forEach(function(element) { //Iterates the code within for each database entry
            // console.log('3')Debugging code for testing flow
             content += `<li>${element[0]}<br> ${element[1]}</li><hr>` // formats the data into the list HTML element
            });
            $("#content").html(content);//Sends the formatted list to be displayed in the div associated by id in the HTML file
-           
-        }
+          }
 
+        function add_data(data){
+            $("#btn2").click(function(){
+            $.getJSON(update_data)
+         });
+        }
+        
+        function update_data(data){
+            $.getJSON(get_data)
+            $("ol").append("<li>Appended item</li>");
+        }
 </script>
 {% endblock %}
 {% endblock %}
