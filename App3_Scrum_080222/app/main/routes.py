@@ -24,7 +24,8 @@ def course(cat=None):
 @main.route('/')
 @main.route('/home', methods=['GET', 'POST'])
 def home(cat=None):
-    return render_template('home.html', title='Home',) 
+    announcements = Announcement.query.order_by(Announcement.created_at).all()
+    return render_template('home.html', title='Home', announcements = announcements) 
 
 @main.route('/users', methods=['GET','POST'])
 def users(cat=None):
