@@ -82,6 +82,24 @@ def Jane_Dane(cat=None):
 def John_Doe(cat=None):
     return render_template('/Trainer_Profile/John_Prof.html', title='John Doe')
 
+# Practitioner Profiles
+@main.route('/Heather_Smith', methods=['GET','POST'])
+def Heather_Smith(cat=None):
+    return render_template('/Practitioner_Profile/Heather_Prof.html', title='Heather Smith')
+
+@main.route('/Sagar_Kesh', methods=['GET','POST'])
+def Sagar_Kesh(cat=None):
+    return render_template('/Practitioner_Profile/Sagar_Prof.html', title='Sagar Keshawala')
+
+@main.route('/Marcus_Yidom', methods=['GET','POST'])
+def Marcus_Yidom(cat=None):
+    return render_template('/Practitioner_Profile/Marcus_Prof.html', title='Marcus Yidom')
+
+# Master Profiles
+@main.route('/Wallace_Harrison', methods=['GET','POST'])
+def Wallace_Harrison(cat=None):
+    return render_template('/Master_Profile/Wallace_Prof.html', title='Wallace Harrison')
+
 #Articles
 @main.route('/articles', methods=['GET', 'POST'])
 def articles(cat=None):

@@ -8,8 +8,7 @@
     <h1>Site Map</h1>
     <p></p> 
   </div>
-
-
+  {% if current_user.is_authenticated %}
   <nav class="sitenav">
     <ul>
       <li>
@@ -49,7 +48,7 @@
             </ul>
           </li>
           <li>
-            <a href="{{ url_for('main.course') }}">Courses</a>
+            <a>Courses</a>
             <ul>
               <li>
                 <a href="{{ url_for('main.course') }}">Certified Courses</a>
@@ -75,9 +74,89 @@
           <li>
             <a href="{{ url_for('main.faq') }}">FAQ</a>
           </li>
-        </ul>
+          <li>
+            <a>User Menu</a>
+              <ul>
+                <li>
+                  <a href="{{ url_for('main.jobs') }}">Jobs</a>
+                </li>
+              </ul>
+          </li>
       </li>
     </ul>
   </nav>
+
+  {% else %}
+    <nav class="sitenav">
+      <ul>
+        <li>
+          <a href="{{ url_for('main.home') }}">Home</a>
+          <ul>
+            <li>
+              <a>Footer</a>
+              <ul>
+                <li>
+                  <a href="{{ url_for('main.sitemap') }}">Site Map</a>
+                  <ul>
+                    <li>
+                      <a href="{{ url_for('main.improvements') }}">Feedback</a>
+                      <ul>
+                        <li>
+                          <a href="#">Corporate Sponsors</a>
+                          <ul>
+                            <li>
+                              <a href="{{ url_for('main.Map') }}">Map</a>
+                              <ul>
+                                <li>
+                                  <a href="{{ url_for('main.privacy_policy') }}">Privacy Policy</a>
+                                  <ul>
+                                    <li>
+                                      <a href="{{ url_for('main.cookie_policy') }}">Cookie Policy</a>
+                                    </li>
+                                  </ul>
+                                </li>
+                              </ul>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a>Courses</a>
+              <ul>
+                <li>
+                  <a href="{{ url_for('main.course') }}">Certified Courses</a>
+                  <ul>
+                    <li>
+                      <a href="{{ url_for('main.addcourse') }}">Non-Certified Courses</a>
+                      <ul>
+                        <li>
+                          <a href="{{ url_for('main.users') }}">Certified Users</a>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="{{ url_for('main.events') }}">Events</a>
+            </li>
+            <li>
+              <a href="{{ url_for('main.articles') }}">Articles</a>
+            </li>
+            <li>
+              <a href="{{ url_for('main.faq') }}">FAQ</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  {% endif %}
+  
 
 {% endblock %}

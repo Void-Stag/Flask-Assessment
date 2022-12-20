@@ -1,0 +1,81 @@
+{% extends "base.html" %}
+
+
+{% block app_content %}
+<div class="container">
+    <div class="main-body">
+    
+          <div class="row gutters-sm">
+            <div class="col-md-4 mb-3">
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex flex-column align-items-center text-center">
+                    <!-- Image is linked from the internet in #14-->
+                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F7f%2F79%2F6d%2F7f796d57218d9cd81a92d9e6e8e51ce4.png&f=1&nofb=1&ipt=6def439ad804e947fc44fb57cd0802ef518b20e955ba5ba36a2952560479b4cf&ipo=images" alt="Jane" class="rounded-circle" width="150">
+                    <div class="mt-3">
+                      <h4>Heather Smith</h4>
+                      <p class="text-secondary mb-1">SCRUM Practitioner @Swift Courses</p>
+                      <!--The 5 span lines have classes which create 5 stars and determine if they are filled, half filled or not filled in-->
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <span class="fa fa-star checked"></span>
+                      <br>
+                      <!--The button link below uses javascript to go back to previois page in browser history to the last page-->
+                      <a href="javascript:history.back()" class="btn btn-primary" role="button">Go Back</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+            <div class="col-md-8">
+              <div class="card mb-3">
+                <div class="card-body">
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Email</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                        <ul class="email">
+                            <!--The link below allows a email message to be created in default mail app, filling in the recepient box-->
+                            <li><a href="mailto:jane@swiftcourses.com">heather@swiftcourses.com</a></li>
+                        </ul>
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Mobile</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      (940) 467-3120
+                    </div>
+                  </div>
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">Address</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      DMU, Leicester, Leicestershire
+                    </div>
+                  </div>
+                  <hr>
+                </div>
+              </div>
+                  <hr>
+                </div>
+              </div>
+
+
+
+
+            </div>
+          </div>
+
+        </div>
+    </div>
+
+{% endblock %}

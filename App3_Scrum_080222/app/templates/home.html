@@ -163,19 +163,25 @@
 </div> 
     </div>
   </div>
-</section>
-<br>
-<!-- The div below contains the contact details-->
-<section class="contact link">
-  <div class="row">
-    <div class="col-sm-6">6 cols</div>
-    <div class="col-sm-6">6 cols</div>
-  </div>
-  <div class="row">
-    <div class="col-sm-12">12 cols</div>
-  </div>
+    <!-- The div below contains links to the contact details and map-->
+    <div class="conrow">
+      <div class="col-sm-6">
+        <p class="leftfloat">
+          Want to navigate to our Office?</p>
+          <br>
+        <a href="{{ url_for('main.Map') }}" class="btn btn-default btn-lg" role="button">Map</a><!-- Button links to connected file using the routing in the routes.py-->
+      </div>
+      <div class="col-sm-6">
+        <p class="leftfloat">
+          Want to get in touch?<br>
+          Details are on our contact page</p>
+        <a href="{{ url_for('main.scrum_project') }}" class="btn btn-default btn-lg" role="button">Contact</a><!-- Button links to connected file using the routing in the routes.py-->
+      </div>
+    </div>
+    <br>
 </section>
 
+<br>
 {% block scripts %}
     {{ super() }}
 <script>

@@ -48,8 +48,10 @@ img{
         display: inline;
 }
 /* List */
-li.email{
+ul.email{
         list-style: none;
+        float: left;
+
 }
 
 /* Announcement List */
@@ -63,14 +65,20 @@ li.email{
 /* Text*/
 p {
         text-align: left;
+        font-size: 18px;
 
 }
 
 p.copyright{
         text-align: center;
         color: black;
+        font-size: 18px;
 }
 
+p.leftfloat{
+        text-align: left;
+        padding-bottom: 10px;
+}
 h3.sitem{
         list-style-type: none;
         text-align: left;
@@ -106,7 +114,7 @@ h3.trainame{
 /* Right nav Bar*/
 .sidnav {
         margin-top: 100px;
-        background-color: #ece6e6;
+        background-color: #679eb4;
         height: 100%;
         width: auto;
         float: right;
@@ -166,5 +174,12 @@ a:hover, a:focus {
 
 .announcecol{
         float: right;
+}
+
+/* Rows*/
+.conrow{/* Contact row on homepage*/
+        padding-left: 500px;
+        padding-right: 500px;
+        background-color: #679eb4;
 }
 
