@@ -46,6 +46,10 @@ def addcourse(cat=None):
 def Map(cat=None):
     return render_template('/Contact and Map/Map.html', title='Map')
 
+@main.route('/Contact', methods=['GET', 'POST'])
+def Contact(cat=None):
+    return render_template('/Contact and Map/Contact.html', title='Contact')
+
 #Certification Courses      
 @main.route('/userstories_acceptancecriteria', methods=['GET', 'POST'])
 def userstories_acceptancecriteria(cat=None):
