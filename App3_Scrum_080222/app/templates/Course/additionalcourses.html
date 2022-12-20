@@ -2,10 +2,10 @@
 
 
 {% block app_content %}
+<br>
 <div class="jumbotron"><!-- Template layout from W3schools ref:https://www.w3schools.com/bootstrap/bootstrap_templates.asp-->
   <div class="container text-center">
-    <h1>Courses</h1>      
-    <p class="copyright">Non-certification Courses</p>
+    <h1>Upcoming Non-certification Courses</h1>      
   </div>
 </div>
 
@@ -13,9 +13,8 @@
         <div class="row content">
           <div class="col-sm-3 sidenav">
             <ul class="nav nav-pills nav-stacked">
-            <li><a href="{{ url_for('main.course') }}">Courses</a></li>
-            <li class="active"><a href="{{ url_for('main.addcourse') }}">Additional Courses</a></li>
-            <li><a href="{{ url_for('main.basicscrum') }}">SCRUM Basics</a></li>
+            <li><a href="{{ url_for('main.course') }}">Upcoming Certification Courses</a></li>
+            <li class="active"><a href="{{ url_for('main.addcourse') }}">Upcoming Non-Certification Courses</a></li>
             <li><a href="{{ url_for('main.users') }}">Certified Users</a></li>
           </ul>
           </div>

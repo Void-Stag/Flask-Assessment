@@ -2,50 +2,82 @@
 
 
 {% block app_content %}
+<link href="{{url_for('static', filename='css/sitemap.css')}}" rel="stylesheet">
+<br>
 <div class="jumbotron text-center"><!-- Template layout from W3schools ref:https://www.w3schools.com/bootstrap/bootstrap_templates.asp-->
     <h1>Site Map</h1>
     <p></p> 
   </div>
-    
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-4">
-        <h3 class="sitem"><li><a href="{{ url_for('main.home') }}" >Home</a></li></h3>
-        <p></p>
-        
-      </div>
-      <div class="col-sm-4">
-        <h3 class="sitem"><li><a href="{{ url_for('main.course') }}" >Courses</a></li>
-        <li><a href="{{ url_for('main.addcourse') }}" >Additional Courses</a></li>
-        <li><a href="{{ url_for('main.basicscrum') }}" >SCRUM Basics</a></li>
-        <li><a href="{{ url_for('main.users') }}" >Certified Users</a></li></h3>
-        
-      </div>
-      <div class="col-sm-4">
-        <h3 class="sitem"><li><a href="{{ url_for('main.articles') }}" >Articles</a></li>
-          <li><a href="{{ url_for('main.events') }}" >Events</a></li></h3>          
-        <p> </p>
-      </div>
 
-    </div>
-    </div>
-  </div><br><br>
 
-  <div class="container-fluid bg-3 text-center">    
-    <div class="row">
-      <div class="col-sm-4">
-        <h3 class="sitem"><li><a href="{{ url_for('auth.login') }}" >Login</a></li>        
-          <li><a href="{{ url_for('auth.register') }}" >Register</a></li>
-          <li><a href="{{ url_for('auth.reset_password_request') }}" >Forgotton Password</a></li>
-          <li><a href="{{ url_for('main.improvements') }}" >Feedback</a></li></h3>
-        </div>
-      
-        <div class="col-sm-4">
-
-        </div>
-      
-      </div>
-    </div>
-  </div><br><br>
+  <nav class="sitenav">
+    <ul>
+      <li>
+        <a href="{{ url_for('main.home') }}">Home</a>
+        <ul>
+          <li>
+            <a>Footer</a>
+            <ul>
+              <li>
+                <a href="{{ url_for('main.sitemap') }}">Site Map</a>
+                <ul>
+                  <li>
+                    <a href="{{ url_for('main.improvements') }}">Feedback</a>
+                    <ul>
+                      <li>
+                        <a href="#">Corporate Sponsors</a>
+                        <ul>
+                          <li>
+                            <a href="{{ url_for('main.Map') }}">Map</a>
+                            <ul>
+                              <li>
+                                <a href="{{ url_for('main.privacy_policy') }}">Privacy Policy</a>
+                                <ul>
+                                  <li>
+                                    <a href="{{ url_for('main.cookie_policy') }}">Cookie Policy</a>
+                                  </li>
+                                </ul>
+                              </li>
+                            </ul>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="{{ url_for('main.course') }}">Courses</a>
+            <ul>
+              <li>
+                <a href="{{ url_for('main.course') }}">Certified Courses</a>
+                <ul>
+                  <li>
+                    <a href="{{ url_for('main.addcourse') }}">Non-Certified Courses</a>
+                    <ul>
+                      <li>
+                        <a href="{{ url_for('main.users') }}">Certified Users</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="{{ url_for('main.events') }}">Events</a>
+          </li>
+          <li>
+            <a href="{{ url_for('main.articles') }}">Articles</a>
+          </li>
+          <li>
+            <a href="{{ url_for('main.faq') }}">FAQ</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
 
 {% endblock %}
