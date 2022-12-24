@@ -3,7 +3,7 @@
 
 {% block app_content %}
 <br>
-<h2> Location of our Offices</h2>
+<h2> Location of our Office</h2>
 <div class='row'>
     <div class='col-sm-4'>                
         <h2 class="h4 fw-bolder">Main Office</h2>
@@ -17,6 +17,10 @@
             Saturday - Sunday: 1pm - 5pm<br>
             Bank Holidays: Closed<br>
             Other Holidays: Closed</p>
+    </div>
+    <div class='col-sm-4'>
+        <h2 class="h4 fw-bolder">To Contact Page</h2>
+            <a href="{{ url_for('main.Contact') }}" class="btn btn-default btn-lg" role="button">Contact</a><!-- Button links to connected file using the routing in the routes.py-->
     </div>
 </div>
 
