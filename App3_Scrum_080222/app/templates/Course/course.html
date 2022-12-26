@@ -2,9 +2,10 @@
 
 
 {% block app_content %}
+<br>
 <div class="jumbotron"><!-- Template layout from W3schools ref:https://www.w3schools.com/bootstrap/bootstrap_templates.asp-->
     <div class="container text-center">
-      <h1>Courses</h1>      
+      <h1>Upcoming Certification Courses</h1>      
       <p class="copyright">Certified SCRUM Courses</p>
     </div>
   </div>
@@ -13,22 +14,21 @@
           <div class="row content">
             <div class="col-sm-3 sidenav">
               <ul class="nav nav-pills nav-stacked">
-              <li class="active"><a href="{{ url_for('main.course') }}">Courses</a></li>
-              <li><a href="{{ url_for('main.addcourse') }}">Additional Courses</a></li>
-              <li><a href="{{ url_for('main.basicscrum') }}">SCRUM Basics</a></li>
+              <li class="active"><a href="{{ url_for('main.course') }}">Upcoming Certification Courses</a></li>
+              <li><a href="{{ url_for('main.addcourse') }}">Upcoming Non-Certification Courses</a></li>
               <li><a href="{{ url_for('main.users') }}">Certified Users</a></li>
             </ul>
             </div>
             <div class="col-sm-8 text-left"> 
-              <div id="bannerimage"><!-- Displays the image linked in the div behind the text-->
+              <div id="courseimage"><!-- Displays the image linked in the div behind the text-->
                 <h2 id="cortitle">SCRUM Website Project</h2>
               </div>
-              <p>Project for The Web has a couple different areas: Grid, Board, and Timeline. A question I hear often is, “Can we manage Agile projects in Project for the Web?” To be more specific,
+              <p>Project for The Web has a couple different areas: Grid, Board, and Timeline. A question I hear often is, “Can we manage Agile projects in Project for the Web?”.<br> To be more specific,
                  “Can we manage Scrum based projects?” The answer is yes, of course—in a limited way, but still well enough!</p>
                 <br>
                 <a href="{{ url_for('main.scrum_project') }}" class="btn btn-default btn-lg" role="button">More Details</a><!-- Button links to connected file using the routing in the routes.py-->
               <hr>
-              <div id="bannerimage"><!-- Displays the image linked in the div behind the text-->
+              <div id="courseimage"><!-- Displays the image linked in the div behind the text-->
                 <h2 id="cortitle">Different Types of Development Cycles</h2>
               </div>
               <p>The product development cycle is the process of taking a product from an idea through its market release and beyond.
@@ -36,7 +36,7 @@
                 <br>
                 <a href="{{ url_for('main.dev_cycles') }}" class="btn btn-default btn-lg" role="button">More Details</a><!-- Button links to connected file using the routing in the routes.py-->
               <hr>
-              <div id="bannerimage"><!-- Displays the image linked in the div behind the text-->
+              <div id="courseimage"><!-- Displays the image linked in the div behind the text-->
                 <h2 id="cortitle">Burnout Charts for Beginners</h2>
               </div>
               <p>A burndown chart helps agile project management teams keep track of what's 
@@ -44,7 +44,7 @@
                 <br>
                 <a href="{{ url_for('main.burnout_charts') }}" class="btn btn-default btn-lg" role="button">More Details</a><!-- Button links to connected file using the routing in the routes.py-->
               <hr>
-              <div id="bannerimage"><!-- Displays the image linked in the div behind the text-->
+              <div id="courseimage"><!-- Displays the image linked in the div behind the text-->
                 <h2 id="cortitle">User Stories and Acceptence Criteria</h2>
               </div>
               <p>In the industry, the word 'Requirement' defines what our goal is, what the customers exactly need, 

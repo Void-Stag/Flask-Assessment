@@ -4,11 +4,6 @@ from flask import jsonify
 
 main = Blueprint('main', __name__)
 #
-
-@main.route('/index', methods=['GET', 'POST'])
-def index(cat=None):
-    return render_template('index.html',  title='Home')
-
 @main.route('/events', methods=['GET','POST'])# Defines the route name and what it can do. GET is fetching data and POST is sending data
 def events(cat=None):#Function defines what happens when the route is called
     return render_template('event.html', title='Events')#Returns the html file which is rendered to display data using jinja as it is a child template file
@@ -46,6 +41,15 @@ def basicscrum(cat=None):
 def addcourse(cat=None):
     return render_template('/Course/additionalcourses.html', title='Additional Courses')
 
+# Map & Contact Pages
+@main.route('/Map', methods=['GET', 'POST'])
+def Map(cat=None):
+    return render_template('/Contact and Map/Map.html', title='Map')
+
+@main.route('/Contact', methods=['GET', 'POST'])
+def Contact(cat=None):
+    return render_template('/Contact and Map/Contact.html', title='Contact')
+
 #Certification Courses      
 @main.route('/userstories_acceptancecriteria', methods=['GET', 'POST'])
 def userstories_acceptancecriteria(cat=None):
@@ -73,7 +77,7 @@ def python_basics(cat=None):
 def cookie_policy(cat=None):
     return render_template('/Legal/cookie_policy.html', title='Cookie Policy')
 
-# TRainer Profiles
+# Trainer Profiles
 @main.route('/Jane_Dane', methods=['GET', 'POST'])
 def Jane_Dane(cat=None):
     return render_template('/Trainer_Profile/Jane_Prof.html', title='Jane Dane')
@@ -81,6 +85,24 @@ def Jane_Dane(cat=None):
 @main.route('/John_Doe', methods=['GET', 'POST'])
 def John_Doe(cat=None):
     return render_template('/Trainer_Profile/John_Prof.html', title='John Doe')
+
+# Practitioner Profiles
+@main.route('/Heather_Smith', methods=['GET','POST'])
+def Heather_Smith(cat=None):
+    return render_template('/Practitioner_Profile/Heather_Prof.html', title='Heather Smith')
+
+@main.route('/Sagar_Kesh', methods=['GET','POST'])
+def Sagar_Kesh(cat=None):
+    return render_template('/Practitioner_Profile/Sagar_Prof.html', title='Sagar Keshawala')
+
+@main.route('/Marcus_Yidom', methods=['GET','POST'])
+def Marcus_Yidom(cat=None):
+    return render_template('/Practitioner_Profile/Marcus_Prof.html', title='Marcus Yidom')
+
+# Master Profiles
+@main.route('/Wallace_Harrison', methods=['GET','POST'])
+def Wallace_Harrison(cat=None):
+    return render_template('/Master_Profile/Wallace_Prof.html', title='Wallace Harrison')
 
 #Articles
 @main.route('/articles', methods=['GET', 'POST'])

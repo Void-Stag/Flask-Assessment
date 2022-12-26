@@ -48,8 +48,10 @@ img{
         display: inline;
 }
 /* List */
-li.email{
+ul.email{
         list-style: none;
+        float: left;
+
 }
 
 /* Announcement List */
@@ -63,12 +65,19 @@ li.email{
 /* Text*/
 p {
         text-align: left;
+        font-size: 18px;
 
 }
 
 p.copyright{
         text-align: center;
         color: black;
+        font-size: 18px;
+}
+
+p.leftfloat{
+        text-align: left;
+        padding-bottom: 10px;
 }
 
 h3.sitem{
@@ -81,6 +90,23 @@ h3.trainame{
         padding-left: 100px;
 }
 
+/*H5 used for disclaimers */
+h5{
+        font-style: italic;
+}
+
+/* Heading css for text on banners on the course page*/
+#cortitle{
+        color: #f1f1f1;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* Heading css for text on banners on the contact page*/
+#contitle{
+        color: black;
+        font-family:'Cambria', Cochin, Georgia, Times, Times New Roman, serif;
+        font-weight: bold;
+}
 /* Jumbotron */
 .jumbotron{
         margin: auto;
@@ -106,7 +132,7 @@ h3.trainame{
 /* Right nav Bar*/
 .sidnav {
         margin-top: 100px;
-        background-color: #ece6e6;
+        background-color: #679eb4;
         height: 100%;
         width: auto;
         float: right;
@@ -146,18 +172,19 @@ a:hover, a:focus {
  }
  
 /* Banner Images*/
-#bannerimage {
+#courseimage {
         width: auto;
         background-image: url(http://getwallpapers.com/wallpaper/full/7/2/2/14898.jpg);
         height: 50px;
         background-position: center;
-      }
-      #cortitle{
-              color: #f1f1f1;
-              font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-      }
+}
 
-
+#contactimage{
+        width: auto;
+        background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimage.freepik.com%2Ffree-vector%2Fmodern-mobile-phone-with-icons-background_23-2147574295.jpg&f=1&nofb=1&ipt=a3b8583d56ccf4fa82488efb2c7661cb0b2006322d1d4080be7e70c6dec72a6b&ipo=images);
+        height: 50px;
+        background-position: center;
+}
 .sticky{
         position: -webkit-sticky; /* Safari */
         position: sticky;
@@ -168,3 +195,15 @@ a:hover, a:focus {
         float: right;
 }
 
+/* Rows*/
+.conrow{/* Contact row on homepage*/
+        padding-left: 500px;
+        padding-right: 500px;
+        background-color: #679eb4;
+}
+
+/*Contact Page*/
+
+#conpost{
+        padding-top: 1%;
+}
