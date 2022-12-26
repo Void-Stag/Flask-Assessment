@@ -10,5 +10,11 @@ Admin = Admin
 Admin  . Account 
 Password = admin
 
+Member  . Account 
+Password = member
+
+Trainer  . Account 
+Password = trainer
+
 To update table
 UPDATE user SET auth = '' WHERE id = ''
