@@ -2,48 +2,54 @@
 
 
 {% block app_content %}
+
 <br>
-<div class="col-sm-2 sidnav">
-    <h2>Special Announcements</h2>
-    {% if current_user.is_authenticated %}
-      {% if current_user.auth == 'admin' %}
-        <form action="/addannounce" method="POST">
-            <label>Title</label>
-            <input type="text" name="title" placeholder="Enter title..."><br>
-            <label>Content</label>
-            <input type="text" name= "content" placeholder="Enter text...">
-            <button type="submit">Post</button>
-        </form>
-        <br>
-        <div class="panel panel-default">
-          <div class="panel-body">   
-            <div id="content" class="announce">
-              <!--Data from the databse will be passed into here by the jquery-->
-            </div>
-          </div>
-        </div>
-      
-      {% else %}
-      <div class="panel panel-default">
-          <div class="panel-body">   
-            <div id="content" class="announce">
-              <!--Data from the databse will be passed into here by the jquery-->
-            </div>
-          </div>
-        </div>
-      {% endif %}
-    {% else %}
-      <div class="panel panel-default">
-          <div class="panel-body">   
-            <div id="content" class="announce">
-              <!--Data from the databse will be passed into here by the jquery-->
-            </div>
-          </div>
-        </div>
-    {% endif %}
+<div>
+  <div>
+    <div>
+      <div style="float: right">
+          <h2>Special Announcements</h2>
+          {% if current_user.is_authenticated %}
+            {% if current_user.auth == 'admin' %}
+              <form action="/addannounce" method="POST">
+                  <label>Title</label>
+                  <input type="text" name="title" placeholder="Enter title..."><br>
+                  <label>Content</label>
+                  <input type="text" name= "content" placeholder="Enter text...">
+                  <button type="submit">Post</button>
+              </form>
+              <br>
+              <div class="panel panel-default">
+                <div class="panel-body">   
+                  <div id="content" class="announce">
+                    <!--Data from the databse will be passed into here by the jquery-->
+                  </div>
+                </div>
+              </div>
+            
+            {% else %}
+            <div class="panel panel-default">
+                <div class="panel-body">   
+                  <div id="content" class="announce">
+                    <!--Data from the databse will be passed into here by the jquery-->
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+          {% else %}
+            <div class="panel panel-default">
+                <div class="panel-body">   
+                  <div id="content" class="announce">
+                    <!--Data from the databse will be passed into here by the jquery-->
+                  </div>
+                </div>
+              </div>
+          {% endif %}
 
+      </div>
+    </div>
+  </div>
 </div>
-
 
 <section id="services" class="services-area services-eight">
   <div class="section-title-five">
@@ -177,22 +183,29 @@
 
 </section>
     <!-- The div below contains links to the contact details and map-->
-    <div class="conrow">
-      <div class="col-sm-6">
-        <p>
-          Want to navigate to our Office?</p>
-          <br>
+<div class="conrow">
+  <div class="col-sm-6">
+    <div class="card" style="width: 180%;">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Want to navigate to our Office?</p>
         <a href="{{ url_for('main.Map') }}" class="btn btn-default btn-lg" role="button">Map</a><!-- Button links to connected file using the routing in the routes.py-->
       </div>
-      <div class="col-sm-6">
-        <p>
-          Want to get in touch?<br>
+    </div>
+  </div>
+  <div class="col-sm-6">
+    <div class="card" style="width: 180%;">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Want to get in touch?<br>
           Details are on our contact page</p>
         <a href="{{ url_for('main.Contact') }}" class="btn btn-default btn-lg" role="button">Contact</a><!-- Button links to connected file using the routing in the routes.py-->
       </div>
-    </div>
+    </div>      
+  </div>
+</div>
     <br>
-<br>
+  
 {% block scripts %}
     {{ super() }}
 <script>
