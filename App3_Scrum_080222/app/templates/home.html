@@ -3,7 +3,7 @@
 
 {% block app_content %}
 <br>
-<div class="col-sm-2 sidnav">
+<div style="float: right">
     <h2>Special Announcements</h2>
     {% if current_user.is_authenticated %}
       {% if current_user.auth == 'admin' %}
@@ -177,22 +177,37 @@
 
 </section>
     <!-- The div below contains links to the contact details and map-->
-    <div class="conrow">
-      <div class="col-sm-6">
-        <p>
-          Want to navigate to our Office?</p>
-          <br>
-        <a href="{{ url_for('main.Map') }}" class="btn btn-default btn-lg" role="button">Map</a><!-- Button links to connected file using the routing in the routes.py-->
-      </div>
-      <div class="col-sm-6">
-        <p>
-          Want to get in touch?<br>
+<div class="container py-4"  style="background:#F9F7F0;">
+  <div class="row gy-4 gx-5">
+    <div class="col-lg-2 col-md-6">
+      <h5 class="text-white mb-3"></h5>
+      <ul class="list-unstyled text-muted">
+      </ul>
+    </div>
+    <div class="col-lg-2 col-md-6">
+      <ul class="list-unstyled text-muted">
+        <p class="card-text">Want to get in touch?<br>
           Details are on our contact page</p>
         <a href="{{ url_for('main.Contact') }}" class="btn btn-default btn-lg" role="button">Contact</a><!-- Button links to connected file using the routing in the routes.py-->
-      </div>
+      </ul>
     </div>
-    <br>
-<br>
+    <div class="col-lg-2 col-md-6">
+      <h5 class="text-white mb-3"></h5>
+      <ul class="list-unstyled text-muted">
+      </ul>
+    </div>
+    <div class="col-lg-2 col-md-6">
+      <h5 class="text-white mb-3"></h5><br>
+      <ul class="list-unstyled text-muted">
+      </ul>
+    </div>
+    <div class="col-lg-2 col-md-6">
+      <ul class="list-unstyled text-muted">
+        <p class="card-text">Want to navigate to our Office?</p>
+        <a href="{{ url_for('main.Map') }}" class="btn btn-default btn-lg" role="button">Map</a><!-- Button links to connected file using the routing in the routes.py-->
+      </ul>
+    </div>
+  </div>
 {% block scripts %}
     {{ super() }}
 <script>
