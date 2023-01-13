@@ -55,4 +55,26 @@
             </div>
           </div>
         </div>
+
+        {% if current_user.is_authenticated %}
+          {% if current_user.auth == 'trainer' %}
+            <!-- This portion of code is listing the information that is going to be available for Trainers only. --> 
+            <div class="col-sm-8 text-left">                                           
+              <h1>Trainers Only Section</h1> 
+              <ol> 
+                <li>Certification Modules</li> 
+                <li>Pupils' Grades </li> 
+                <li>Employment Opportunities</li> 
+                <li>Diary</li> 
+                <li>Teaching Material</li> 
+                <li>Special Teaching Material for Disabled Pupils</li> 
+             </ol>   
+            </div>
+          {% else %}
+
+          {% endif %}
+        {% else %}
+
+            
+        {% endif %}
 {% endblock %}
