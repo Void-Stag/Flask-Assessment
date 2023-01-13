@@ -2,17 +2,20 @@
 
 
 {% block app_content %}
+<link href="{{url_for('static', filename='css/announceform.css')}}" rel="stylesheet"> 
 <br>
 <div style="float: right">
+  <div class="title">
     <h2>Special Announcements</h2>
+  </div>
     {% if current_user.is_authenticated %}
       {% if current_user.auth == 'admin' %}
         <form action="/addannounce" method="POST">
-            <label>Title</label>
-            <input type="text" name="title" placeholder="Enter title..."><br>
-            <label>Content</label>
-            <input type="text" name= "content" placeholder="Enter text...">
-            <button type="submit">Post</button>
+            <label>Title:</label><br>
+            <input type="text" name="title" placeholder="Title" class="form-control"><br>
+            <label>Content:</label><br>
+            <input type="text" name= "content" placeholder="Content" class="form-control"><br>
+            <button type="submit" class="btn btn-default">Post</button>
         </form>
         <br>
         <div class="panel panel-default">
