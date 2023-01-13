@@ -156,7 +156,10 @@ def welcome_member(cat=None):
 #Admin
 
 
-
+#Current User Profile
+@main.route('/profile', methods=['GET', 'POST'])
+def profile(cat=None):
+    return render_template('/User_Only/Profile.html', title='Profile')
 
 
 
