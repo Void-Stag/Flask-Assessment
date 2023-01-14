@@ -140,8 +140,10 @@
     </div>
   </div>
 </div>
-{% block scripts %}
+<!--
+  {% block scripts %}
     {{ super() }}
+  -->
 <script>
         $(document).ready(function contrequest(){//Once the page has loaded, the folowing function is executed
           $.getJSON('/getannounce', get_data)//Obtains the data from the annoumcement route
@@ -169,5 +171,5 @@
             $("ol").append("<li>Appended item</li>");
         }
 </script>
-{% endblock %}<!--block scripts-->
+<!--{% endblock %}block scripts-->
 {% endblock %}<!--block app_content-->
