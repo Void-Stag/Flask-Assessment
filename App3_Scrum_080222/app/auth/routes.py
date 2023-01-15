@@ -35,7 +35,7 @@ def register():
     form = RegistrationForm()
     if form.validate_on_submit():
         user = User(
-            username=form.username.data, 
+            username=form.username.data,
             email=form.email.data,
             first_name=form.first_name.data.lower(),
             last_name=form.last_name.data.lower()
@@ -67,7 +67,7 @@ def reset_password_request():
             return redirect(url_for('auth.login'))
         else:
             flash('An error occured, please try again', 'danger')
-            return redirect(url_for('main.index'))
+            return redirect(url_for('main.home'))
     return render_template('auth/reset_password_request.html',
                            title='Reset Password', form=form)
 
