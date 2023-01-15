@@ -5,28 +5,42 @@
 <br>
 <div class="jumbotron"><!-- Template layout from W3schools ref:https://www.w3schools.com/bootstrap/bootstrap_templates.asp-->
   <div class="container text-center">
-    <h1>Upcoming Non-certification Courses</h1>      
+    <h1>Upcoming Non-certification Courses</h1>
+    <p class="copyright">Non Certified and SCRUM Courses</p>
   </div>
 </div>
 
-    <div class="container-fluid text-center">    
-        <div class="row content">
-          <div class="col-sm-3 sidenav">
-            <ul class="nav nav-pills nav-stacked">
+<div class="container-fluid text-center">
+  <div class="row content">
+    <div class="col-sm-3 sidenav">
+      <ul class="nav nav-pills nav-stacked">
+        {% if current_user.is_authenticated %}
+          {% if current_user.auth == 'trainer' %}
             <li><a href="{{ url_for('main.course') }}">Upcoming Certification Courses</a></li>
             <li class="active"><a href="{{ url_for('main.addcourse') }}">Upcoming Non-Certification Courses</a></li>
             <li><a href="{{ url_for('main.users') }}">Certified Users</a></li>
-          </ul>
-          </div>
-          <div class="col-sm-8 text-left"> 
-            <div id="courseimage"><!-- Displays the image linked in the div behind the text-->
-              <h2 id="cortitle">Python Basics</h2>
-            </div>
-            <p>What is Python? This course will provide you with the basic knowledge of the Python programming Language! </p>
-              <br>
-              <a href="{{ url_for('main.python_basics') }}" class="btn btn-default btn-lg" role="button">More Details</a><!-- button links to connected file using the set routing in the routes.py-->
-            <hr>
-          </div>
-        </div>
+            <li><a href="{{ url_for('main.trainer_info') }}">Trainer Info</a></li>
+          {% else %}
+            <li><a href="{{ url_for('main.course') }}">Upcoming Certification Courses</a></li>
+            <li class="active"><a href="{{ url_for('main.addcourse') }}">Upcoming Non-Certification Courses</a></li>
+            <li><a href="{{ url_for('main.users') }}">Certified Users</a></li>
+          {% endif %}
+        {% else %}
+          <li><a href="{{ url_for('main.course') }}">Upcoming Certification Courses</a></li>
+          <li class="active"><a href="{{ url_for('main.addcourse') }}">Upcoming Non-Certification Courses</a></li>
+          <li><a href="{{ url_for('main.users') }}">Certified Users</a></li>
+        {% endif %}
+      </ul>
+    </div>
+    <div class="col-sm-8 text-left">
+      <div id="courseimage"><!-- Displays the image linked in the div behind the text-->
+        <h2 id="cortitle">Python Basics</h2>
       </div>
+      <p>What is Python? This course will provide you with the basic knowledge of the Python programming Language! </p>
+      <br>
+      <a href="{{ url_for('main.python_basics') }}" class="btn btn-default btn-lg" role="button">More Details</a><!-- button links to connected file using the set routing in the routes.py-->
+      <hr>
+    </div>
+  </div>
+</div>
 {% endblock %}

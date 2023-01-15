@@ -2,21 +2,35 @@
 
 
 {% block app_content %}
+<br>
 <div class="jumbotron text-center"><!-- Template layout from W3schools ref:https://www.w3schools.com/bootstrap/bootstrap_templates.asp-->
-    <h1>SCRUM Certified Users</h1>
-    <p></p> 
-  </div>
-    
-  <div class="container-fluid text-center">    
+  <h1>SCRUM Certified Users</h1>
+  <p class="copyright">Trainers, Practitioners & Masters</p>
+</div>
+
+<div class="container-fluid text-center">
   <div class="row content">
     <div class="col-sm-3 sidenav">
       <ul class="nav nav-pills nav-stacked">
-      <li><a href="{{ url_for('main.course') }}">Upcoming Certification Courses</a></li>
-      <li><a href="{{ url_for('main.addcourse') }}">Upcoming Non-Certification Courses</a></li>
-      <li class="active"><a href="{{ url_for('main.users') }}">Certified Users</a></li>
-    </ul>
+        {% if current_user.is_authenticated %}
+          {% if current_user.auth == 'trainer' %}
+            <li><a href="{{ url_for('main.course') }}">Upcoming Certification Courses</a></li>
+            <li><a href="{{ url_for('main.addcourse') }}">Upcoming Non-Certification Courses</a></li>
+            <li  class="active"><a href="{{ url_for('main.users') }}">Certified Users</a></li>
+            <li><a href="{{ url_for('main.trainer_info') }}">Trainer Info</a></li>
+          {% else %}
+            <li><a href="{{ url_for('main.course') }}">Upcoming Certification Courses</a></li>
+            <li><a href="{{ url_for('main.addcourse') }}">Upcoming Non-Certification Courses</a></li>
+            <li  class="active"><a href="{{ url_for('main.users') }}">Certified Users</a></li>
+          {% endif %}
+        {% else %}
+          <li><a href="{{ url_for('main.course') }}">Upcoming Certification Courses</a></li>
+          <li><a href="{{ url_for('main.addcourse') }}">Upcoming Non-Certification Courses</a></li>
+          <li class="active"><a href="{{ url_for('main.users') }}">Certified Users</a></li>
+        {% endif %}
+      </ul>
     </div>
-    <div class="col-sm-8 text-left"> 
+    <div class="col-sm-8 text-left">
       <h3>SCRUM Trainers</h3>
       <ul class="profile">
         <li><a href="{{ url_for('main.Jane_Dane') }}">Jane Dane</a></li><!-- links to connected file using the routing in the routes.py-->
@@ -33,11 +47,9 @@
         <li><a href="{{ url_for('main.Heather_Smith') }}">Heather Smith</a></li><!-- links to connected file using the routing in the routes.py-->
         <li><a href="{{ url_for('main.Sagar_Kesh') }}">Sagar Keshawala</a></li><!-- links to connected file using the routing in the routes.py-->
         <li><a href="{{ url_for('main.Marcus_Yidom') }}">Marcus Yidom</a></li><!-- links to connected file using the routing in the routes.py-->
-    </ul>
-    <hr>
-    <br>
-
-
+      </ul>
+      <hr>
+      <br>
     </div>
   </div>
 </div>

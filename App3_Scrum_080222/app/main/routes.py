@@ -19,7 +19,7 @@ def course(cat=None):
 @main.route('/')
 @main.route('/home', methods=['GET', 'POST'])
 def home(cat=None):
-    return render_template('home.html', title='Home') 
+    return render_template('home.html', title='Home')
 
 @main.route('/users', methods=['GET','POST'])
 def users(cat=None):
@@ -50,7 +50,7 @@ def Map(cat=None):
 def Contact(cat=None):
     return render_template('/Contact and Map/Contact.html', title='Contact')
 
-#Certification Courses      
+#Certification Courses
 @main.route('/userstories_acceptancecriteria', methods=['GET', 'POST'])
 def userstories_acceptancecriteria(cat=None):
     return render_template('/Course/course_post/usercriteria.html', title='User Stories & Acceptance Criteria')
@@ -62,7 +62,7 @@ def burnout_charts(cat=None):
 @main.route('/dev_cycles', methods=['GET', 'POST'])
 def dev_cycles(cat=None):
     return render_template('/Course/course_post/devcycles.html', title='Different types of Development Cycles')
-    
+
 @main.route('/scrum_project', methods=['GET', 'POST'])
 def scrum_project(cat=None):
     return render_template('/Course/course_post/scrumweb.html', title='SCRUM Website Project')
@@ -71,6 +71,11 @@ def scrum_project(cat=None):
 @main.route('/python_basics', methods=['GET', 'POST'])
 def python_basics(cat=None):
     return render_template('/Course/addcourse/pythonbasic.html', title='Python Basics')
+
+#Trainer Info
+@main.route('/trainer_info', methods=['GET', 'POST'])
+def trainer_info(cat=None):
+    return render_template('/Course/trainerinfo.html', tile='Trainer Info ')
 
 #Legal
 @main.route('/cookie_policy', methods=['GET', 'POST'])

@@ -6,7 +6,7 @@
 <br>
 <div class="jumbotron text-center"><!-- Template layout from W3schools ref:https://www.w3schools.com/bootstrap/bootstrap_templates.asp-->
     <h1>Site Map</h1>
-    <p></p> 
+    <p></p>
   </div>
   {% if current_user.is_authenticated %}
   <nav class="sitenav">
@@ -43,7 +43,7 @@
             </ul>
           </li>
           <li>
-            <a href="{{ url_for('main.course') }}">Contact</a>
+            <a href="{{ url_for('main.course') }}">Contact Us</a>
             <ul>
               <li class="spacetop">
                 <a href="{{ url_for('main.Map') }}">Google Map</a>
@@ -81,7 +81,12 @@
             <a>User Menu</a>
               <ul>
                 <li class="spacetop">
-                  <a href="{{ url_for('main.jobs') }}"> Job Vacencies </a>
+                  <a href="{{ url_for('main.profile') }}">Profile</a>
+                  <ul>
+                    <li class="spacetop">
+                      <a href="{{ url_for('main.jobs') }}">Job Vacencies</a>
+                    </li>
+                  </ul>
                 </li>
               </ul>
           </li>
@@ -125,7 +130,7 @@
               </ul>
             </li>
             <li>
-              <a href="{{ url_for('main.course') }}">Contact</a>
+              <a href="{{ url_for('main.course') }}">Contact Us</a>
               <ul>
                 <li class="spacetop">
                   <a href="{{ url_for('main.Map') }}">Google Map</a>
@@ -164,6 +169,6 @@
       </ul>
     </nav>
   {% endif %}
-  
+
 
 {% endblock %}

@@ -107,43 +107,48 @@
   </div> 
 </section>
 
-<!-- The div below contains links to the contact details and map-->
-<div class="container py-4"  style="background:#d3cdb9; padding: 2%;">
-  <div class="row gy-4 gx-5">
-    <div class="col-lg-2 col-md-6">
-      <h5 class="text-white mb-3"></h5>
-      <ul class="list-unstyled text-muted">
-      </ul>
-    </div>
-    <div class="col-lg-2 col-md-6">
-      <ul class="list-unstyled text-muted">
-        <p class="card-text">Want to get in touch?<br>
-          Details are on our contact page</p>
-        <a href="{{ url_for('main.Contact') }}" class="btn btn-default btn-lg" role="button">Contact</a><!-- Button links to connected file using the routing in the routes.py-->
-      </ul>
-    </div>
-    <div class="col-lg-2 col-md-6">
-      <h5 class="text-white mb-3"></h5>
-      <ul class="list-unstyled text-muted">
-      </ul>
-    </div>
-    <div class="col-lg-2 col-md-6">
-      <h5 class="text-white mb-3"></h5><br>
-      <ul class="list-unstyled text-muted">
-      </ul>
-    </div>
-    <div class="col-lg-2 col-md-6">
-      <ul class="list-unstyled text-muted">
-        <p class="card-text">Want to navigate to our Office?</p>
-        <a href="{{ url_for('main.Map') }}" class="btn btn-default btn-lg" role="button">Map</a><!-- Button links to connected file using the routing in the routes.py-->
-      </ul>
-    </div>
+<!-- Div section containing SCRUM basics link-->
+<div class="row">
+	<div class="col-sm-3"></div>
+	<div class="col-sm-6">
+    <p class="card-text">Interested in learning what SCRUM is?<br>
+      Follow the link for an overview for the Basics of SCRUM...</p>
+  </div>
+	<div class="col-sm-3">
+    <a href="{{ url_for('main.basicscrum') }}" class="btn btn-default btn-lg" role="button">SCRUM Basics</a><!-- Button links to connected file using the routing in the routes.py-->
   </div>
 </div>
-<!--
-  {% block scripts %}
-    {{ super() }}
-  -->
+
+
+<!-- The div below contains links to the contact details and map-->
+<section style="background:#4682B4; padding: 2%;">
+  <div class="row">
+	  <div class="col-sm-3"></div>
+	  <div class="col-sm-3">
+      <p class="card-text">Want to get in touch?<br>
+      Details are on our contact page...</p>
+    </div>
+	  <div class="col-sm-3">
+      <p class="card-text">Want to navigate to our Office?<br>
+      Find us below!</p>
+    </div>
+	  <div class="col-sm-3"></div>
+  </div>
+  <div class="row">
+	  <div class="col-sm-3"></div>
+	  <div class="col-sm-3">
+      <a href="{{ url_for('main.Contact') }}" class="btn btn-default btn-lg" role="button" style="background:#B0C4DE;">Contact</a><!-- Button links to connected file using the routing in the routes.py-->
+    </div>
+	  <div class="col-sm-3">
+      <a href="{{ url_for('main.Map') }}" class="btn btn-default btn-lg" role="button" style="background:#B0C4DE;">Map</a><!-- Button links to connected file using the routing in the routes.py-->
+    </div>
+	  <div class="col-sm-3"></div>
+  </div>
+</section>
+
+<!-- Announcement Script-->
+{% block scripts %}
+  {{super ()}}
 <script>
         $(document).ready(function contrequest(){//Once the page has loaded, the folowing function is executed
           $.getJSON('/getannounce', get_data)//Obtains the data from the annoumcement route
@@ -171,5 +176,5 @@
             $("ol").append("<li>Appended item</li>");
         }
 </script>
-<!--{% endblock %}block scripts-->
+{% endblock %}
 {% endblock %}<!--block app_content-->
