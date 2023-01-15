@@ -10,6 +10,7 @@
 
 <div class="container-fluid text-center">
   <div class="row content">
+<!--Left Side Nav Bar-->
     <div class="col-sm-3 sidenav">
       {% if current_user.is_authenticated %}
         <ul class="nav nav-pills nav-stacked">
@@ -20,8 +21,10 @@
       {% endif %}
         </ul>
     </div>
+
+<!--Main Content-->
     <div class="col-sm-8 text-left">
-      <div id="bannerimage">
+      <div id="mainimage">
         <h2 id="cortitle">What's Happening next @ Swift Courses</h2>
       </div>
       <p>Big news for everyone! Swift Course's website is getting an upgrade..</p>

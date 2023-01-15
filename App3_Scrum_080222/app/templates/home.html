@@ -107,44 +107,38 @@
   </div> 
 </section>
 
-<!-- Div section containing SCRUM basics link-->
-<div class="row">
-	<div class="col-sm-3"></div>
-	<div class="col-sm-6">
-    <p class="card-text">Interested in learning what SCRUM is?<br>
-      Follow the link for an overview for the Basics of SCRUM...</p>
-  </div>
-	<div class="col-sm-3">
-    <a href="{{ url_for('main.basicscrum') }}" class="btn btn-default btn-lg" role="button">SCRUM Basics</a><!-- Button links to connected file using the routing in the routes.py-->
-  </div>
-</div>
-
-
-<!-- The div below contains links to the contact details and map-->
+<!-- Div section containing SCRUM basics link & Contact and Map links-->
 <section style="background:#4682B4; padding: 2%;">
+<!--Top Row-->
   <div class="row">
-	  <div class="col-sm-3"></div>
 	  <div class="col-sm-3">
       <p class="card-text">Want to get in touch?<br>
-      Details are on our contact page...</p>
+        Details are on our contact page...</p>
+    </div>
+	  <div class="col-sm-6">
+      <p class="card-text">Interested in learning what SCRUM is?<br>
+        Follow the link for an overview for the Basics of SCRUM...</p>
     </div>
 	  <div class="col-sm-3">
       <p class="card-text">Want to navigate to our Office?<br>
-      Find us below!</p>
+        Find us below!</p>
     </div>
-	  <div class="col-sm-3"></div>
   </div>
+
+<!--Bottom Row-->
   <div class="row">
-	  <div class="col-sm-3"></div>
 	  <div class="col-sm-3">
       <a href="{{ url_for('main.Contact') }}" class="btn btn-default btn-lg" role="button" style="background:#B0C4DE;">Contact</a><!-- Button links to connected file using the routing in the routes.py-->
+    </div>
+	  <div class="col-sm-6">
+      <a href="{{ url_for('main.basicscrum') }}" class="btn btn-default btn-lg" role="button" style="background:#B0C4DE;">SCRUM Basics</a><!-- Button links to connected file using the routing in the routes.py-->
     </div>
 	  <div class="col-sm-3">
       <a href="{{ url_for('main.Map') }}" class="btn btn-default btn-lg" role="button" style="background:#B0C4DE;">Map</a><!-- Button links to connected file using the routing in the routes.py-->
     </div>
-	  <div class="col-sm-3"></div>
   </div>
 </section>
+
 
 <!-- Announcement Script-->
 {% block scripts %}

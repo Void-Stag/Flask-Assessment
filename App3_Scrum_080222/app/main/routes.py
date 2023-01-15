@@ -75,7 +75,11 @@ def python_basics(cat=None):
 #Trainer Info
 @main.route('/trainer_info', methods=['GET', 'POST'])
 def trainer_info(cat=None):
-    return render_template('/Course/trainerinfo.html', tile='Trainer Info ')
+    return render_template('/Course/trainerinfo.html', title='Trainer Info ')
+
+@main.route('/new_course', methods=['GET', 'POST'])
+def new_course(cat=None):
+    return render_template('/Course/traininfo/addnewcourse.html', title='Add New Course')
 
 #Legal
 @main.route('/cookie_policy', methods=['GET', 'POST'])

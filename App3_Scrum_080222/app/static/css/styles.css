@@ -180,7 +180,7 @@ a:hover, a:focus {
  }
 
 /* Banner Images*/
-#courseimage {
+#mainimage {
         width: auto;
         background-image: url(http://getwallpapers.com/wallpaper/full/7/2/2/14898.jpg);
         height: 50px;
@@ -194,16 +194,9 @@ a:hover, a:focus {
         background-position: center;
 }
 
-#pythonimage{
-        width: auto;
-        background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapercave.com%2Fwp%2Fwp8740371.jpg&f=1&nofb=1&ipt=9b7241663082fc361d4d1e02f9486b25779af3358fbe2187f2d876598a5b87b7&ipo=images);
-        height: 50px;
-        background-position: center;
-}
-
 #mapimage{
         width: auto;
-        background-image: url(https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.pixelstalk.net%2Fwp-content%2Fuploads%2F2016%2F06%2FFree-desktop-world-map-wallpapers-HD.jpg&f=1&nofb=1&ipt=b147c047f42737c935f4cad4a59512aacf43f212fd254e4f7ef33382d5f7b350&ipo=images);
+        background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.designyourway.net%2Fblog%2Fwp-content%2Fuploads%2F2019%2F04%2Fgalaxy-wallpaper-35-1600x900.jpg&f=1&nofb=1&ipt=dd6999627dee2b8f47789ba79d5d5acfddf7f477e0e3b8f3ff08f1a5f45f4100&ipo=images);
         height: 50px;
         background-position: center;
 }
