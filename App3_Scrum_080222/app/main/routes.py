@@ -72,15 +72,6 @@ def scrum_project(cat=None):
 def python_basics(cat=None):
     return render_template('/Course/addcourse/pythonbasic.html', title='Python Basics')
 
-#Trainer Info
-@main.route('/trainer_info', methods=['GET', 'POST'])
-def trainer_info(cat=None):
-    return render_template('/Course/trainerinfo.html', title='Trainer Info ')
-
-@main.route('/new_course', methods=['GET', 'POST'])
-def new_course(cat=None):
-    return render_template('/Course/traininfo/addnewcourse.html', title='Add New Course')
-
 #Legal
 @main.route('/cookie_policy', methods=['GET', 'POST'])
 def cookie_policy(cat=None):
@@ -160,8 +151,16 @@ def member_articles(cat=None):
 @main.route('/welcome_member', methods=['GET', 'POST'])
 def welcome_member(cat=None):
     return render_template('/Articles/Member_Only/memberwelcome.html', title='Welcome Member')
-#Trainers
 
+#Trainers
+#Trainer Info
+@main.route('/trainer_info', methods=['GET', 'POST'])
+def trainer_info(cat=None):
+    return render_template('/Course/trainerinfo.html', title='Trainer Info ')
+
+@main.route('/new_course', methods=['GET', 'POST'])
+def new_course(cat=None):
+    return render_template('/Course/traininfo/addnewcourse.html', title='Add New Course')
 #Admin
 
 

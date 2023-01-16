@@ -1,19 +1,19 @@
-label{
+label{/* Adjusts the placement of element*/
     padding-left: 10px;
     padding-bottom: 2px;
     padding-top: 2px;
 }
 
-input{
+input{/* Adjusts the placement of element*/
     padding-left: 10px;
-    padding-bottom: 5px; 
+    padding-bottom: 5px;
 
 }
-button{
+button{/* Adjusts the placement of element*/
     padding-top: 10px;
 }
 
-.title, h2.title{
+.title, h2.title{/* Adjusts the placement of element* and assigns colour to it*/
     background: rgb(211,211,211);
     background: linear-gradient(90deg, rgba(211,211,211,1) 0%, rgba(64,64,171,1) 38%, rgba(40,162,187,1) 90%);
     -webkit-border-radius: 10px;
@@ -24,8 +24,8 @@ button{
     padding-left: 20px;
 }
 
-form{
-    background-color: white; 
+form{/* Adjusts the placement of element* and assigns colour to it*/
+    background-color: white;
     padding: 2px;
-    
+
 }

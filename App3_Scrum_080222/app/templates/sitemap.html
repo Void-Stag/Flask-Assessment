@@ -8,6 +8,7 @@
     <h1>Site Map</h1>
     <p></p>
   </div>
+<!--If the user is logged in, a sitemap variation is shown-->
   {% if current_user.is_authenticated %}
   <nav class="sitenav">
     <ul>
@@ -95,6 +96,7 @@
     </ul>
   </nav>
 
+<!--If user is not logged in, default sitemap is shown-->
   {% else %}
     <nav class="sitenav">
       <ul>

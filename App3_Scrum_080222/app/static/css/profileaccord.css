@@ -1,7 +1,7 @@
 
-/* Accodian on Profile Page*/
+/* Accodian on Profile Page, linked to profile.html*/
  /* Style the buttons that are used to open and close the accordion panel */
- .accordion {
+.accordion {
     background-color: rgb(41, 34, 75);
     color: rgb(241, 243, 247);
     cursor: pointer;
@@ -13,12 +13,12 @@
     transition: 0.4s;
 }
 
-    /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
 .active, .accordion:hover {
       background-color: rgb(38, 81, 109);
 }
 
-    /* Style the accordion panel. Note: hidden by default */
+/* Style the accordion panel. Note: hidden by default */
 .panel {
             padding: 0 18px;
             background-color: white;

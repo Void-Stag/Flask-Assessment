@@ -2,110 +2,123 @@
 
 
 {% block app_content %}
-<link href="{{url_for('static', filename='css/profileaccord.css')}}" rel="stylesheet"> 
+<link href="{{url_for('static', filename='css/profileaccord.css')}}" rel="stylesheet">
 
 <div class="container">
-    <div class="main-body">
+  <div class="main-body">
 
-          <div class="row gutters-sm">
-            <div class="col-md-4 mb-3">
-              <div class="card">
-                <div class="card-body">
-                  <div class="d-flex flex-column align-items-center text-center">
-                    <!-- Image is linked from the internet in #14-->
-                    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fvectorified.com%2Fimages%2Ffont-awesome-user-icon-31.png&f=1&nofb=1&ipt=0989ed2b17b5a493f530e9d939c15950c98ec96b9feccec729109b52a37b92cb&ipo=images" alt="Jane" class="rounded-circle" width="150">
-                    <div class="mt-3">
-                      <h4>{{ current_user.username }}</h4>
-                      <p class="text-secondary mb-1">{{ current_user.auth }}</p>
-                      <br>
-                      <!--The button link below uses javascript to go back to previois page in browser history to the last page-->
-                      <a href="javascript:history.back()" class="btn btn-primary" role="button">Go Back</a>
-                    </div>
-                  </div>
-                </div>
+<!--User Profile-->
+    <div class="row gutters-sm">
+      <div class="col-md-4 mb-3">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex flex-column align-items-center text-center">
+
+<!-- Image is linked from the internet in #17-->
+              <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fvectorified.com%2Fimages%2Ffont-awesome-user-icon-31.png&f=1&nofb=1&ipt=0989ed2b17b5a493f530e9d939c15950c98ec96b9feccec729109b52a37b92cb&ipo=images" alt="Jane" class="rounded-circle" width="150">
+              <div class="mt-3">
+                <h4>{{ current_user.username }}</h4>
+                <p class="text-secondary mb-1">{{ current_user.auth }}</p>
+                <br>
+
+<!--The button link below uses javascript to go back to previois page in browser history to the last page-->
+                <a href="javascript:history.back()" class="btn btn-primary" role="button">Go Back</a>
               </div>
-
             </div>
-            <div class="col-md-8">
-              <div class="card mb-3">
-                <div class="card-body">
-                  <div class="row">
-                    <div class="col-sm-3">
-                      <h6 class="mb-0">Email</h6>
-                    </div>
-                    <div class="col-sm-9 text-secondary">
-                        <ul class="email">
-                            <!--The link below allows a email message to be created in default mail app, filling in the recepient box-->
-                            <li><a href="{{ current_user.email }}">{{ current_user.email }}</a></li>
-                        </ul>
-                    </div>
-                  </div>
-                  <hr>
-                </div>
-              </div>
-              {% if current_user.auth == 'member' %}
-              <div class="card mb-3">
-                <ul class="email">
-                    <h2>Avaliable applications for Certified positions</h2>
-                </ul>
-                  <div class="card-body">
-                    <button class="accordion">Application for Certified Scrum Trainer (CST)</button>
-                    <div class="panel">
-                        <div class="center">
-                            <form method="POST">
-                                <div class="inputbox">
-                                    <input type="text" required="required">
-                                    <span>Firstname</span>
-                                  </div>
-                                <div class="inputbox">
-                                    <input type="text" required="required">
-                                    <span>Surname</span>
-                                  </div>  
-                              <div class="inputbox">
-                                <input type="text" required="required">
-                                <span>Email</span>
-                              </div>
-                              <div class="inputbox">
-                                <button type="submit" class="btn btn-default btn-lg">Submit</button>
-                              </div>
-                            </form>
-                          </div>
-                    </div>
-
-                    <button class="accordion">Application for Certified Scrum Practitioner (CSP)</button>
-                    <div class="panel">
-                            <div class="center">
-                                <form method="POST">
-                                    <div class="inputbox">
-                                        <input type="text" required="required">
-                                        <span>Firstname</span>
-                                      </div>
-                                    <div class="inputbox">
-                                        <input type="text" required="required">
-                                        <span>Surname</span>
-                                      </div>  
-                                  <div class="inputbox">
-                                    <input type="text" required="required">
-                                    <span>Email</span>
-                                  </div>
-                                  <div class="inputbox">
-                                    <button type="submit" class="btn btn-default btn-lg">Submit</button>
-                                  </div>
-                                </form>
-                            </div>
-                    </div>
-                  </div>
-                </div>
-            </div>
-          {% else %}
-
-          {% endif %}
-
           </div>
-
         </div>
-    </div>
+      </div>
 
+<!--User Detail Section-->
+      <div class="col-md-8">
+        <div class="card mb-3">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-3">
+                <h6 class="mb-0">Email</h6>
+              </div>
+              <div class="col-sm-9 text-secondary">
+                <ul class="email">
+
+<!--The link below allows a email message to be created in default mail app, filling in the recepient box-->
+                  <li><a href="{{ current_user.email }}">{{ current_user.email }}</a></li>
+                </ul>
+              </div>
+            </div>
+            <hr>
+          </div>
+        </div>
+
+<!--Member Application Section-->
+<!--if current user is 'member' the application forms will be visible to them-->
+        {% if current_user.auth == 'member' %}
+          <div class="card mb-3">
+            <ul class="email">
+              <h2>Avaliable applications for Certified positions</h2>
+            </ul>
+            <div class="card-body">
+<!--Interactive Form within Interactable Accordian-->
+              <button class="accordion">Application for Certified Scrum Trainer (CST)</button>
+              <div class="panel">
+                <div class="center">
+                  <form method="POST">
+                    <div class="inputbox">
+                      <input type="text" required="required">
+                      <span>Firstname</span>
+                    </div>
+                    <div class="inputbox">
+                      <input type="text" required="required">
+                      <span>Surname</span>
+                    </div>
+                    <div class="inputbox">
+                      <input type="text" required="required">
+                      <span>Email</span>
+                    </div>
+                    <div class="inputbox">
+                      <button type="submit" class="btn btn-default btn-lg">Submit</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+
+<!--Interactive Form within Interactable Accordian-->
+              <button class="accordion">Application for Certified Scrum Practitioner (CSP)</button>
+                <div class="panel">
+                  <div class="center">
+                    <form method="POST">
+                      <div class="inputbox">
+                        <input type="text" required="required">
+                        <span>Firstname</span>
+                      </div>
+                      <div class="inputbox">
+                        <input type="text" required="required">
+                        <span>Surname</span>
+                      </div>
+                      <div class="inputbox">
+                        <input type="text" required="required">
+                        <span>Email</span>
+                      </div>
+                      <div class="inputbox">
+                        <button type="submit" class="btn btn-default btn-lg">Submit</button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% else %}
+
+        {% endif %}
+
+      </div>
+    </div>
+  </div>
+</div>
+<!--Space div for moving footer down-->
+<div style="padding-bottom: 25%;"></div>
+
+<!--Script for opening and closing accordian-->
 <script>
 var acc = document.getElementsByClassName("accordion");
 var i;
@@ -120,6 +133,6 @@ for (i = 0; i < acc.length; i++) {
       panel.style.maxHeight = panel.scrollHeight + "px";
     }
   });
-} 
+}
 </script>
 {% endblock %}

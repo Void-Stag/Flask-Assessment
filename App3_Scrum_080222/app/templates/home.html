@@ -2,12 +2,15 @@
 
 
 {% block app_content %}
+<!--Link CSS for Announcements-->
 <link href="{{url_for('static', filename='css/announceform.css')}}" rel="stylesheet">
 <br>
+<!--Right Side Nav-->
 <div style="float: right;">
   <div class="title">
     <h2 class="title">Special Announcements</h2>
   </div>
+<!--If current user is 'admin', the form will be visable-->
   {% if current_user.is_authenticated %}
     {% if current_user.auth == 'admin' %}
       <form action="/addannounce" method="POST">

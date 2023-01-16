@@ -1,18 +1,12 @@
-/*,
-*:before,
-*:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}*/
+/* CSS for sitemap design */
 
 * {
   position: relative;
   margin: 0;
   padding: 0;
-  
+
   border: 0 none;
-    
+
   -webkit-transition: all ease .4s;
   -moz-transition: all ease .4s;
     transition: all ease .4s;
@@ -27,49 +21,49 @@
 
 .sitenav ul {
   position: relative;
-  padding-top: 20px; 
+  padding-top: 20px;
 }
 
 .sitenav li {
   position: relative;
-  padding: 10px 3px 0 3px; 
-  float: left; 
-  
+  padding: 10px 3px 0 3px;
+  float: left;
+
   text-align: center;
-  list-style-type: none; 
+  list-style-type: none;
 }
 li.spacetop {
   position: relative;
-  padding: 0px 3px 0 3px; 
-  float: left; 
-  
+  padding: 0px 3px 0 3px;
+  float: left;
+
   text-align: center;
-  list-style-type: none; 
+  list-style-type: none;
 }
 
 li.spacetopstr {
   position: relative;
-  padding: 0px 50px 0 3px; 
-  float: left; 
-  
+  padding: 0px 50px 0 3px;
+  float: left;
+
   text-align: center;
-  list-style-type: none; 
+  list-style-type: none;
 }
 
 .sitenav li::before, .sitenav li::after{
   content: '';
-  position: absolute; 
-  top: 0; 
+  position: absolute;
+  top: 0;
   right: 50%;
-  width: 50%; 
+  width: 50%;
   height: 10px;
   border-top: 1px solid rgb(0, 0, 0);
 }
 
 .sitenav li::after{
   left: 50%;
-  right: auto; 
-  
+  right: auto;
+
   border-left: 1px solid rgb(0, 0, 0);
 }
 
@@ -94,17 +88,17 @@ li.spacetopstr {
   content: '';
   position: absolute; top: 0; left: 50%;
   border-left: 1px solid rgb(0, 0, 0);
-  width: 0; 
+  width: 0;
   height: 20px;
 }
 
 .sitenav li a{
   display: inline-block;
   padding: 5px 10px;
-  
+
   border-radius: 5px;
   border: 1px solid rgb(0, 0, 0);
-  
+
   text-decoration: none;
   color: rgb(0, 0, 0);
   font-size: 22px;
@@ -112,20 +106,6 @@ li.spacetopstr {
 
 .sitenav ul li a:hover {
   color: #000;
-  background: #c8e4f8;   
+  background: #c8e4f8;
   border: 1px solid #000000;
 }
-
-/*.sitenav li a:hover, .sitenav li a:hover+ul li a {
-  color: #000;
-  background: #c8e4f8;   
-  border: 1px solid #000000;
-}
-
-.sitenav li a:hover+ul li::after, 
-.sitenav li a:hover+ul li::before, 
-.sitenav li a:hover+ul::before, 
-.sitenav li a:hover+ul ul::before{
-  content: '';
-  border-color: #94a0b4;
-}*/

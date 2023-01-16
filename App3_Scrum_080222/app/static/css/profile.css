@@ -1,3 +1,4 @@
+/*Main CSS for Profile pages layout*/
 .main-body {
     padding: 15px;
     padding-top: 100px;
@@ -6,7 +7,7 @@
     box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
 }
 
-.card {
+.card {/* Adjusts the placement of element* and assigns colour to it*/
     position: relative;
     display: flex;
     flex-direction: column;
@@ -62,4 +63,3 @@ p.mb-1{
     text-align: center;
 }
 
-/* Accordian */
