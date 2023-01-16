@@ -2,10 +2,11 @@
 
 
 {% block app_content %}
+<br>
 <div class="jumbotron"><!-- Template layout from W3schools ref:https://www.w3schools.com/bootstrap/bootstrap_templates.asp-->
   <div class="container text-center">
-    <h1>Courses</h1>
-    <p class="copyright">Non-certification Courses</p>
+    <h1>Trainer Info</h1>
+    <p class="copyright">Information for our SCRUM trainers!</p>
   </div>
 </div>
 
@@ -17,14 +18,16 @@
         <li><a href="{{ url_for('main.addcourse') }}">Additional Courses</a></li>
         <li><a href="{{ url_for('main.basicscrum') }}">SCRUM Basics</a></li>
         <li><a href="{{ url_for('main.users') }}">Certified Users</a></li>
+        <li><a href="{{ url_for('main.trainer_info') }}">Trainer Info</a></li>
       </ul>
     </div>
     <div class="col-sm-8 text-left">
       <h1>Python Basics</h1>
-      <h5><span class="glyphicon glyphicon-user"></span></a></h5>
-      <p>What is Python? This course will provide you with the basic knowledge of the Python programming Language! <br>
-        This Course will guide you through understanding the theory and practical of Python, providing you <br>
-        with the knowledge to create a simple alarm clock at the end of the course.</p>
+      <h5><span class="glyphicon glyphicon-user"></span>Staff @ SwiftCourses</a></h5>
+      <p>Information for new proposed courses to be added to the site.</p><br>
+      <p>In order to add new courses, you will need to get in contact with our lovely<br>
+      site admins to verify your course before we can publish it on the site.<br>
+      Please get in contact via our Contact page and a member of our team will be happy to help you out!</p>
       <br>
       <hr>
 

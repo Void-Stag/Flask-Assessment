@@ -2,6 +2,7 @@
 
 
 {% block app_content %}
+<br>
 <div class="jumbotron"><!-- Template layout from W3schools ref:https://www.w3schools.com/bootstrap/bootstrap_templates.asp-->
   <div class="container text-center">
     <h1>Articles</h1>
@@ -11,11 +12,15 @@
 <div class="container-fluid text-center">
   <div class="row content">
 <!--Left Side Nav Bar-->
-    <div class="col-sm-3 sidenav">
+    <div class="col-sm-3 sidenav" style="background:#4682B4;">
       {% if current_user.is_authenticated %}
+        {% if current_user == 'member' %}
         <ul class="nav nav-pills nav-stacked">
           <li><a href="{{ url_for('main.member_articles') }}">Member Articles</a></li>
           <hr>
+          {% else %}
+
+          {% endif %}
       {% else %}
 
       {% endif %}
@@ -29,7 +34,7 @@
       </div>
       <p>Big news for everyone! Swift Course's website is getting an upgrade..</p>
       <br>
-      <a href="{{ url_for('main.whatnext') }}" class="btn btn-default btn-lg" role="button">More Details</a>
+      <a href="{{ url_for('main.whatnext') }}" class="btn btn-default btn-lg" role="button" style="background:#B0C4DE;">More Details</a>
       <hr>
     </div>
   </div>

@@ -10,7 +10,7 @@
   </div>
 <!--If the user is logged in, a sitemap variation is shown-->
   {% if current_user.is_authenticated %}
-  <nav class="sitenav">
+  <nav class="sitenav" style="width: fit-content;">
     <ul>
       <li>
         <a href="{{ url_for('main.home') }}">Home</a>
@@ -44,10 +44,15 @@
             </ul>
           </li>
           <li>
-            <a href="{{ url_for('main.course') }}">Contact Us</a>
+            <a href="{{ url_for('main.Contact') }}">Contact Us</a>
             <ul>
               <li class="spacetop">
-                <a href="{{ url_for('main.Map') }}">Google Map</a>
+                <a href="{{ url_for('main.Map') }}">Map</a>
+                <ul>
+                  <li class="spacetop">
+                    <a href="{{ url_for('main.basicscrum') }}">Scrum Basics</a>
+                  </li>
+                </ul>
               </li>
             </ul>
           </li>
@@ -62,6 +67,15 @@
                     <ul>
                       <li class="spacetop">
                         <a href="{{ url_for('main.users') }}">Certified SCRUM Users</a>
+                      {% if current_user == 'trainer' %}
+                        <ul>
+                          <li class="spacetop">
+                            <a href="{{ url_for('main.users') }}">TRainer Info</a>
+                          </li>
+                        </ul>
+                      {% else %}
+
+                      {% endif %}
                       </li>
                     </ul>
                   </li>
@@ -85,7 +99,7 @@
                   <a href="{{ url_for('main.profile') }}">Profile</a>
                   <ul>
                     <li class="spacetop">
-                      <a href="{{ url_for('main.jobs') }}">Job Vacencies</a>
+                      <a href="{{ url_for('main.jobs') }}">Jobs</a>
                     </li>
                   </ul>
                 </li>
@@ -107,7 +121,7 @@
               <a>Footer</a>
               <ul>
                 <li class="spacetop">
-                  <a href="{{ url_for('main.sitemap') }}">Site Map</a>
+                  <a href="{{ url_for('main.sitemap') }}">Map</a>
                   <ul>
                     <li class="spacetop">
                       <a href="{{ url_for('main.improvements') }}">Feedback</a>
@@ -132,10 +146,15 @@
               </ul>
             </li>
             <li>
-              <a href="{{ url_for('main.course') }}">Contact Us</a>
+              <a href="{{ url_for('main.Contact') }}">Contact Us</a>
               <ul>
                 <li class="spacetop">
-                  <a href="{{ url_for('main.Map') }}">Google Map</a>
+                  <a href="{{ url_for('main.Map') }}">Map</a>
+                  <ul>
+                    <li class="spacetop">
+                      <a href="{{ url_for('main.basicscrum') }}">Scrum Basics</a>
+                    </li>
+                  </ul>
                 </li>
               </ul>
             </li>
