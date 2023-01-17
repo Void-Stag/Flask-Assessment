@@ -4,77 +4,93 @@
 {% block app_content %}
 <br>
 <div class="jumbotron"><!-- Template layout from W3schools ref:https://www.w3schools.com/bootstrap/bootstrap_templates.asp-->
-    <div class="container text-center">
-      <h1>Upcoming Certification Courses</h1>      
-      <p class="copyright">Certified SCRUM Courses</p>
-    </div>
+  <div class="container text-center">
+    <h1>Upcoming Certification Courses</h1>
+    <p class="copyright">Certified SCRUM Courses</p>
   </div>
-  
-      <div class="container-fluid text-center">    
-          <div class="row content">
-            <div class="col-sm-3 sidenav">
-              <ul class="nav nav-pills nav-stacked">
-              <li class="active"><a href="{{ url_for('main.course') }}">Upcoming Certification Courses</a></li>
-              <li><a href="{{ url_for('main.addcourse') }}">Upcoming Non-Certification Courses</a></li>
-              <li><a href="{{ url_for('main.users') }}">Certified Users</a></li>
-            </ul>
-            </div>
-            <div class="col-sm-8 text-left"> 
-              <div id="courseimage"><!-- Displays the image linked in the div behind the text-->
-                <h2 id="cortitle">SCRUM Website Project</h2>
-              </div>
-              <p>Project for The Web has a couple different areas: Grid, Board, and Timeline. A question I hear often is, “Can we manage Agile projects in Project for the Web?”.<br> To be more specific,
-                 “Can we manage Scrum based projects?” The answer is yes, of course—in a limited way, but still well enough!</p>
-                <br>
-                <a href="{{ url_for('main.scrum_project') }}" class="btn btn-default btn-lg" role="button">More Details</a><!-- Button links to connected file using the routing in the routes.py-->
-              <hr>
-              <div id="courseimage"><!-- Displays the image linked in the div behind the text-->
-                <h2 id="cortitle">Different Types of Development Cycles</h2>
-              </div>
-              <p>The product development cycle is the process of taking a product from an idea through its market release and beyond.
-                This cycle involves many departments in a company: product managers, developers, designers, QA testers, and others.</p>
-                <br>
-                <a href="{{ url_for('main.dev_cycles') }}" class="btn btn-default btn-lg" role="button">More Details</a><!-- Button links to connected file using the routing in the routes.py-->
-              <hr>
-              <div id="courseimage"><!-- Displays the image linked in the div behind the text-->
-                <h2 id="cortitle">Burnout Charts for Beginners</h2>
-              </div>
-              <p>A burndown chart helps agile project management teams keep track of what's 
-                been done, what needs to be done and how much time is left in the project. </p>
-                <br>
-                <a href="{{ url_for('main.burnout_charts') }}" class="btn btn-default btn-lg" role="button">More Details</a><!-- Button links to connected file using the routing in the routes.py-->
-              <hr>
-              <div id="courseimage"><!-- Displays the image linked in the div behind the text-->
-                <h2 id="cortitle">User Stories and Acceptence Criteria</h2>
-              </div>
-              <p>In the industry, the word 'Requirement' defines what our goal is, what the customers exactly need, 
-                and what will make our company increase its business.</p>
-                <br>
-                <a href="{{ url_for('main.userstories_acceptancecriteria') }}" class="btn btn-default btn-lg" role="button">More Details</a><!-- Button links to connected file using the routing in the routes.py-->
-              <hr>
-            </div>
-          </div>
-        </div>
+</div>
 
+<div class="container-fluid text-center">
+  <div class="row content">
+<!--Left Side Nav Bar-->
+    <div class="col-sm-3 sidenav" style="background:#7dadd1;">
+<!--If current user is 'trainer' the following will be visible, otherwise something else will be displayed-->
+      <ul class="nav nav-pills nav-stacked">
         {% if current_user.is_authenticated %}
           {% if current_user.auth == 'trainer' %}
-            <!-- This portion of code is listing the information that is going to be available for Trainers only. --> 
-            <div class="col-sm-8 text-left">                                           
-              <h1>Trainers Only Section</h1> 
-              <ol> 
-                <li>Certification Modules</li> 
-                <li>Pupils' Grades </li> 
-                <li>Employment Opportunities</li> 
-                <li>Diary</li> 
-                <li>Teaching Material</li> 
-                <li>Special Teaching Material for Disabled Pupils</li> 
-             </ol>   
-            </div>
+            <li class="active"><a href="{{ url_for('main.course') }}">Upcoming Certification Courses</a></li>
+            <li><a href="{{ url_for('main.addcourse') }}">Upcoming Non-Certification Courses</a></li>
+            <li><a href="{{ url_for('main.users') }}">Certified Users</a></li>
+            <li><a href="{{ url_for('main.trainer_info') }}">Trainer Info</a></li>
           {% else %}
-
+            <li class="active"><a href="{{ url_for('main.course') }}">Upcoming Certification Courses</a></li>
+            <li><a href="{{ url_for('main.addcourse') }}">Upcoming Non-Certification Courses</a></li>
+            <li><a href="{{ url_for('main.users') }}">Certified Users</a></li>
           {% endif %}
         {% else %}
-
-            
+          <li class="active"><a href="{{ url_for('main.course') }}">Upcoming Certification Courses</a></li>
+          <li><a href="{{ url_for('main.addcourse') }}">Upcoming Non-Certification Courses</a></li>
+          <li><a href="{{ url_for('main.users') }}">Certified Users</a></li>
         {% endif %}
+      </ul>
+    </div>
+<!--Main Page Content-->
+    <div class="col-sm-8 text-left">
+      <div id="mainimage"><!-- Displays the image linked in the div behind the text-->
+        <h2 id="cortitle">SCRUM Website Project</h2>
+      </div>
+      <p>Project for The Web has a couple different areas: Grid, Board, and Timeline. A question I hear often is, “Can we manage Agile projects in Project for the Web?”.<br> To be more specific,
+        “Can we manage Scrum based projects?” The answer is yes, of course—in a limited way, but still well enough!</p>
+      <br>
+      <a href="{{ url_for('main.scrum_project') }}" class="btn btn-default btn-lg" role="button">More Details</a><!-- Button links to connected file using the routing in the routes.py-->
+      <hr>
+      <div id="mainimage"><!-- Displays the image linked in the div behind the text-->
+        <h2 id="cortitle">Different Types of Development Cycles</h2>
+      </div>
+      <p>The product development cycle is the process of taking a product from an idea through its market release and beyond.
+        This cycle involves many departments in a company: product managers, developers, designers, QA testers, and others.</p>
+      <br>
+      <a href="{{ url_for('main.dev_cycles') }}" class="btn btn-default btn-lg" role="button">More Details</a><!-- Button links to connected file using the routing in the routes.py-->
+      <hr>
+      <div id="mainimage"><!-- Displays the image linked in the div behind the text-->
+        <h2 id="cortitle">Burnout Charts for Beginners</h2>
+      </div>
+      <p>A burndown chart helps agile project management teams keep track of what's
+        been done, what needs to be done and how much time is left in the project. </p>
+      <br>
+      <a href="{{ url_for('main.burnout_charts') }}" class="btn btn-default btn-lg" role="button">More Details</a><!-- Button links to connected file using the routing in the routes.py-->
+      <hr>
+      <div id="mainimage"><!-- Displays the image linked in the div behind the text-->
+        <h2 id="cortitle">User Stories and Acceptence Criteria</h2>
+      </div>
+      <p>In the industry, the word 'Requirement' defines what our goal is, what the customers exactly need,
+        and what will make our company increase its business.</p>
+      <br>
+      <a href="{{ url_for('main.userstories_acceptancecriteria') }}" class="btn btn-default btn-lg" role="button">More Details</a><!-- Button links to connected file using the routing in the routes.py-->
+      <hr>
+    </div>
+  </div>
+</div>
+
+<!-- This portion of code is listing the information that is going to be available for Trainers only. --> 
+{% if current_user.is_authenticated %}
+  {% if current_user.auth == 'trainer' %}
+    <div class="col-sm-8 text-left">
+      <h1>Trainers Only Section</h1> 
+        <ol> 
+          <li>Certification Modules</li> 
+          <li>Pupils' Grades </li> 
+          <li>Employment Opportunities</li> 
+          <li>Diary</li> 
+          <li>Teaching Material</li> 
+          <li>Special Teaching Material for Disabled Pupils</li> 
+        </ol>
+      </div>
+  {% else %}
+
+  {% endif %}
+{% else %}
+
+
+{% endif %}
 {% endblock %}

@@ -5,41 +5,31 @@
 <br>
 <div class="jumbotron"><!-- Template layout from W3schools ref:https://www.w3schools.com/bootstrap/bootstrap_templates.asp-->
   <div class="container text-center">
-    <h1>Courses</h1>
-    <p class="copyright">Certified SCRUM Courses</p>
+    <h1>Trainer Info</h1>
+    <p class="copyright">Information for our SCRUM trainers!</p>
   </div>
 </div>
 
 <div class="container-fluid text-center">
   <div class="row content">
     <div class="col-sm-3 sidenav" style="background:#7dadd1;">
-<!--If current user is 'trainer' the following will be visible, otherwise something else will be displayed-->
       <ul class="nav nav-pills nav-stacked">
-        {% if current_user.is_authenticated %}
-          {% if current_user.auth == 'trainer' %}
-            <li><a href="{{ url_for('main.course') }}">Upcoming Certification Courses</a></li>
-            <li><a href="{{ url_for('main.addcourse') }}">Upcoming Non-Certification Courses</a></li>
-            <li><a href="{{ url_for('main.users') }}">Certified Users</a></li>
-            <li><a href="{{ url_for('main.trainer_info') }}">Trainer Info</a></li>
-          {% else %}
-            <li><a href="{{ url_for('main.course') }}">Upcoming Certification Courses</a></li>
-            <li><a href="{{ url_for('main.addcourse') }}">Upcoming Non-Certification Courses</a></li>
-            <li><a href="{{ url_for('main.users') }}">Certified Users</a></li>
-          {% endif %}
-        {% else %}
-          <li class="active"><a href="{{ url_for('main.course') }}">Upcoming Certification Courses</a></li>
-          <li><a href="{{ url_for('main.addcourse') }}">Upcoming Non-Certification Courses</a></li>
-          <li><a href="{{ url_for('main.users') }}">Certified Users</a></li>
-        {% endif %}
+        <li><a href="{{ url_for('main.course') }}">Courses</a></li>
+        <li><a href="{{ url_for('main.addcourse') }}">Additional Courses</a></li>
+        <li><a href="{{ url_for('main.basicscrum') }}">SCRUM Basics</a></li>
+        <li><a href="{{ url_for('main.users') }}">Certified Users</a></li>
+        <li><a href="{{ url_for('main.trainer_info') }}">Trainer Info</a></li>
       </ul>
     </div>
     <div class="col-sm-8 text-left">
-      <h1>SCRUM Website Project</h1>
-      <h5><span class="glyphicon glyphicon-user"></span><a href="{{ url_for('main.Jane_Dane') }}">Trainer: Jane Dane</a></h5>
-      <p>Project for The Web has a couple different areas: Grid, Board, and Timeline. A question I hear often is, “Can we manage Agile projects in Project for the Web?” To be more specific,
-        “Can we manage Scrum based projects?” The answer is yes, of course—in a limited way, but still well enough!
-        <br> This course will teach you how to build a website in a group, with the use of SCRUM.</p>
+      <h1>Python Basics</h1>
+      <h5><span class="glyphicon glyphicon-user"></span>Staff @ SwiftCourses</a></h5>
+      <p>Information for new proposed courses to be added to the site.</p><br>
+      <p>In order to add new courses, you will need to get in contact with our lovely<br>
+      site admins to verify your course before we can publish it on the site.<br>
+      Please get in contact via our Contact page and a member of our team will be happy to help you out!</p>
       <br>
+      <hr>
 
 <!-- begin wwww.htmlcommentbox.com -->
       <div id="HCB_comment_box"><a href="http://www.htmlcommentbox.com">Comment Box</a> is loading comments...</div><!--The first element to be displayed as a delay before the script loads the comment box elements-->

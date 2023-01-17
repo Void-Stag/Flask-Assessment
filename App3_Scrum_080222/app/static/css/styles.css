@@ -15,8 +15,8 @@ body{
 img{
         float: left
 }
-/* Map */
 
+/* Map */
 .embed-responsive-100x400px{
         padding-bottom: 400px;
 }
@@ -28,7 +28,7 @@ img{
         margin: auto;
         justify-content: center;
 }
-    
+
 .navitem {
         list-style:none;
         margin: 0 50px 0 50px;
@@ -36,7 +36,7 @@ img{
         transition: 0.4s;
         text-align: center;
 }
-    
+
 .navitem:hover {
         transform: scale(1.05);
 }
@@ -101,14 +101,19 @@ h5{
 #cortitle{
         color: #f1f1f1;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
 }
 
 /* Heading css for text on banners on the contact page*/
 #contitle{
-        color: black;
+        color: #f1f1f1;
         font-family:'Cambria', Cochin, Georgia, Times, Times New Roman, serif;
         font-weight: bold;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        padding-left: 20px;
 }
+
 /* Jumbotron */
 .jumbotron{
         margin: auto;
@@ -160,22 +165,22 @@ a {
         text-decoration: none;
         transition: all 0.3s;
       }
-      
+
 a:hover, a:focus {
         text-decoration: none;
       }
-      
+
  /* On small screens, set height to 'auto' for sidenav and grid */
  @media screen and (max-width: 767px) {
    .sidenav {
      height: auto;
      padding: 15px;
    }
-   .row.content {height:auto;} 
+   .row.content {height:auto;}
  }
- 
+
 /* Banner Images*/
-#courseimage {
+#mainimage {
         width: auto;
         background-image: url(http://getwallpapers.com/wallpaper/full/7/2/2/14898.jpg);
         height: 50px;
@@ -184,16 +189,26 @@ a:hover, a:focus {
 
 #contactimage{
         width: auto;
-        background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimage.freepik.com%2Ffree-vector%2Fmodern-mobile-phone-with-icons-background_23-2147574295.jpg&f=1&nofb=1&ipt=a3b8583d56ccf4fa82488efb2c7661cb0b2006322d1d4080be7e70c6dec72a6b&ipo=images);
+        background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.fqraFDddXWoGVRf3wWy6mQHaEU%26pid%3DApi&f=1&ipt=12a34f5116cb60f171f1a07bbf18cc01ce11862734f7955ff39c864cf4850446&ipo=images);
         height: 50px;
         background-position: center;
 }
+
+#mapimage{
+        width: auto;
+        background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.designyourway.net%2Fblog%2Fwp-content%2Fuploads%2F2019%2F04%2Fgalaxy-wallpaper-35-1600x900.jpg&f=1&nofb=1&ipt=dd6999627dee2b8f47789ba79d5d5acfddf7f477e0e3b8f3ff08f1a5f45f4100&ipo=images);
+        height: 50px;
+        background-position: center;
+}
+
+/* Sticky Side Nav */
 .sticky{
         position: -webkit-sticky; /* Safari */
         position: sticky;
          top: 0;
 }
 
+/* Announcement sectionplacement */
 .announcecol{
         float: right;
 }
