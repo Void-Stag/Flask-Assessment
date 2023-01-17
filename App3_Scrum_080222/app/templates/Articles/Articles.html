@@ -12,9 +12,9 @@
 <div class="container-fluid text-center">
   <div class="row content">
 <!--Left Side Nav Bar-->
-    <div class="col-sm-3 sidenav" style="background:#4682B4;">
+    <div class="col-sm-3 sidenav" style="background:#7dadd1;">
       {% if current_user.is_authenticated %}
-        {% if current_user == 'member' %}
+        {% if current_user.auth == 'member' %}
         <ul class="nav nav-pills nav-stacked">
           <li><a href="{{ url_for('main.member_articles') }}">Member Articles</a></li>
           <hr>
