@@ -12,6 +12,7 @@
 
 <div class="container-fluid text-center">
   <div class="row content">
+<!--Left Side Nav Bar-->
     <div class="col-sm-3 sidenav" style="background:#7dadd1;">
 <!--If current user is 'trainer' the following will be visible, otherwise something else will be displayed-->
       <ul class="nav nav-pills nav-stacked">
@@ -33,6 +34,8 @@
         {% endif %}
       </ul>
     </div>
+
+<!--Main Content-->
     <div class="col-sm-8 text-left">
       <h1>Burnout Charts for Beginners</h1>
       <h5><span class="glyphicon glyphicon-user"></span><a href="{{ url_for('main.John_Doe') }}">Trainer: John Doe</a></h5>

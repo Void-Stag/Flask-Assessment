@@ -12,6 +12,7 @@
 
 <div class="container-fluid text-center">
   <div class="row content">
+
 <!--Left Side Nav Bar-->
     <div class="col-sm-3 sidenav" style="background:#7dadd1;">
 <!--If current user is 'trainer' the following will be visible, otherwise something else will be displayed-->
@@ -34,9 +35,10 @@
         {% endif %}
       </ul>
     </div>
-<!--Main Page Content-->
+
+<!--Main Content-->
     <div class="col-sm-8 text-left">
-      <div id="mainimage"><!-- Displays the image linked in the div behind the text-->
+      <div id="mainimage"><!-- Displays the image linked in the div behind the text using an id-->
         <h2 id="cortitle">SCRUM Website Project</h2>
       </div>
       <p>Project for The Web has a couple different areas: Grid, Board, and Timeline. A question I hear often is, “Can we manage Agile projects in Project for the Web?”.<br> To be more specific,
@@ -44,7 +46,7 @@
       <br>
       <a href="{{ url_for('main.scrum_project') }}" class="btn btn-default btn-lg" role="button">More Details</a><!-- Button links to connected file using the routing in the routes.py-->
       <hr>
-      <div id="mainimage"><!-- Displays the image linked in the div behind the text-->
+      <div id="mainimage"><!-- Displays the image linked in the div behind the text using an id-->
         <h2 id="cortitle">Different Types of Development Cycles</h2>
       </div>
       <p>The product development cycle is the process of taking a product from an idea through its market release and beyond.
@@ -52,7 +54,7 @@
       <br>
       <a href="{{ url_for('main.dev_cycles') }}" class="btn btn-default btn-lg" role="button">More Details</a><!-- Button links to connected file using the routing in the routes.py-->
       <hr>
-      <div id="mainimage"><!-- Displays the image linked in the div behind the text-->
+      <div id="mainimage"><!-- Displays the image linked in the div behind the text using an id-->
         <h2 id="cortitle">Burnout Charts for Beginners</h2>
       </div>
       <p>A burndown chart helps agile project management teams keep track of what's
@@ -60,7 +62,7 @@
       <br>
       <a href="{{ url_for('main.burnout_charts') }}" class="btn btn-default btn-lg" role="button">More Details</a><!-- Button links to connected file using the routing in the routes.py-->
       <hr>
-      <div id="mainimage"><!-- Displays the image linked in the div behind the text-->
+      <div id="mainimage"><!-- Displays the image linked in the div behind the text using an id-->
         <h2 id="cortitle">User Stories and Acceptence Criteria</h2>
       </div>
       <p>In the industry, the word 'Requirement' defines what our goal is, what the customers exactly need,

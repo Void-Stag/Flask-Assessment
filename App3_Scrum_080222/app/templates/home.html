@@ -10,7 +10,7 @@
   <div class="title">
     <h2 class="title">Special Announcements</h2>
   </div>
-<!--If current user is 'admin', the form will be visable-->
+  <!--If current user is 'admin', the form will be visable-->
   {% if current_user.is_authenticated %}
     {% if current_user.auth == 'admin' %}
       <form action="/addannounce" method="POST">
@@ -23,25 +23,28 @@
       <div class="panel panel-default">
         <div class="panel-body">
           <div id="content" class="announce">
-            <!--Data from the databse will be passed into here by the jquery-->
+<!--Data from the databse will be passed into the content div here by the jquery-->
           </div>
         </div>
       </div>
 
+<!--If the current user is not an admin, they will not see the form, but see the list of announcements-->
       {% else %}
     <div class="panel panel-default">
       <div class="panel-body">
         <div id="content" class="announce">
-          <!--Data from the databse will be passed into here by the jquery-->
+<!--Data from the databse will be passed into the content div here by the jquery-->
         </div>
       </div>
     </div>
     {% endif %}
+
+<!--If the user is not logged in, they will not see the form, but see the list of announcements-->
   {% else %}
     <div class="panel panel-default">
       <div class="panel-body">
         <div id="content" class="announce">
-          <!--Data from the databse will be passed into here by the jquery-->
+<!--Data from the databse will be passed into the content div here by the jquery-->
         </div>
       </div>
     </div>
@@ -129,6 +132,7 @@
   </div>
 
 <!--Bottom Row-->
+<!--Contains the links to the contact, SCRUM and Map pages-->
   <div class="row">
 	  <div class="col-sm-3">
       <a href="{{ url_for('main.Contact') }}" class="btn btn-default btn-lg" role="button" style="background:#B0C4DE;">Contact</a><!-- Button links to connected file using the routing in the routes.py-->
@@ -144,8 +148,8 @@
 
 
 <!-- Announcement Script-->
-{% block scripts %}
-  {{super ()}}
+{% block scripts %}<!--blocks other scripts-->
+  {{super ()}}<!--the script below overrides the others using admin-like privilages-->
 <script>
         $(document).ready(function contrequest(){//Once the page has loaded, the folowing function is executed
           $.getJSON('/getannounce', get_data)//Obtains the data from the annoumcement route
@@ -163,15 +167,15 @@
           }
 
         function add_data(data){
-            $("#btn2").click(function(){
-            $.getJSON(update_data)
+            $("#btn2").click(function(){//when the form button is pressed, code below is executed
+            $.getJSON(update_data)//calls the update data function
          });
         }
 
         function update_data(data){
-            $.getJSON(get_data)
-            $("ol").append("<li>Appended item</li>");
+            $.getJSON(get_data)//gets the data retrieved by the get data function
+            $("ol").append("<li>Appended item</li>");//formats the data retrieved to be posted on the website
         }
 </script>
-{% endblock %}
+{% endblock %}<!--block scripts-->
 {% endblock %}<!--block app_content-->

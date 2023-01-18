@@ -5,7 +5,7 @@
     background-color: rgb(41, 34, 75);
     color: rgb(241, 243, 247);
     cursor: pointer;
-    padding: 18px;
+    padding: 18px;/*Specifies shadow used on elements*/
     width: 100%;
     text-align: left;
     border: none;
@@ -20,22 +20,24 @@
 
 /* Style the accordion panel. Note: hidden by default */
 .panel {
-            padding: 0 18px;
+            padding: 0 18px;/*Specifies shadow used on elements*/
             background-color: white;
             max-height: 0;
           overflow: hidden;
           transition: max-height 0.2s ease-out;
 }
 
+/* Import Google Sansita Swashed Font */
 @import url("https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@600&display=swap");
 
-.center {
+.center { /* Profile Accordian position */
   position: relative;
   padding: 50px 50px;
   background: #fff;
   border-radius: 10px;
 }
-.center h1 {
+
+.center h1 {/* Profile Accordian text position */
   font-size: 2em;
   border-left: 5px solid dodgerblue;
   padding: 10px;
@@ -45,13 +47,15 @@
   font-weight: bold;
   padding-left: 10px;
 }
-.center .inputbox {
+
+.center .inputbox {/* Profile Accordian input position */
   position: relative;
   width: 300px;
   height: 50px;
   margin-bottom: 50px;
 }
-.center .inputbox input {
+
+.center .inputbox input { /* Profile Accordian input box position */
   position: absolute;
   top: 0;
   left: 0;
@@ -63,10 +67,12 @@
   border-radius: 10px;
   font-size: 1.2em;
 }
+
 .center .inputbox:last-child {
   margin-bottom: 0;
 }
-.center .inputbox span {
+
+.center .inputbox span { /* Profile Accordian filler text position */
   position: absolute;
   top: 14px;
   left: 20px;
@@ -74,17 +80,20 @@
   transition: 0.6s;
   font-family: sans-serif;
 }
+
 .center .inputbox input:focus ~ span,
-.center .inputbox input:valid ~ span {
+.center .inputbox input:valid ~ span { /* Profile Accordian input box text animation */
   transform: translateX(-13px) translateY(-35px);
   font-size: 1em;
 }
-.center .inputbox [type="button"] {
+
+.center .inputbox [type="button"] {/* Profile Accordian button position */
   width: 50%;
   background: dodgerblue;
   color: #fff;
   border: #fff;
 }
-.center .inputbox:hover [type="button"] {
+
+.center .inputbox:hover [type="button"] { /* Profile Accordian button background position */
   background: linear-gradient(45deg, navy , dodgerblue);
 }

@@ -12,19 +12,18 @@
     transition: all ease .4s;
 }
 
-
-.sitenav {
+.sitenav { /* Overall sitemap size */
   margin: 45px;
   width: 1080px;
   height: auto;
 }
 
-.sitenav ul {
+.sitenav ul {/* Position of the top vertical stalk */
   position: relative;
   padding-top: 20px;
 }
 
-.sitenav li {
+.sitenav li { /* Position of the horizontal stalk */
   position: relative;
   padding: 10px 3px 0 3px;
   float: left;
@@ -32,7 +31,8 @@
   text-align: center;
   list-style-type: none;
 }
-li.spacetop {
+
+li.spacetop { /* Position of the upper vertical stalks above the boxes */
   position: relative;
   padding: 0px 3px 0 3px;
   float: left;
@@ -41,7 +41,7 @@ li.spacetop {
   list-style-type: none;
 }
 
-li.spacetopstr {
+li.spacetopstr { /* Position of the upper/lower vertical stalks above the boxes */
   position: relative;
   padding: 0px 50px 0 3px;
   float: left;
@@ -50,7 +50,7 @@ li.spacetopstr {
   list-style-type: none;
 }
 
-.sitenav li::before, .sitenav li::after{
+.sitenav li::before, .sitenav li::after{ /* Position of the upper/lower vertical stalks above the boxes */
   content: '';
   position: absolute;
   top: 0;
@@ -60,7 +60,7 @@ li.spacetopstr {
   border-top: 1px solid rgb(0, 0, 0);
 }
 
-.sitenav li::after{
+.sitenav li::after{ /* Position of the horizontal stalk on x axis */
   left: 50%;
   right: auto;
 
@@ -84,6 +84,7 @@ li.spacetopstr {
 .sitenav li:first-child::after{
     border-radius: 5px 0 0 0;
 }
+
 .sitenav ul ul::before{
   content: '';
   position: absolute; top: 0; left: 50%;
@@ -92,7 +93,7 @@ li.spacetopstr {
   height: 20px;
 }
 
-.sitenav li a{
+.sitenav li a{ /* Position and style of content within the box */
   display: inline-block;
   padding: 5px 10px;
 
@@ -104,7 +105,7 @@ li.spacetopstr {
   font-size: 22px;
 }
 
-.sitenav ul li a:hover {
+.sitenav ul li a:hover { /* Style of mouse hover over the box */
   color: #000;
   background: #c8e4f8;
   border: 1px solid #000000;

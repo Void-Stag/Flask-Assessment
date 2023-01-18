@@ -1,6 +1,6 @@
 from flask_wtf import FlaskForm
 from flask_wtf.file import FileField, FileAllowed
-from wtforms import StringField, PasswordField, BooleanField, SubmitField 
+from wtforms import StringField, PasswordField, BooleanField, SubmitField
 from wtforms import TextAreaField, FileField, DecimalField, IntegerField, SelectField
 from wtforms.validators import ValidationError, DataRequired, Email, EqualTo, Length, NumberRange
 from app.models import User
@@ -43,7 +43,8 @@ class ResetPasswordForm(FlaskForm):
                                            EqualTo('password')])
     submit = SubmitField('Request Password Reset')
 
+# Announcement Database Table Contents Definition
 class AnnounceForm(FlaskForm):
-    title = StringField('Title', validators=[DataRequired()])
-    content= PasswordField('Content', validators=[DataRequired()])
-    post = SubmitField('Post')
+    title = StringField('Title', validators=[DataRequired()]) # Announcenment Title type definition
+    content= PasswordField('Content', validators=[DataRequired()]) # Announcement Content type definition
+    post = SubmitField('Post') # Announcement Post type definition

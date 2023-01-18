@@ -7,13 +7,16 @@ Users:
 Sean = Admin
 Admin = Admin
 
-Admin  . Account 
+Admin  . Account
 Password = admin
 
-Member  . Account 
+Member  . Account
+Username: Bobcat
 Password = member
 
-Trainer  . Account 
+Trainer  . Account
+Username:JDane
+Username:JDoe
 Password = trainer
 
 To update table

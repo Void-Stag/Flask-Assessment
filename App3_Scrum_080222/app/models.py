@@ -24,7 +24,7 @@ class User(db.Model, TimestampMixin, UserMixin):
     password_hash = db.Column(db.String(128))
     first_name = db.Column(db.String(20), nullable=False)
     last_name = db.Column(db.String(20), nullable=False)
-    auth = db.Column(db.String(20), nullable=True)
+    auth = db.Column(db.String(20), nullable=True) # Authentication type (Admin, Trainer, Practitioner and Member) definition
 
     # print to console username created
     def __repr__(self):
@@ -51,14 +51,8 @@ class User(db.Model, TimestampMixin, UserMixin):
             return
         return User.query.get(id)
 
-#Admin auth
-    def is_admin(self):
-        return self.auth == "admin"
-#Announcement class
+# Announcement class
 class Announcement(db.Model, TimestampMixin):
-    id = db.Column(db.Integer, primary_key=True)
-    title = db.Column(db.String(50), nullable=False)
-    content = db.Column(db.String(1000), nullable=True)
-
-def __repr__(self):
-    return f'<Announcement "{self.title}">'
+    id = db.Column(db.Integer, primary_key=True) # ID of Announcement message (Auto-Increment)
+    title = db.Column(db.String(50), nullable=False) # Announcement Title
+    content = db.Column(db.String(1000), nullable=True) # Announcement Content

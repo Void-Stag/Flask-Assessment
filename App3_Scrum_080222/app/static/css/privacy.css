@@ -1,7 +1,14 @@
-
+.body{
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .bg{
-    height: 100vh;
-    width: 100%;
+    height: 200vh;
+    width: 200%;
     position: absolute;
     background-size: cover;
     filter: blur(5px);
@@ -9,8 +16,9 @@
     opacity: 0.7;
     filter: brightness(75%);
 }
+/*Terms box*/
 .terms-box{
-    max-width: 460px;
+    max-width: 660px;
     background-color: rgb(83, 83, 83,0.1);
     color: #fff;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -46,13 +54,14 @@
     color: rgb(245, 68, 68);
     text-transform: uppercase;
 }
+/*Buttons to accept the policy or reject*/
 .buttons{
     display: flex;
     padding: 0 20px;
     justify-content: space-between;
     padding-bottom: 50px;
 }
-.btnpriv{
+.private-btn{
     height: 50px;
     width: calc(50% - 6px);
     border: 0;

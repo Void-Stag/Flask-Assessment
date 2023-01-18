@@ -2,7 +2,7 @@
 
 
 {% block app_content %}
-<link href="{{url_for('static', filename='css/sitemap.css')}}" rel="stylesheet">
+<link href="{{url_for('static', filename='css/sitemap.css')}}" rel="stylesheet"><!--LInks CSS for sitemap-->
 <br>
 <div class="jumbotron text-center"><!-- Template layout from W3schools ref:https://www.w3schools.com/bootstrap/bootstrap_templates.asp-->
     <h1>Site Map</h1>
@@ -10,14 +10,18 @@
   </div>
 <!--If the user is logged in, a sitemap variation is shown-->
   {% if current_user.is_authenticated %}
+<!--This sitemap uses variations of li and ol to create the different levels, connecting lines between the boxes using the linked CSS-->
   <nav class="sitenav" style="width: fit-content;">
     <ul>
       <li>
+<!--This is the very top of the sitemap where the home page is-->
         <a href="{{ url_for('main.home') }}">Home</a>
         <ul>
           <li>
+<!-- This the level where it is shown which pages are conected to the home page using relevant headings-->
             <a>Footer</a>
             <ul>
+<!--Downwards from here are the contents of each heading e.g the links you would find for the different page sections-->
               <li class="spacetop">
                 <a href="{{ url_for('main.sitemap') }}">Site Map</a>
                 <ul>
@@ -25,7 +29,7 @@
                     <a href="{{ url_for('main.improvements') }}">Feedback</a>
                     <ul>
                       <li class="spacetop">
-                        <a href="{{ url_for('main.improvements') }}">Sponsors</a>
+                        <a href="{{ url_for('main.Sponsor') }}">Sponsors</a>
                         <ul>
                           <li class="spacetop">
                               <a href="{{ url_for('main.privacy_policy') }}">Privacy Policy</a>
@@ -44,6 +48,9 @@
             </ul>
           </li>
           <li>
+<!-- This the level where it is shown which pages are conected to the home page using relevant headings-->
+<!--These links are found on the home page so they have a separate column-->
+<!--Downwards from here are the contents of each heading e.g the links you would find for the different page sections-->
             <a href="{{ url_for('main.Contact') }}">Contact Us</a>
             <ul>
               <li class="spacetop">
@@ -57,8 +64,10 @@
             </ul>
           </li>
           <li>
+<!-- This the level where it is shown which pages are conected to the home page using relevant headings-->
             <a>Upcoming Courses</a>
             <ul>
+<!--Downwards from here are the contents of each heading e.g the links you would find for the different page sections-->
               <li class="spacetop">
                 <a href="{{ url_for('main.course') }}">Certified Courses</a>
                 <ul>
@@ -67,10 +76,11 @@
                     <ul>
                       <li class="spacetop">
                         <a href="{{ url_for('main.users') }}">Certified SCRUM Users</a>
+<!--If the user is logged in and is 'trainer' they will see a sitemap addition-->
                       {% if current_user == 'trainer' %}
                         <ul>
                           <li class="spacetop">
-                            <a href="{{ url_for('main.users') }}">TRainer Info</a>
+                            <a href="{{ url_for('main.users') }}">Trainer Info</a>
                           </li>
                         </ul>
                       {% else %}
@@ -84,17 +94,22 @@
             </ul>
           </li>
           <li>
+<!-- This the level where it is shown which pages are conected to the home page using relevant headings-->
             <a href="{{ url_for('main.events') }}">Events</a>
           </li>
           <li>
+<!-- This the level where it is shown which pages are conected to the home page using relevant headings-->
             <a href="{{ url_for('main.articles') }}">Articles</a>
           </li>
           <li>
+<!-- This the level where it is shown which pages are conected to the home page using relevant headings-->
             <a href="{{ url_for('main.faq') }}">FAQ</a>
           </li>
           <li>
+<!-- This the level where it is shown which pages are conected to the home page using relevant headings-->
             <a>User Menu</a>
               <ul>
+<!--Downwards from here are the contents of each heading e.g the links you would find for the different page sections-->
                 <li class="spacetop">
                   <a href="{{ url_for('main.profile') }}">Profile</a>
                   <ul>
@@ -110,8 +125,9 @@
     </ul>
   </nav>
 
-<!--If user is not logged in, default sitemap is shown-->
+<!--If user is not logged in, default sitemap is shown, only missing the logged in user pages-->
   {% else %}
+<!--This sitemap uses variations of li and ol to create the different levels, connecting lines between the boxes using the linked CSS-->
     <nav class="sitenav">
       <ul>
         <li>
@@ -127,7 +143,7 @@
                       <a href="{{ url_for('main.improvements') }}">Feedback</a>
                       <ul>
                         <li class="spacetop">
-                          <a href="#">Corporate Sponsors</a>
+                          <a href="{{ url_for('main.Sponsor') }}">Corporate Sponsors</a>
                           <ul>
                             <li class="spacetopstr">
                               <a href="{{ url_for('main.privacy_policy') }}">Privacy Policy</a>
