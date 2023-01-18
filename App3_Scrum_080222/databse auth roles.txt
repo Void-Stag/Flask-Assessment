@@ -12,7 +12,7 @@ Password = admin
 
 Member  . Account
 Username: Bobcat
-Password = member
+Password = bobcat
 
 Trainer  . Account
 Username:JDane
