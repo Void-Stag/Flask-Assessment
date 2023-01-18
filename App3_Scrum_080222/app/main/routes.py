@@ -50,6 +50,11 @@ def Map(cat=None):
 def Contact(cat=None):
     return render_template('/Contact and Map/Contact.html', title='Contact')
 
+#Corporate Sponsors
+@main.route('/Sponsor', methods=['GET', 'POST'])
+def Sponsor(cat=None):
+    return render_template('/sponsors/corporatesponsors.html', title='Sponsors')
+
 #Certification Courses
 @main.route('/userstories_acceptancecriteria', methods=['GET', 'POST'])
 def userstories_acceptancecriteria(cat=None):

@@ -42,7 +42,12 @@
                             <span class="caret"></span>
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a href="{{ url_for('main.profile') }}">Profile</a></li>
+<!-- If the current user is one of the specified trainers, they would be able to see their own profile-->
+                            {% if current_user.username == 'JDane' %}
+                                <li><a href="{{ url_for('main.Jane_Dane') }}">Profile</a></li>
+                            {% else %}
+                                <li><a href="{{ url_for('main.profile') }}">Profile</a></li>
+                            {% endif %}
                             <li><a href="{{ url_for('main.jobs') }}">Jobs</a></li>
                             <li><a href="{{ url_for('auth.logout') }}" >Logout</a></li>
                         </ul>
@@ -97,7 +102,7 @@
                 <ul class="list-unstyled">
                     <li><a href="{{ url_for('main.sitemap') }}">Site Map</a></li>
                     <li><a href="{{ url_for('main.improvements') }}">Feedback</a></li>
-                    <li><a href="#">Corpoerate Sponsors</a></li>
+                    <li><a href="{{ url_for('main.Sponsor') }}">Corpoerate Sponsors</a></li>
                 </ul>
             </div>
             <div class="col-lg-2 col-md-6" style="color: white;">
