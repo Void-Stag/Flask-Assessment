@@ -45,6 +45,6 @@ class ResetPasswordForm(FlaskForm):
 
 # Announcement Database Table Contents Definition
 class AnnounceForm(FlaskForm):
-    title = StringField('Title', validators=[DataRequired()])
-    content= PasswordField('Content', validators=[DataRequired()])
-    post = SubmitField('Post')
+    title = StringField('Title', validators=[DataRequired()]) # Announcenment Title type definition
+    content= PasswordField('Content', validators=[DataRequired()]) # Announcement Content type definition
+    post = SubmitField('Post') # Announcement Post type definition

@@ -54,7 +54,7 @@ ul.profile{
 }
 
 /* Star Rating*/
-.checked {
+.checked {/* Defines the colour of the star rating */
     color: orange;
   }
 

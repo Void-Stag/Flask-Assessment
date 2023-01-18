@@ -50,6 +50,7 @@ img{
         text-align: center;
         display: inline;
 }
+
 /* List */
 ul.email{
         list-style: none;
@@ -63,7 +64,6 @@ ul.email{
         max-width: fit-content;/* Specifies the max width/ how wide the content can be*/
         height: 300px;/* Specifies height of element*/
 }
-
 
 /* Text*/
 p {
@@ -87,7 +87,6 @@ h3.sitem{
         list-style-type: none;
         text-align: left;
 }
-
 
 h3.trainame{
         padding-left: 100px;/* Specifies spacing between content and margin of element*/
@@ -138,11 +137,11 @@ h5{
  /* Set height of the grid so left .sidenav can be 100% (adjust as needed) */
  .row.content {height: 450px}
 
-
 /* Footer used universially*/
 footer {
         background:#2D3E4E;/*specifies background colour for element*/
 }
+
 a {
         color: inherit;
         text-decoration: none;
