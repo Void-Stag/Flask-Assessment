@@ -5,32 +5,34 @@
 <div class="container">
   <div class="main-body">
 
-<!--User Image card, contains star rating & back button-->
+    <!--User Image card, contains star rating & back button-->
     <div class="row gutters-sm">
       <div class="col-md-4 mb-3">
         <div class="card">
           <div class="card-body">
             <div class="d-flex flex-column align-items-center text-center">
-<!-- Image is linked from the internet in #14-->
-              <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F7f%2F79%2F6d%2F7f796d57218d9cd81a92d9e6e8e51ce4.png&f=1&nofb=1&ipt=6def439ad804e947fc44fb57cd0802ef518b20e955ba5ba36a2952560479b4cf&ipo=images" alt="Jane" class="rounded-circle" width="150">
+              <!-- Image is linked from the internet in #15-->
+              <img
+                src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F7f%2F79%2F6d%2F7f796d57218d9cd81a92d9e6e8e51ce4.png&f=1&nofb=1&ipt=6def439ad804e947fc44fb57cd0802ef518b20e955ba5ba36a2952560479b4cf&ipo=images"
+                alt="Jane" class="rounded-circle" width="150">
               <div class="mt-3">
                 <h4>Jane Dane</h4>
                 <p class="text-secondary mb-1">SCRUM Trainer @Swift Courses</p>
-<!--The 5 span lines have classes which create 5 stars and determine if they are filled, half filled or not filled in-->
+                <!--The 5 span lines have classes which create 5 stars and determine if they are filled, half filled or not filled in-->
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star checked"></span>
                 <span class="fa fa-star"></span>
                 <br>
-<!--The button link below uses javascript to go back to previois page in browser history to the last page-->
+                <!--The button link below uses javascript to go back to previois page in browser history to the last page-->
                 <a href="javascript:history.back()" class="btn btn-primary" role="button">Go Back</a>
               </div>
             </div>
           </div>
         </div>
       </div>
-
+      <!-- Centered div containng personal contact details-->
       <div class="col-md-8">
         <div class="card mb-3">
           <div class="card-body">
@@ -40,7 +42,7 @@
               </div>
               <div class="col-sm-9 text-secondary">
                 <ul class="email">
-<!--The link below allows a email message to be created in default mail app, filling in the recepient box-->
+                  <!--The link below allows a email message to be created in default mail app, filling in the recepient box-->
                   <li><a href="mailto:jane@swiftcourses.com">jane@swiftcourses.com</a></li>
                 </ul>
               </div>
@@ -66,7 +68,7 @@
             <hr>
           </div>
         </div>
-
+        <!--Bottom centered div containing links to courses-->
         <div class="card mb-3">
           <div class="card-body">
             <h2>Owned Courses</h2>
@@ -76,7 +78,8 @@
                 <h6 class="mb-0">Different Types of Development Cycles</h6>
               </div>
               <div class="col-sm-9 text-secondary">
-                <a href="{{ url_for('main.dev_cycles') }}" class="btn btn-default btn-lg" role="button">More Details</a>
+                <a href="{{ url_for('main.dev_cycles') }}" class="btn btn-default btn-lg" role="button">More
+                  Details</a><!-- Button links to connected file using the routing in the routes.py-->
               </div>
             </div>
             <hr>
@@ -85,7 +88,8 @@
                 <h6 class="mb-0">SCRUM Website Project</h6>
               </div>
               <div class="col-sm-9 text-secondary">
-                <a href="{{ url_for('main.scrum_project') }}" class="btn btn-default btn-lg" role="button">More Details</a>
+                <a href="{{ url_for('main.scrum_project') }}" class="btn btn-default btn-lg" role="button">More
+                  Details</a><!-- Button links to connected file using the routing in the routes.py-->
               </div>
             </div>
             <hr>

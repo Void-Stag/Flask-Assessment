@@ -16,7 +16,7 @@ img{
         float: left/* Positions element to the left*/
 }
 
-/* Map used in map hmtl file*/
+/* Google Map used in map html file*/
 .embed-responsive-100x400px{
         padding-bottom: 400px;/* Specifies spacing between content and margin of element*/
 }

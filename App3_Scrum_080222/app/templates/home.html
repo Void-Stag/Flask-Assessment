@@ -10,7 +10,7 @@
   <div class="title">
     <h2 class="title">Special Announcements</h2>
   </div>
-<!--If current user is 'admin', the form will be visable-->
+  <!--If current user is 'admin', the form will be visable-->
   {% if current_user.is_authenticated %}
     {% if current_user.auth == 'admin' %}
       <form action="/addannounce" method="POST">

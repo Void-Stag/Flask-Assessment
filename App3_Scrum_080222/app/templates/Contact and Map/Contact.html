@@ -3,77 +3,89 @@
 
 {% block app_content %}
 <br>
-<div class="jumbotron"><!-- Template layout from W3schools ref:https://www.w3schools.com/bootstrap/bootstrap_templates.asp-->
+<div class="jumbotron">
+    <!-- Template layout from W3schools ref:https://www.w3schools.com/bootstrap/bootstrap_templates.asp-->
     <div class="container text-center">
-      <h1>Contact us!</h1>
+        <h1>Contact us!</h1>
     </div>
 </div>
-  <br>
+<br>
 <!--Top Row-->
 <section class="py-5 border-bottom" id="conpost">
     <div class="container px-5 my-5">
         <div class="row gx-5">
             <div class="col-lg-4 mb-5 mb-lg-0">
-                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-collection"></i></div>
-                <div id="contactimage">
+                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-collection"></i>
+                </div>
+                <div id="contactimage"><!-- Displays the image linked in the div behind the text using an id-->
                     <h3 id="contitle">Email us</h3>
                 </div>
                 <br>
                 <ul class="email">
-                  <!--The link below allows a email message to be created in default mail app, filling in the recepient box-->
-                  <li class="email"><a href="mailto:supportdesk@swiftcourses.com">supportdesk@swiftcourses.com</a></li>
+                    <!--The link below allows a email message to be created in default mail app, filling in the recepient box-->
+                    <li class="email"><a href="mailto:supportdesk@swiftcourses.com">supportdesk@swiftcourses.com</a>
+                    </li>
                 </ul>
                 <br>
-                <h5> Disclaimer: Emails will not be responded to outside of office hours - See map for office opening hours</h5>
+                <h5> Disclaimer: Emails will not be responded to outside of office hours - See map for office opening
+                    hours</h5>
             </div>
             <div class="col-lg-4 mb-5 mb-lg-0">
-                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-building"></i></div>
-                <div id="contactimage">
+                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-building"></i>
+                </div>
+                <div id="contactimage"><!-- Displays the image linked in the div behind the text using an id-->
                     <h3 id="contitle">Phone us</h3>
                 </div>
                 <br>
                 <p>
                     24/7 Helpline<br>
-                   (+44) 08934 8934673
-                 </p>
+                    (+44) 08934 8934673
+                </p>
             </div>
             <div class="col-lg-4">
-                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i></div>
-                <div id="contactimage">
+                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-toggles2"></i>
+                </div>
+                <div id="contactimage"><!-- Displays the image linked in the div behind the text using an id-->
                     <h3 id="contitle">Find our Office</h3>
                 </div>
                 <br>
                 <p>Find our office on the map. Click below...</p>
-                <a href="{{ url_for('main.Map') }}" class="btn btn-default btn-lg" role="button">Map</a><!-- Button links to connected file using the routing in the routes.py-->
+                <a href="{{ url_for('main.Map') }}" class="btn btn-default btn-lg"
+                    role="button">Map</a><!-- Button links to connected map.html using the routing in the routes.py-->
             </div>
         </div>
     </div>
 </section>
 <br>
+
 <!--Bottom Row-->
 <section class="py-5 border-bottom" id="conpost">
     <div class="container px-5 my-5">
         <div class="row gx-5">
             <div class="col-lg-4 mb-5 mb-lg-0">
-                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-collection"></i></div>
-                <div id="contactimage">
+                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-collection"></i>
+                </div>
+                <div id="contactimage"><!-- Displays the image linked in the div behind the text using an id-->
                     <h3 id="contitle">Find us on Facebook</h3>
                 </div>
                 <br>
                 <p>Click below..</p>
-                <a href="https://www.facebook.com/profile.php?id=100089706876051">
-                    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook logo" style="width:42px;height:42px;">
+                <a href="https://www.facebook.com/profile.php?id=100089706876051"><!--hyperlink connected to image in #74 which will redirect to target href listsed-->
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook logo"
+                        style="width:42px;height:42px;">
                 </a>
             </div>
             <div class="col-lg-4 mb-5 mb-lg-0">
-                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-building"></i></div>
-                <div id="contactimage">
+                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-building"></i>
+                </div>
+                <div id="contactimage"><!-- Displays the image linked in the div behind the text using an id-->
                     <h3 id="contitle">Find us on Twitter</h3>
                 </div>
                 <br>
                 <p>Click below...</p>
-                <a href="https://twitter.com/swiftcourses?s=11&t=jmzjo23H1X8NpNLhWj-qZg">
-                    <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter logo" style="width:42px;height:42px;">
+                <a href="https://twitter.com/swiftcourses?s=11&t=jmzjo23H1X8NpNLhWj-qZg"><!--hyperlink connected to image in #74 which will redirect to target href listsed-->
+                    <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter logo"
+                        style="width:42px;height:42px;">
                 </a>
             </div>
         </div>

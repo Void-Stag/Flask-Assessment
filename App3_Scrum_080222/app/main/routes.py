@@ -3,7 +3,7 @@ from app.models import db, Announcement
 from flask import jsonify
 
 main = Blueprint('main', __name__)
-#
+#Events
 @main.route('/events', methods=['GET','POST'])# Defines the route name and what it can do. GET is fetching data and POST is sending data
 def events(cat=None):#Function defines what happens when the route is called
     return render_template('event.html', title='Events')#Returns the html file which is rendered to display data using jinja as it is a child template file
@@ -17,7 +17,7 @@ def course(cat=None):
     return render_template('/Course/course.html', title='Courses')
 
 @main.route('/')
-@main.route('/home', methods=['GET', 'POST'])
+@main.route('/home', methods=['GET', 'POST'])#Renders the homepage
 def home(cat=None):
     return render_template('home.html', title='Home')
 
@@ -33,19 +33,22 @@ def faq(cat=None):
 def improvements(cat=None):
     return render_template('Improvements.html', title='Improvements')
 
+#
 @main.route('/basicscrum', methods=['GET', 'POST'])
 def basicscrum(cat=None):
     return render_template('/Course/SCRUM_basics.html', title='Scrum Basics')
 
-@main.route('/addcourse', methods=['GET', 'POST'])
+#Non Certification Course Page
+@main.route('/addcourse', methods=['GET', 'POST'])#Renders the Non-certificantion Courses page
 def addcourse(cat=None):
     return render_template('/Course/additionalcourses.html', title='Additional Courses')
 
-# Map & Contact Pages
+# Map Page
 @main.route('/Map', methods=['GET', 'POST'])
 def Map(cat=None):
     return render_template('/Contact and Map/Map.html', title='Map')
 
+# Contact Page
 @main.route('/Contact', methods=['GET', 'POST'])
 def Contact(cat=None):
     return render_template('/Contact and Map/Contact.html', title='Contact')

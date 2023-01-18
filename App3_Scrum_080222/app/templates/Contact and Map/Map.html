@@ -3,26 +3,28 @@
 
 {% block app_content %}
 <br>
-<div class="jumbotron"><!-- Template layout from W3schools ref:https://www.w3schools.com/bootstrap/bootstrap_templates.asp-->
+<div class="jumbotron">
+    <!-- Template layout from W3schools ref:https://www.w3schools.com/bootstrap/bootstrap_templates.asp-->
     <div class="container text-center">
-      <h1>Find Us!</h1>
-      <br>
-      <h2> Location of our Office</h2>
+        <h1>Find Us!</h1>
+        <br>
+        <h2> Location of our Office</h2>
     </div>
 </div>
 
 <!--Top Row-->
 <div class='row'>
     <div class='col-sm-4'>
-        <div id="mapimage">
+        <div id="mapimage"><!-- Displays the image linked in the div behind the text using an id-->
             <h2 id="cortitle">Main Office</h2>
         </div>
         <p>Our Main office is located in Luton, as seen on the map below:<br>
             Stockwood Gardens<br>
             Newlands Rd<br>
-            Luton LU1 4AA</p></div>
+            Luton LU1 4AA</p>
+    </div>
     <div class='col-sm-4'>
-        <div id="mapimage">
+        <div id="mapimage"><!-- Displays the image linked in the div behind the text using an id-->
             <h2 id="cortitle"><span class="glyphicon glyphicon-time"></span> Opening Times</h2>
         </div>
         <p>Monday - Friday: 10am - 5pm<br>
@@ -31,10 +33,11 @@
             Other Holidays: Closed</p>
     </div>
     <div class='col-sm-4'>
-        <div id="mapimage">
+        <div id="mapimage"><!-- Displays the image linked in the div behind the text using an id-->
             <h2 id="cortitle">Contact Page</h2>
         </div>
-        <a href="{{ url_for('main.Contact') }}" class="btn btn-default btn-lg" role="button" style="margin-top: 25px; background:#B0C4DE;">Contact</a><!-- Button links to connected file using the routing in the routes.py-->
+        <a href="{{ url_for('main.Contact') }}" class="btn btn-default btn-lg" role="button"
+            style="margin-top: 25px; background:#B0C4DE;">Contact</a><!-- Button links to connected file using the routing in the routes.py-->
     </div>
 </div>
 
@@ -42,8 +45,9 @@
 <!--Bottom Row-->
 <!--Div to format and position the google map-->
 <div class="border d-flex align-items-center justify-content-center">
-        <!--Contains an google map embed which allows access to an interactable map which is linked to Google Maps Webite-->
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d35818.719732048536!2d-4.25169!3d55.868392!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x488815562056ceeb%3A0x71e683b805ef511e!2sGlasgow%2C+Glasgow+City%2C+UK!5e0!3m2!1sen!2sus!https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9573.243132160434!2d-0.4270260601796047!3d51.87117999073809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487649043c494f1d%3A0xb391a877a3fcbc56!2sStockwood%20Gardens!5e0!3m2!1sen!2suk!4v1670265320387!5m2!1sen!2suk"
+    <!--Contains an google map embed which allows access to an interactable map which is linked to Google Maps Webite-->
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d35818.719732048536!2d-4.25169!3d55.868392!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x488815562056ceeb%3A0x71e683b805ef511e!2sGlasgow%2C+Glasgow+City%2C+UK!5e0!3m2!1sen!2sus!https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9573.243132160434!2d-0.4270260601796047!3d51.87117999073809!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487649043c494f1d%3A0xb391a877a3fcbc56!2sStockwood%20Gardens!5e0!3m2!1sen!2suk!4v1670265320387!5m2!1sen!2suk"
         width="1200" height="600" frameborder="0" allowfullscreen></iframe>
 </div>
 {% endblock %}

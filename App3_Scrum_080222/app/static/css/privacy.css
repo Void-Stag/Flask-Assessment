@@ -61,7 +61,7 @@
     justify-content: space-between;
     padding-bottom: 50px;
 }
-.btn{
+.private-btn{
     height: 50px;
     width: calc(50% - 6px);
     border: 0;
