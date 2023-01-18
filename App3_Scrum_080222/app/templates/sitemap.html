@@ -2,7 +2,7 @@
 
 
 {% block app_content %}
-<link href="{{url_for('static', filename='css/sitemap.css')}}" rel="stylesheet">
+<link href="{{url_for('static', filename='css/sitemap.css')}}" rel="stylesheet"><!--LInks CSS for sitemap-->
 <br>
 <div class="jumbotron text-center"><!-- Template layout from W3schools ref:https://www.w3schools.com/bootstrap/bootstrap_templates.asp-->
     <h1>Site Map</h1>
@@ -10,6 +10,7 @@
   </div>
 <!--If the user is logged in, a sitemap variation is shown-->
   {% if current_user.is_authenticated %}
+<!--This sitemap uses variations of li and ol to create the different levels, connecting lines between the boxes using the linked CSS-->
   <nav class="sitenav" style="width: fit-content;">
     <ul>
       <li>
@@ -67,10 +68,11 @@
                     <ul>
                       <li class="spacetop">
                         <a href="{{ url_for('main.users') }}">Certified SCRUM Users</a>
+<!--If the user is logged in and is 'trainer' they will see a sitemap addition-->
                       {% if current_user == 'trainer' %}
                         <ul>
                           <li class="spacetop">
-                            <a href="{{ url_for('main.users') }}">TRainer Info</a>
+                            <a href="{{ url_for('main.users') }}">Trainer Info</a>
                           </li>
                         </ul>
                       {% else %}
@@ -112,6 +114,7 @@
 
 <!--If user is not logged in, default sitemap is shown-->
   {% else %}
+<!--This sitemap uses variations of li and ol to create the different levels, connecting lines between the boxes using the linked CSS-->
     <nav class="sitenav">
       <ul>
         <li>

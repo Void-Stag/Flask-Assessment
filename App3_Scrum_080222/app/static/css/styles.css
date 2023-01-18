@@ -4,45 +4,46 @@
             border-radius: 0 !important;
 }
 html{
-        scroll-behavior: smooth;
+        scroll-behavior: smooth;/*Makes the scroll function smoother*/
         content: none;
 }
 
 body{
-        background:#F9F7F0;
+        background:#F9F7F0;/*Changed background colour for the page body*/
 }
-/* Images */
+/* Images used all over website unless overrided elsewhere */
 img{
-        float: left
+        float: left/* Positions element to the left*/
 }
 
-/* Map */
+/* Map used in map hmtl file*/
 .embed-responsive-100x400px{
-        padding-bottom: 400px;
+        padding-bottom: 400px;/* Specifies spacing between content and margin of element*/
 }
 
 /* Nav Bar*/
 .navbar {
         display: flex;
-        align-items: center;
-        margin: auto;
-        justify-content: center;
+        align-items: center;/* Specifies position of element*/
+        margin: auto;/* Specifies spacing between margin and the content/padding of element*/
+        justify-content: center;/* Specifies position of items within the element*/
 }
 
 .navitem {
         list-style:none;
-        margin: 0 50px 0 50px;
-        font-size: 22px;
+        margin: 0 50px 0 50px;/* Specifies spacing between margin and the content/padding of element*/
+        font-size: 22px;/*Specifies size of font used in nav bar*/
         transition: 0.4s;
-        text-align: center;
+        text-align: center;/* Specifies position of element*/
 }
 
 .navitem:hover {
         transform: scale(1.05);
 }
+
 .page-footer {
         color:#000000;
-        padding-top: 5px;
+        padding-top: 5px;/* Specifies spacing between content and margin of element*/
             width: 100%;
             height: 100px;
         overflow: hidden;
@@ -58,9 +59,9 @@ ul.email{
 
 /* Announcement List */
 .announce{
-        overflow: auto;
-        max-width: fit-content;
-        height: 300px;
+        overflow: auto;/*Adds scrollbars to element when the content no longer fits*/
+        max-width: fit-content;/* Specifies the max width/ how wide the content can be*/
+        height: 300px;/* Specifies height of element*/
 }
 
 
@@ -79,7 +80,7 @@ p.copyright{
 
 p.leftfloat{
         text-align: left;
-        padding-bottom: 10px;
+        padding-bottom: 10px;/* Specifies spacing between content and margin of element*/
 }
 
 h3.sitem{
@@ -89,7 +90,7 @@ h3.sitem{
 
 
 h3.trainame{
-        padding-left: 100px;
+        padding-left: 100px;/* Specifies spacing between content and margin of element*/
 }
 
 /*H5 used for disclaimers */
@@ -100,65 +101,47 @@ h5{
 /* Heading css for text on banners on the course page*/
 #cortitle{
         color: #f1f1f1;
-        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;/* quoted item specifies font used to be displayed on website*/
 
 }
 
 /* Heading css for text on banners on the contact page*/
 #contitle{
         color: #f1f1f1;
-        font-family:'Cambria', Cochin, Georgia, Times, Times New Roman, serif;
+        font-family:'Cambria', Cochin, Georgia, Times, Times New Roman, serif;/* quoted item specifies font used to be displayed on website*/
         font-weight: bold;
-        padding-top: 2px;
-        padding-bottom: 2px;
-        padding-left: 20px;
+        padding-top: 2px;/* Specifies spacing between content and margin of element*/
+        padding-bottom: 2px;/* Specifies spacing between content and margin of element*/
+        padding-left: 20px;/* Specifies spacing between content and margin of element*/
 }
 
-/* Jumbotron */
+/* Jumbotron used universially*/
 .jumbotron{
         margin: auto;
-        width: auto;
-        height: auto;
-        padding-right:60px;
-        padding-left:60px;
+        width: auto;/* Specifies width of element, auto sizes element to fit content inside it or to its orginal size*/
+        height: auto;/* Specifies height of element, auto sizes element to fit content inside it or to its orginal size*/
+        padding-right:60px;/* Specifies spacing between content and margin of element*/
+        padding-left:60px;/* Specifies spacing between content and margin of element*/
         position: relative;
         background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.psdcodax.com%2Fwp-content%2Fuploads%2FBackground-Header-1.jpg&f=1&nofb=1&ipt=ef872138e3ae42db7c49a1b44d58c8bd5688986ba82833895498cc1de537219a&ipo=images);
 }
 
-/* Left nav Bar */
+/* Left nav Bar used universially */
 .sidenav {
-        padding-top: 28px;
-        margin-top: 18px;
+        padding-top: 28px;/* Specifies spacing between content and margin of element*/
+        margin-top: 18px;/* Specifies spacing between margin and the content/padding of element*/
         object-position: left;
-    }
-
-.scrum{
-        padding-left: 28px;
-        margin-left: 18px;
+        padding-top: 20px;/* Specifies spacing between content and margin of element*/
+        height: 100%;/* Specifies height for element*/
 }
 
-/* Right nav Bar*/
-.sidnav {
-        margin-top: 100px;
-        background-color: #679eb4;
-        height: 100%;
-        width: auto;
-        float: right;
-      }
-
- /* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+ /* Set height of the grid so left .sidenav can be 100% (adjust as needed) */
  .row.content {height: 450px}
 
- /* Set gray background color and 100% height */
- .sidenav {
-   padding-top: 20px;
-   background-color: #f1f1f1;
-   height: 100%;
- }
 
-/* Footer */
+/* Footer used universially*/
 footer {
-        background:#2D3E4E;
+        background:#2D3E4E;/*specifies background colour for element*/
 }
 a {
         color: inherit;
@@ -174,12 +157,12 @@ a:hover, a:focus {
  @media screen and (max-width: 767px) {
    .sidenav {
      height: auto;
-     padding: 15px;
+     padding: 15px;/* Specifies spacing between content and margin of element*/
    }
    .row.content {height:auto;}
  }
 
-/* Banner Images*/
+/* Banner Images used on courses, contact, user, map and any other pages by using div ids*/
 #mainimage {
         width: auto;
         background-image: url(http://getwallpapers.com/wallpaper/full/7/2/2/14898.jpg);
@@ -210,24 +193,17 @@ a:hover, a:focus {
 
 /* Announcement sectionplacement */
 .announcecol{
-        float: right;
+        float: right;/* Specifies position of element*/
 }
 
-/* Rows*/
+/* Home page Rows*/
 .conrow{/* Contact row on homepage*/
-        padding-left: 500px;
-        padding-right: 500px;
-        background-color: #679eb4;
+        padding-left: 500px;/* Specifies spacing between content and margin of element*/
+        padding-right: 500px;/* Specifies spacing between content and margin of element*/
+        background-color: #679eb4;/* Specifies background colour*/
 }
 
 /*Contact Page*/
-
-.contact{
-        background-color:#124d71;
-        width: 100%;
-        height: 200px;
-        padding-top: 40px;
-}
 #conpost{
-        padding-top: 1%;
+        padding-top: 1%;/* Specifies spacing between content and margin of element*/
 }

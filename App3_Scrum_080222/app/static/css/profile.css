@@ -1,10 +1,10 @@
 /*Main CSS for Profile pages layout*/
 .main-body {/* Adjusts the placement of element*/
-    padding: 15px;
-    padding-top: 100px;
+    padding: 15px;/* Specifies spacing between content and margin of element*/
+    padding-top: 100px;/* Specifies spacing between content and margin of element*/
 }
 .card {
-    box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);
+    box-shadow: 0 1px 3px 0 rgba(0,0,0,.1), 0 1px 2px 0 rgba(0,0,0,.06);/*Specifies shadow used on elements*/
 }
 
 .card {/* Adjusts the placement of element* and assigns colour to it*/
@@ -22,20 +22,20 @@
 .card-body {/* Adjusts the placement of element*/
     flex: 1 1 auto;
     min-height: 1px;
-    padding: 1rem;
+    padding: 1rem;/* Specifies spacing between content and margin of element*/
 }
 
 .gutters-sm {/* Adjusts the placement of element*/
-    margin-right: -8px;
-    margin-left: -8px;
+    margin-right: -8px;/* Specifies spacing between margin and the content/padding of element*/
+    margin-left: -8px;/* Specifies spacing between margin and the content/padding of element*/
 }
 
 .gutters-sm>.col, .gutters-sm>[class*=col-] {/* Adjusts the placement of element*/
-    padding-right: 8px;
-    padding-left: 8px;
+    padding-right: 8px;/* Specifies spacing between content and margin of element*/
+    padding-left: 8px;/* Specifies spacing between content and margin of element*/
 }
 .mb-3, .my-3 {/* Adjusts the placement of element*/
-    margin-bottom: 1rem!important;
+    margin-bottom: 1rem!important;/* Specifies thicknees of margin of the element*/
 }
 
 .bg-gray-300 {
@@ -45,7 +45,7 @@
     height: 100%!important;
 }
 .shadow-none {
-    box-shadow: none!important;
+    box-shadow: none!important;/*Specifies shadow used on elements*/
 }
 
 /* Profile Nav Link */

@@ -5,7 +5,7 @@
     background-color: rgb(41, 34, 75);
     color: rgb(241, 243, 247);
     cursor: pointer;
-    padding: 18px;
+    padding: 18px;/*Specifies shadow used on elements*/
     width: 100%;
     text-align: left;
     border: none;
@@ -20,7 +20,7 @@
 
 /* Style the accordion panel. Note: hidden by default */
 .panel {
-            padding: 0 18px;
+            padding: 0 18px;/*Specifies shadow used on elements*/
             background-color: white;
             max-height: 0;
           overflow: hidden;
@@ -31,7 +31,7 @@
 
 .center {
   position: relative;
-  padding: 50px 50px;
+  padding: 50px 50px;/*Specifies shadow used on elements*/
   background: #fff;
   border-radius: 10px;
 }
@@ -43,7 +43,7 @@
   letter-spacing: 5px;
   margin-bottom: 60px;
   font-weight: bold;
-  padding-left: 10px;
+  padding-left: 10px;/*Specifies shadow used on elements*/
 }
 .center .inputbox {
   position: relative;
@@ -59,7 +59,7 @@
   border: 2px solid #000;
   outline: none;
   background: none;
-  padding: 10px;
+  padding: 10px;/*Specifies shadow used on elements*/
   border-radius: 10px;
   font-size: 1.2em;
 }

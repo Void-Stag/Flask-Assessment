@@ -13,6 +13,7 @@
   <div class="row content">
 <!--Left Side Nav Bar-->
     <div class="col-sm-3 sidenav" style="background:#7dadd1;">
+<!--If the user is logged in and is 'member' they will see the nav bar menu-->
       {% if current_user.is_authenticated %}
         {% if current_user.auth == 'member' %}
         <ul class="nav nav-pills nav-stacked">

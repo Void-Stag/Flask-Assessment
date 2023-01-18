@@ -15,6 +15,7 @@
 <!--Left Side Bar-->
     <div class="col-sm-3 sidenav" style="background:#7dadd1;">
       <ul class="nav nav-pills nav-stacked">
+<!--If the user is logged in and is 'trainer' they will see a slightly different menu-->
         {% if current_user.is_authenticated %}
           {% if current_user.auth == 'trainer' %}
             <li><a href="{{ url_for('main.course') }}">Upcoming Certification Courses</a></li>
