@@ -15,7 +15,7 @@
     <!--Left Side Nav Bar-->
     <div class="col-sm-3 sidenav" style="background:#7dadd1;">
       <!--If the user is logged in and is 'member' they will see the nav bar menu-->
-      {% if current_user.is_authenticated %}
+    {% if current_user.is_authenticated %}
       {% if current_user.auth == 'member' %}
       <ul class="nav nav-pills nav-stacked">
         <li><a href="{{ url_for('main.member_articles') }}">Member Articles</a></li>
@@ -23,9 +23,9 @@
         {% else %}
         <!-- If the current user is not a member, but is logged in they will not see anything-->
         {% endif %}
-        {% else %}
+      {% else %}
         <!-- If the current user is not logged in, they will not see anything-->
-        {% endif %}
+      {% endif %}
       </ul>
     </div>
 
@@ -43,20 +43,29 @@
   </div>
 </div>
 
-<!-- The following portion of code is the main body, illustrating a list of 3 additinal articles a site editor could add.-->
-<div class="container-fluid text-center">
-  <div class="row content">
-    <div class="col-sm-2 sidenav">
-      <h3>Add Articles</h3>
-      <ol>
-        <li><a href="https://uk.indeed.com/career-advice/finding-a-job/high-paying-computer-science-jobs">Careers</a>
-        </li>
-        <li><a href="https://www.itpro.co.uk/business-strategy/careers-training/354917/the-most-in-demand-tech-jobs">
-            Tech Jobs in Demand</a></li>
-        <li><a href="https://www.wired.com/insights/2014/04/future-digital-will-change-world/">How IT will change the
-            world</a></li>
-      </ol>
+{% if current_user.is_authenticated %}
+  {% if current_user.auth == 'admin' %}
+    <!-- The following portion of code is the main body, illustrating a list of 3 additinal articles a site editor could add.-->
+    <div class="container-fluid text-center">
+      <div class="row content">
+        <div class="col-sm-2 sidenav">
+          <h3>Add Articles</h3>
+          <ol>
+            <li><a href="https://uk.indeed.com/career-advice/finding-a-job/high-paying-computer-science-jobs">Careers</a>
+            </li>
+            <li><a href="https://www.itpro.co.uk/business-strategy/careers-training/354917/the-most-in-demand-tech-jobs">
+                Tech Jobs in Demand</a></li>
+            <li><a href="https://www.wired.com/insights/2014/04/future-digital-will-change-world/">How IT will change the
+                world</a></li>
+          </ol>
+        </div>
+      </div>
     </div>
-  </div>
-</div>
+  {% else %}
+
+  {% endif %}
+{% else %}
+
+{% endif %}
+
 {% endblock %}
